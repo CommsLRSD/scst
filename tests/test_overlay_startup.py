@@ -21,17 +21,19 @@ class OverlayStartupTests(unittest.TestCase):
 
     def test_hidden_attribute_cannot_be_overridden_by_component_display_rules(self):
         css = (ROOT / "css" / "styles.css").read_text(encoding="utf-8")
-        self.assertRegex(
-            css,
-            r"\[hidden\]\s*\{[^}]*display\s*:\s*none\s*!important\s*;",
-        )
+        rule_match = re.search(r"\[hidden\]\s*\{([^}]*)\}", css, re.IGNORECASE | re.DOTALL)
+        self.assertIsNotNone(rule_match, "Missing [hidden] CSS rule")
+        self.assertRegex(rule_match.group(1), r"display\s*:\s*none\s*!important\s*;")
 
     def test_init_does_not_auto_open_search(self):
         js = (ROOT / "js" / "app.js").read_text(encoding="utf-8")
         self.assertIn("initTheme();", js)
         self.assertIn("renderLanding();", js)
         self.assertIn("wire();", js)
-        init_block = js[js.rfind("/* ---------------------------------------------------------------- Init */") :]
+        init_marker = "/* ---------------------------------------------------------------- Init */"
+        init_pos = js.rfind(init_marker)
+        self.assertNotEqual(init_pos, -1, "Init block marker not found")
+        init_block = js[init_pos:]
         self.assertNotIn("openSearch();", init_block)
 
 
