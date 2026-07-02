@@ -4,6 +4,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+# Keep a local context slice large enough to include the surrounding keyboard
+# shortcut condition while staying small and deterministic for this static check.
 CONTEXT_BEFORE = 260
 CONTEXT_AFTER = 80
 
@@ -27,7 +29,7 @@ class OverlayStartupTests(unittest.TestCase):
         self.assertIsNotNone(rule_match, "Missing [hidden] CSS rule")
         self.assertRegex(rule_match.group(1), r"display\s*:\s*none\s*!important\s*;?")
 
-    def test_search_open_is_only_called_from_user_shortcut_handler(self):
+    def test_search_open_called_from_user_shortcut_handler(self):
         js = (ROOT / "js" / "app.js").read_text(encoding="utf-8")
         call_matches = list(re.finditer(r"\bopenSearch\(\);", js))
         self.assertEqual(len(call_matches), 1, "Unexpected number of openSearch() calls")
