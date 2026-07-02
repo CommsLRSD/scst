@@ -4,6 +4,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+INIT_TAIL_LINES = 20
 
 
 class OverlayStartupTests(unittest.TestCase):
@@ -27,7 +28,7 @@ class OverlayStartupTests(unittest.TestCase):
 
     def test_init_does_not_auto_open_search(self):
         js = (ROOT / "js" / "app.js").read_text(encoding="utf-8")
-        tail = "\n".join(js.strip().splitlines()[-20:])
+        tail = "\n".join(js.strip().splitlines()[-INIT_TAIL_LINES:])
         self.assertIn("initTheme();", tail)
         self.assertIn("renderLanding();", tail)
         self.assertIn("wire();", tail)
