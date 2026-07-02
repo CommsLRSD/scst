@@ -27,7 +27,11 @@ class OverlayStartupTests(unittest.TestCase):
 
     def test_init_does_not_auto_open_search(self):
         js = (ROOT / "js" / "app.js").read_text(encoding="utf-8")
-        self.assertRegex(js, r"initTheme\(\);\s*renderLanding\(\);\s*wire\(\);\s*\}\)\(\);")
+        tail = "\n".join(js.strip().splitlines()[-20:])
+        self.assertIn("initTheme();", tail)
+        self.assertIn("renderLanding();", tail)
+        self.assertIn("wire();", tail)
+        self.assertNotIn("openSearch();", tail)
 
 
 if __name__ == "__main__":
