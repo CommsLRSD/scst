@@ -7,7 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class OverlayStartupTests(unittest.TestCase):
-    def test_dialog_elements_are_hidden_by_default(self):
+    def test_dialog_elements_have_hidden_attribute_in_markup(self):
         html = (ROOT / "index.html").read_text(encoding="utf-8")
 
         for element_id in ("searchOverlay", "personModal", "scrim"):
@@ -19,7 +19,7 @@ class OverlayStartupTests(unittest.TestCase):
             self.assertIsNotNone(match, f"Missing element with id={element_id}")
             self.assertRegex(match.group(0), r"\bhidden\b")
 
-    def test_hidden_attribute_cannot_be_overridden_by_component_display_rules(self):
+    def test_hidden_attribute_enforced_by_css_rule(self):
         css = (ROOT / "css" / "styles.css").read_text(encoding="utf-8")
         rule_match = re.search(r"\[hidden\]\s*\{([^}]*)\}", css, re.IGNORECASE | re.DOTALL)
         self.assertIsNotNone(rule_match, "Missing [hidden] CSS rule")
