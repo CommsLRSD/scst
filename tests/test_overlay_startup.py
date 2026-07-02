@@ -4,6 +4,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+CONTEXT_BEFORE = 260
+CONTEXT_AFTER = 80
 
 
 class OverlayStartupTests(unittest.TestCase):
@@ -31,7 +33,7 @@ class OverlayStartupTests(unittest.TestCase):
         self.assertEqual(len(call_matches), 1, "Unexpected number of openSearch() calls")
 
         call_pos = call_matches[0].start()
-        context_window = js[max(0, call_pos - 260) : call_pos + 80]
+        context_window = js[max(0, call_pos - CONTEXT_BEFORE) : call_pos + CONTEXT_AFTER]
         self.assertIn('if (e.key === "/"', context_window)
 
 
