@@ -4,7 +4,6 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-INIT_TAIL_LINES = 20
 
 
 class OverlayStartupTests(unittest.TestCase):
@@ -26,13 +25,14 @@ class OverlayStartupTests(unittest.TestCase):
         self.assertIsNotNone(rule_match, "Missing [hidden] CSS rule")
         self.assertRegex(rule_match.group(1), r"display\s*:\s*none\s*!important\s*;?")
 
-    def test_init_does_not_auto_open_search(self):
+    def test_search_open_is_only_called_from_user_shortcut_handler(self):
         js = (ROOT / "js" / "app.js").read_text(encoding="utf-8")
-        tail = "\n".join(js.strip().splitlines()[-INIT_TAIL_LINES:])
-        self.assertIn("initTheme();", tail)
-        self.assertIn("renderLanding();", tail)
-        self.assertIn("wire();", tail)
-        self.assertNotIn("openSearch();", tail)
+        call_matches = list(re.finditer(r"\bopenSearch\(\);", js))
+        self.assertEqual(len(call_matches), 1, "Unexpected number of openSearch() calls")
+
+        call_pos = call_matches[0].start()
+        context_window = js[max(0, call_pos - 260) : call_pos + 80]
+        self.assertIn('if (e.key === "/"', context_window)
 
 
 if __name__ == "__main__":
