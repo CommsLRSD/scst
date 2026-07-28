@@ -588,6 +588,16 @@ body {
   gap: 14px;
   margin-top: 4px;
 }
+.tier-intro {
+  grid-column: 1 / -1;
+  background: linear-gradient(180deg, var(--surface-2), var(--surface));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  line-height: 1.55;
+  font-size: 0.95rem;
+  box-shadow: var(--shadow-sm);
+}
 .tier-card {
   border: 1px solid var(--border);
   border-top: 4px solid var(--tc, var(--brand));
