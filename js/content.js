@@ -157,11 +157,9 @@ const SCST_CONTENT = {
         "A tiered model — Universal, Targeted, and Intensive — matches support to need.",
       blocks: [
         {
-          type: "note",
-          text:
-            "SCST support is organized into three tiers. Compare them side-by-side below — each tier builds on the one before it.",
+          type: "tiers",
+          intro: "SCST support is organized into three tiers. Compare them side-by-side below — each tier builds on the one before it.",
         },
-        { type: "tiers" }, // rendered as the Tier comparison component
       ],
       takeaway:
         "Every school gets Tier 1 universal support; Tier 2 and Tier 3 add targeted and intensive help where data shows need.",

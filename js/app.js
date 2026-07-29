@@ -144,7 +144,7 @@
       }
 
       case "tiers":
-        return renderTiers();
+        return renderTiers(block.intro);
 
       case "team":
         return renderTeam();
@@ -155,8 +155,11 @@
   }
 
   /* -------------------------------------------------------------- Tier cards */
-  function renderTiers() {
+  function renderTiers(intro) {
     const grid = el("div", { class: "tier-grid" });
+    if (intro) {
+      grid.append(el("div", { class: "tier-intro", text: intro }));
+    }
     C.tiers.forEach((t) => {
       const items = el("ul", { class: "tier-items" });
       t.items.forEach((i) => items.append(el("li", { text: i })));
