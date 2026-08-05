@@ -644,6 +644,103 @@ body {
 
 /* Team --------------------------------------------------------------------- */
 .team-wrap { margin-top: 6px; }
+.hierarchy-card {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, var(--surface), var(--surface-2));
+  box-shadow: var(--shadow-sm);
+}
+.hierarchy-head { margin-bottom: 16px; }
+.hierarchy-title {
+  margin: 0 0 6px;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 1.35rem;
+}
+.hierarchy-summary {
+  margin: 0;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  font-size: 0.92rem;
+}
+.hierarchy-tree,
+.hierarchy-branch {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+.hierarchy-branch {
+  margin-top: 14px;
+  margin-left: 18px;
+  padding-left: 22px;
+  border-left: 2px solid var(--border);
+}
+.hierarchy-node {
+  position: relative;
+  margin-top: 14px;
+}
+.hierarchy-node:first-child { margin-top: 0; }
+.hierarchy-branch > .hierarchy-node::before {
+  content: "";
+  position: absolute;
+  left: -22px;
+  top: 24px;
+  width: 16px;
+  border-top: 2px solid var(--border);
+}
+.hierarchy-person {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+}
+.hierarchy-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(140deg, var(--brand-2), var(--brand-ink));
+}
+.hierarchy-meta { min-width: 0; }
+.hierarchy-name {
+  margin: 0;
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+.hierarchy-role {
+  margin: 3px 0 0;
+  color: var(--ink-faint);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+.hierarchy-areas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+  margin-left: 52px;
+}
+.hierarchy-area-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--brand-tint);
+  color: var(--brand-ink);
+  font-size: 0.74rem;
+  font-weight: 600;
+}
 .filter-bar {
   display: flex;
   flex-wrap: wrap;

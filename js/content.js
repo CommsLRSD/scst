@@ -386,6 +386,54 @@ const SCST_CONTENT = {
    * Each person: { name, title, summary }. HOOK: add `contactUrl` per person.
    * ------------------------------------------------------------------------- */
   teamStructure: {
+    hierarchy: [
+      {
+        id: "nicholas-kelly",
+        name: "Nicholas Kelly",
+        title: "Director of School and Classroom Support",
+        areaIds: ["leadership"],
+        summary:
+          "Provides overall leadership for SCST, ensuring coordinated, responsive, and equity-focused support across the division. Works closely with school and divisional leaders to align services, strengthen coherence, and improve outcomes for all students.",
+        reports: [
+          {
+            id: "nicole-mager",
+            name: "Nicole Mager",
+            title: "Divisional Principal (Instructional & Indigenous Education)",
+            areaIds: ["leadership", "instructional", "indigenous"],
+            summary:
+              "Leads instructional and Indigenous education supports across the division. Partners with schools to strengthen teaching, advance culturally responsive learning, and support meaningful, engaging learning experiences for all students.",
+            reports: [
+              {
+                id: "kelsey-lenaghan",
+                name: "Kelsey Lenaghan",
+                title: "Divisional Indigenous Leader",
+                areaIds: ["indigenous"],
+                summary:
+                  "Leads Indigenous education and intercultural understandings across the division. Works alongside schools to strengthen relationships, support IESAP planning, and embed Indigenous perspectives, identities, and ways of knowing into learning.",
+              },
+            ],
+          },
+          {
+            id: "megan-vankoughnett",
+            name: "Megan Vankoughnett",
+            title: "Divisional Principal (Clinical & Student Services)",
+            areaIds: ["leadership", "student-services", "clinical"],
+            summary:
+              "Provides leadership for clinical and student services, supporting inclusive and responsive learning environments. Works collaboratively with schools to ensure student needs are met through coordinated, evidence-informed approaches.",
+            reports: [
+              {
+                id: "lisa-tymchuk",
+                name: "Lisa Tymchuk",
+                title: "Assistant Director, Clinical Services",
+                areaIds: ["clinical"],
+                summary:
+                  "Supports the delivery of clinical services across the division, coordinating interdisciplinary supports. Works with school teams to strengthen practices that support learning, communication, regulation, and well-being.",
+              },
+            ],
+          },
+        ],
+      },
+    ],
     areas: [
       {
         id: "leadership",
