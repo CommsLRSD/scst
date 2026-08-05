@@ -2,17 +2,16 @@
  * SCST — App logic
  * -----------------------------------------------------------------------------
  * UX APPROACH (short):
- *   The app opens on a calm landing screen offering two paths — Guided and
- *   Search — so users choose HOW they want to learn. Guided mode uses a stepper
- *   with a progress bar and per-section key takeaways, revealing one small
- *   section at a time (progressive disclosure) to aid retention. Dense material
- *   (team structure, tiers) is rendered as interactive accordions and
- *   comparison cards rather than long text. Search mode is a command-palette
- *   style overlay that indexes sections, tiers, areas, and people, highlights
- *   matches, and jumps straight to the relevant place. Everything is generated
- *   from js/content.js, keeping content easy to maintain.
+ *   A dashboard shell. A persistent sidebar menu lists every content area, and
+ *   the main panel renders whatever the user selects, so all information is
+ *   always one click away from a single space (no guided/stepped flow). Dense
+ *   material (leadership hierarchy, tiers, team areas) is rendered as cards,
+ *   a reporting tree, and expandable area panels. A command-palette style
+ *   search overlay indexes sections, tiers, areas, and people and jumps
+ *   straight to the relevant place. Everything is generated from
+ *   js/content.js, keeping content easy to maintain.
  *
- * The file is organised into small modules: State, Utils, Render (guided,
+ * The file is organised into small modules: State, Utils, Render (panels,
  * tiers, team), Search, Person modal, Theme, and Navigation/keyboard wiring.
  * ========================================================================== */
 
@@ -71,33 +70,53 @@
   };
   const sections = C.sections;
 
-  /* -------------------------------------------------------------- Screen mgmt */
-  const screens = { landing: $("#landing"), guided: $("#guided") };
-  function showScreen(name) {
-    Object.entries(screens).forEach(([k, node]) =>
-      node.classList.toggle("is-active", k === name)
-    );
-    $("#main").focus({ preventScroll: true });
+  /* ------------------------------------------------------- Dashboard chrome */
+  function renderChrome() {
+    $("#brandDivision").textContent = C.meta.division;
+    $("#headerEyebrow").textContent = C.meta.division;
+    $("#heroTagline").textContent = C.meta.tagline;
+    $("#heroIntro").textContent = C.meta.intro;
   }
 
-  /* ------------------------------------------------------------------ Landing */
-  function renderLanding() {
-    $("#landingEyebrow").textContent = C.meta.division;
-    $("#landingTitle").textContent = C.meta.title;
-    $("#landingTagline").textContent = C.meta.tagline;
-    $("#landingIntro").textContent = C.meta.intro;
-
-    const map = $("#landingMap");
-    map.innerHTML = "";
+  /* ------------------------------------------------------------ Sidebar menu */
+  function renderNav() {
+    const list = $("#navList");
+    list.innerHTML = "";
     sections.forEach((s, i) => {
-      const li = el("li", {}, [
-        el("button", {
-          html: `${icon(s.icon)}<span>${escapeHtml(s.label)}</span>`,
-          onclick: () => goToStep(i),
-        }),
-      ]);
-      map.append(li);
+      const btn = el("button", {
+        class: "nav-link",
+        type: "button",
+        "data-section": s.id,
+        "aria-current": i === State.step ? "page" : null,
+        html: `<span class="nav-ico">${icon(s.icon)}</span><span>${escapeHtml(s.label)}</span>`,
+        onclick: () => {
+          goToSection(i);
+          closeSidebar();
+        },
+      });
+      list.append(el("li", {}, [btn]));
     });
+  }
+
+  function syncNav() {
+    $$("#navList .nav-link").forEach((btn) => {
+      const active = btn.dataset.section === sections[State.step].id;
+      if (active) btn.setAttribute("aria-current", "page");
+      else btn.removeAttribute("aria-current");
+    });
+  }
+
+  function toggleSidebar(force) {
+    const sidebar = $("#sidebar");
+    const overlay = $("#sidebarOverlay");
+    const open = force !== undefined ? force : !sidebar.classList.contains("is-open");
+    sidebar.classList.toggle("is-open", open);
+    overlay.toggleAttribute("hidden", !open);
+    $("#sidebarToggle").setAttribute("aria-expanded", String(open));
+  }
+
+  function closeSidebar() {
+    toggleSidebar(false);
   }
 
   /* ------------------------------------------------------------ Block rendering */
@@ -351,35 +370,25 @@
     return item;
   }
 
-  /* ------------------------------------------------------------- Guided step */
-  function renderStep() {
+  /* ------------------------------------------------------------ Panel render */
+  function renderPanel() {
     const s = sections[State.step];
-    const total = sections.length;
 
-    // Progress
-    $("#progressFill").style.width = ((State.step + 1) / total) * 100 + "%";
-    $("#stepNow").textContent = State.step + 1;
-    $("#stepTotal").textContent = total;
-    $("#stepName").textContent = s.label;
+    $("#headerTitle").textContent = s.title;
+    document.title = `${s.label} — ${C.meta.title}`;
 
-    // Nav state
-    $("#backBtn").disabled = State.step === 0;
-    const isLast = State.step === total - 1;
-    $("#nextLabel").textContent = isLast ? "Finish" : "Next";
-
-    // Build step
-    const step = el("div", { class: "step" }, [
+    const panel = el("section", { class: "panel", "aria-label": s.title }, [
       el("span", {
-        class: "step-eyebrow",
+        class: "panel-eyebrow",
         html: `${icon(s.icon)}<span>${escapeHtml(s.label)}</span>`,
       }),
-      el("h2", { class: "step-title", text: s.title }),
-      el("p", { class: "step-summary", text: s.summary }),
+      el("h2", { class: "panel-title", text: s.title }),
+      el("p", { class: "panel-summary", text: s.summary }),
     ]);
-    s.blocks.forEach((b) => step.append(renderBlock(b)));
+    s.blocks.forEach((b) => panel.append(renderBlock(b)));
 
     if (s.takeaway) {
-      step.append(
+      panel.append(
         el("div", { class: "takeaway" }, [
           el("span", { class: "tk-badge", text: "Key takeaway" }),
           el("p", { text: s.takeaway }),
@@ -387,48 +396,18 @@
       );
     }
 
-    const host = $("#guidedContent");
+    const host = $("#panelHost");
     host.innerHTML = "";
-    host.append(step);
-    host.scrollTop = 0;
+    host.append(panel);
 
-    buildJumpMenu();
+    syncNav();
   }
 
-  function buildJumpMenu() {
-    const menu = $("#jumpMenu");
-    menu.innerHTML = "";
-    sections.forEach((s, i) => {
-      const btn = el("button", {
-        role: "menuitem",
-        class: i === State.step ? "is-current" : "",
-        html: `<span class="num">${i + 1}</span><span>${escapeHtml(s.label)}</span>`,
-        onclick: () => {
-          goToStep(i);
-          toggleJump(false);
-        },
-      });
-      menu.append(el("li", {}, [btn]));
-    });
-  }
-
-  function goToStep(i) {
+  function goToSection(i) {
     State.step = Math.max(0, Math.min(sections.length - 1, i));
-    showScreen("guided");
-    renderStep();
-  }
-
-  function toggleJump(force) {
-    const menu = $("#jumpMenu");
-    const btn = $("#jumpToggle");
-    const open = force !== undefined ? force : menu.hasAttribute("hidden");
-    if (open) {
-      menu.removeAttribute("hidden");
-      btn.setAttribute("aria-expanded", "true");
-    } else {
-      menu.setAttribute("hidden", "");
-      btn.setAttribute("aria-expanded", "false");
-    }
+    renderPanel();
+    $("#main").focus({ preventScroll: true });
+    window.scrollTo({ top: 0, behavior: "auto" });
   }
 
   /* --------------------------------------------------------------- Person modal */
@@ -523,7 +502,7 @@
         title: s.title,
         sub: s.summary,
         haystack: (s.label + " " + s.title + " " + s.summary + " " + keywords.join(" ")).toLowerCase(),
-        action: () => goToStep(i),
+        action: () => goToSection(i),
       });
     });
 
@@ -536,7 +515,7 @@
         sub: t.summary,
         haystack: (t.level + " " + t.name + " " + t.reach + " " + t.summary + " " + t.items.join(" ") + " " + t.goal).toLowerCase(),
         action: () => {
-          goToStep(tierStep);
+          goToSection(tierStep);
           requestAnimationFrame(() => {
             const card = $(`#card-${t.id}`);
             if (card) card.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -576,7 +555,7 @@
   }
 
   function openArea(area, teamStep) {
-    goToStep(teamStep);
+    goToSection(teamStep);
     requestAnimationFrame(() => {
       State.teamFilter = "All";
       const node = $(`.area[data-area="${area.id}"]`);
@@ -680,23 +659,13 @@
 
   /* -------------------------------------------------------------- Wiring */
   function wire() {
-    $("#startGuided").addEventListener("click", () => goToStep(0));
-    $("#startSearch").addEventListener("click", openSearch);
-    $("#brandHome").addEventListener("click", () => showScreen("landing"));
-    $("#homeBtn").addEventListener("click", () => showScreen("landing"));
-
-    $("#backBtn").addEventListener("click", () => goToStep(State.step - 1));
-    $("#nextBtn").addEventListener("click", () => {
-      if (State.step === sections.length - 1) showScreen("landing");
-      else goToStep(State.step + 1);
+    $("#brandHome").addEventListener("click", () => {
+      goToSection(0);
+      closeSidebar();
     });
 
-    $("#jumpToggle").addEventListener("click", () => toggleJump());
-    document.addEventListener("click", (e) => {
-      if (!e.target.closest("#jumpMenu") && !e.target.closest("#jumpToggle")) {
-        toggleJump(false);
-      }
-    });
+    $("#sidebarToggle").addEventListener("click", () => toggleSidebar());
+    $("#sidebarOverlay").addEventListener("click", closeSidebar);
 
     $("#openSearchBtn").addEventListener("click", openSearch);
     $("#searchClose").addEventListener("click", () => closeDialog("#searchOverlay"));
@@ -726,21 +695,15 @@
       if (e.key === "Escape") {
         if ($("#searchOverlay").__trap) return closeDialog("#searchOverlay");
         if ($("#personModal").__trap) return closeDialog("#personModal");
-        if (!$("#jumpMenu").hasAttribute("hidden")) return toggleJump(false);
-      }
-      // Arrow navigation while in guided mode (not in a dialog/field).
-      const inGuided = screens.guided.classList.contains("is-active");
-      const inField = /input|textarea|select/i.test(e.target.tagName);
-      const dialogOpen = $("#searchOverlay").__trap || $("#personModal").__trap;
-      if (inGuided && !inField && !dialogOpen) {
-        if (e.key === "ArrowRight") goToStep(State.step + 1);
-        if (e.key === "ArrowLeft") goToStep(State.step - 1);
+        if ($("#sidebar").classList.contains("is-open")) return closeSidebar();
       }
     });
   }
 
   /* ---------------------------------------------------------------- Init */
   initTheme();
-  renderLanding();
+  renderChrome();
+  renderNav();
+  renderPanel();
   wire();
 })();
