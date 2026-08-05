@@ -289,8 +289,10 @@
     // Walk each node: show it if its areaIds includes the active area OR if
     // it has any visible descendant (so the chain from root is preserved).
     function walkVisible(nodes) {
-      // Returns true if any node in the list (or its subtree) matches.
-      return nodes.some((node) => {
+      // Process every sibling node so each one gets its display set correctly.
+      // Returns true if at least one node in the list (or its subtree) matches.
+      let anyVisible = false;
+      nodes.forEach((node) => {
         const nodeEl = card.querySelector(`[data-node-id="${node.id}"]`);
         const selfMatches = Array.isArray(node.areaIds) && node.areaIds.includes(activeId);
         const childMatches = Array.isArray(node.reports) && node.reports.length
@@ -298,8 +300,9 @@
           : false;
         const visible = selfMatches || childMatches;
         if (nodeEl) nodeEl.style.display = visible ? "" : "none";
-        return visible;
+        if (visible) anyVisible = true;
       });
+      return anyVisible;
     }
     const anyVisible = walkVisible(C.teamStructure.hierarchy);
 
