@@ -627,6 +627,46 @@ const SCST_CONTENT = {
               },
             ],
           },
+          {
+            id: "kathy-atkin",
+            name: "Kathy Atkin",
+            title: "Divisional Teacher Librarian (Libraries)",
+            areaIds: ["specialized"],
+            summary:
+              "Supports school libraries across the division, creating welcoming, literacy-rich environments that foster a love of reading and inquiry, and partnering with educators to enhance access to diverse resources.",
+          },
+          {
+            id: "shaemus-campbell",
+            name: "Shaemus Campbell",
+            title: "Physical Education & Healthy Living",
+            areaIds: ["specialized"],
+            summary:
+              "Supports high-quality physical education and active, healthy lifestyles — strengthening PE programming, mentoring educators, and coordinating divisional events that engage students in activity and well-being.",
+          },
+          {
+            id: "jordana-milne",
+            name: "Jordana Milne",
+            title: "Manager of Athletics and Healthy Living",
+            areaIds: ["specialized"],
+            summary:
+              "Leads and coordinates divisional extra-curricular athletics, supporting inclusive, engaging sport opportunities and helping build strong school-based programs and positive experiences through teamwork.",
+          },
+          {
+            id: "ryan-sabourin",
+            name: "Ryan Sabourin",
+            title: "Applied Technology / Human Ecology",
+            areaIds: ["specialized"],
+            summary:
+              "Supports applied technology and human ecology programming across the division — creating safe, innovative, engaging learning experiences that prepare students with practical skills and real-world connections.",
+          },
+          {
+            id: "allan-suban",
+            name: "Allan Suban",
+            title: "LRSD Arts (Music, Visual Arts, Drama)",
+            areaIds: ["specialized"],
+            summary:
+              "Supports arts programming in schools, fostering creativity, expression, and engagement — strengthening music, visual arts, and drama experiences that enrich learning and build student confidence.",
+          },
         ],
       },
     ],
