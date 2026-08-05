@@ -12,40 +12,41 @@ server such as `python3 -m http.server`).
 
 ## UX approach
 
-The goal is to help people learn the content **in small pieces** rather than
-scrolling one long page. Two ideas drive the design:
+The app is a **dashboard**, modelled on the `CommsLRSD/school-dashboard`
+layout: a persistent left **sidebar menu** lists every content area, and the
+main panel renders whatever is selected. All information lives in a single
+space and is always one click away — there is no guided/stepped flow.
 
-1. **Choose how you learn.** The landing screen offers two paths:
-   - **Guided mode** — a step-by-step flow through nine focused sections, with
-     a progress bar, *Back / Next / Home / Jump to section* controls, and a
-     **key takeaway** at the end of each section for retention.
-   - **Search mode** — a command-palette-style overlay (press `/` anywhere)
-     that instantly indexes sections, tiers, team areas, and every staff
-     member. Matches are highlighted and clicking a result jumps straight to
-     the right place (and can open the person’s card).
+- **Sidebar menu** — every section (Overview, Why This Matters, How Support
+  Works, Levels/Tiers, Data-Informed, Team Structure, School-Based Model,
+  Current Direction, Looking Ahead). The active item is highlighted; on
+  narrow screens the sidebar collapses behind a menu button.
+- **Search** — a command-palette-style overlay (press `/` anywhere) that
+  indexes sections, tiers, team areas, and every staff member. Matches are
+  highlighted and clicking a result jumps straight to the right place (and can
+  open the person's card).
+- **Leadership reporting hierarchy** — the Team Structure panel keeps the
+  reporting tree (Director → Divisional Principals → their direct reports)
+  above the filterable area accordions.
+- **Dense material as components** — Tier 1/2/3 render as a side-by-side
+  comparison; team areas are filterable, expandable cards with staff cards
+  that open a detail modal.
 
-2. **Progressive disclosure.** Only a manageable amount is shown at once. Dense
-   material is presented as interactive components instead of text walls:
-   - **Tier 1 / 2 / 3** appear as a side-by-side **comparison layout**.
-   - **Team Structure** is a set of **filterable, expandable accordions**
-     (filter by Leadership, Instructional Support, Student Support Services,
-     Indigenous Education, Clinical Services, Specialized Supports), each
-     revealing clean **staff cards** that open a detail modal.
-
-The visual style is calm and premium: generous spacing, a serif display face
-for headings, subtle motion, strong hierarchy, an optional **dark mode**
-(remembered across visits), full keyboard navigation, focus states, and a
-`prefers-reduced-motion` fallback. The layout is responsive down to mobile.
+The visual style matches the school-dashboard design system: Poppins/Ubuntu
+type, LRSD red + green accents, light neutral surfaces and soft shadows, plus
+an optional **dark mode** (remembered across visits), full keyboard
+navigation, focus states, and a `prefers-reduced-motion` fallback. The layout
+is responsive down to mobile.
 
 ---
 
 ## Project structure
 
 ```
-index.html        App shell: screens, dialogs, and an inline SVG icon sprite.
+index.html        App shell: sidebar + main panel, dialogs, inline SVG icon sprite.
 css/styles.css    Design tokens (light/dark), layout, and all components.
 js/content.js     ← CONTENT MODEL. The single source of truth (edit this).
-js/app.js         Rendering + interaction logic (guided, tiers, team, search).
+js/app.js         Rendering + interaction logic (nav, panels, tiers, team, search).
 ```
 
 The interface is **generated entirely from `js/content.js`**, so you can
@@ -57,7 +58,8 @@ maintain the site without touching the rendering code.
 
 Open **`js/content.js`** — it is heavily commented. Common edits:
 
-- **Section text (Guided mode):** edit the `sections` array. Each section has
+- **Section text:** edit the `sections` array — each entry becomes a sidebar
+  menu item and a dashboard panel. Each section has
   an `id`, `label`, `title`, `summary`, an array of `blocks`
   (`lead` / `list` / `note` / `grid`), and a `takeaway`.
 - **Team members:** edit `teamStructure.areas[].people` — each person is
@@ -81,8 +83,7 @@ Search the codebase for `HOOK:` to find ready-made extension points:
 ## Accessibility &amp; keyboard shortcuts
 
 - `/` — open Search from anywhere
-- `Esc` — close Search, the person modal, or the Jump menu
-- `← / →` — previous / next section while in Guided mode
+- `Esc` — close Search, the person modal, or the mobile menu
 - Skip link, focus-visible outlines, focus trapping in dialogs, and ARIA roles
   throughout.
 

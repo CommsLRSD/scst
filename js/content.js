@@ -6,13 +6,13 @@
  * maintain the site without touching the HTML/CSS/JS logic.
  *
  * HOW TO UPDATE CONTENT LATER:
- *   • Edit text in the `sections` array to change guided-mode content.
+ *   • Edit text in the `sections` array to change dashboard panel content.
  *   • Add / edit people inside `teamStructure.areas[].people`.
  *   • Add / edit tiers inside the `tiers` array.
  *   • Placeholder hooks for future features (PDF downloads, contact links)
  *     live on each person and section object — search for "HOOK:".
  *
- * Every section has a stable `id` (used for jump-to + deep links) and an
+ * Every section has a stable `id` (used by the sidebar menu + search) and an
  * `icon` (an inline SVG name resolved in app.js).
  * ========================================================================== */
 
@@ -31,7 +31,7 @@ const SCST_CONTENT = {
   },
 
   /* ---------------------------------------------------------------------------
-   * TOP-LEVEL SECTIONS (drive both Guided mode and the section map)
+   * TOP-LEVEL SECTIONS (drive the sidebar menu and dashboard panels)
    * Each `blocks` entry is a small, digestible unit rendered as a card.
    * Block types: "lead" | "list" | "note" | "grid".
    * ------------------------------------------------------------------------- */

@@ -18,123 +18,77 @@
 </head>
 <body>
   <!-- =========================================================================
-       APP SHELL
-       The app renders three "screens": #landing, #guided, #search-mode.
-       A persistent top bar hosts brand, mode switch, dark-mode + search.
-       Almost all content is injected by js/app.js from js/content.js.
+       APP SHELL — DASHBOARD LAYOUT
+       A persistent sidebar menu lists every content area; the main panel
+       renders the selected area. All content is available from this single
+       space (no guided/stepped flow). Content is injected by js/app.js from
+       js/content.js.
        ====================================================================== -->
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="topbar" role="banner">
-    <button class="brand" id="brandHome" aria-label="Go to home screen">
-      <span class="brand-mark" aria-hidden="true"></span>
-      <span class="brand-text">
-        <strong>SCST</strong>
-        <small>Louis Riel School Division</small>
-      </span>
-    </button>
-
-    <nav class="topbar-actions" aria-label="Primary">
-      <button class="pill-btn" id="openSearchBtn" aria-haspopup="dialog">
-        <svg class="ico" aria-hidden="true"><use href="#i-search"></use></svg>
-        <span>Search</span>
-        <kbd class="kbd">/</kbd>
-      </button>
-      <button
-        class="icon-btn"
-        id="themeToggle"
-        aria-pressed="false"
-        aria-label="Toggle dark mode"
-        title="Toggle dark mode"
-      >
-        <svg class="ico" aria-hidden="true"><use href="#i-sun"></use></svg>
-      </button>
-    </nav>
-  </header>
-
-  <main id="main" class="stage" tabindex="-1">
-    <!-- ---------------------------------------------------------------- LANDING -->
-    <section id="landing" class="screen is-active" aria-label="Welcome">
-      <div class="landing-inner">
-        <p class="eyebrow" id="landingEyebrow"></p>
-        <h1 class="landing-title" id="landingTitle"></h1>
-        <p class="landing-tagline" id="landingTagline"></p>
-        <p class="landing-intro" id="landingIntro"></p>
-
-        <div class="path-cards">
-          <button class="path-card" id="startGuided">
-            <span class="path-icon" aria-hidden="true">
-              <svg class="ico ico-lg"><use href="#i-route"></use></svg>
-            </span>
-            <span class="path-body">
-              <span class="path-title">Guided mode</span>
-              <span class="path-desc"
-                >Move through the information one small section at a time, with
-                progress and key takeaways.</span
-              >
-            </span>
-            <span class="path-go" aria-hidden="true">→</span>
-          </button>
-
-          <button class="path-card" id="startSearch">
-            <span class="path-icon" aria-hidden="true">
-              <svg class="ico ico-lg"><use href="#i-search"></use></svg>
-            </span>
-            <span class="path-body">
-              <span class="path-title">Search mode</span>
-              <span class="path-desc"
-                >Instantly find people, roles, services, supports, tiers, and
-                keywords.</span
-              >
-            </span>
-            <span class="path-go" aria-hidden="true">→</span>
-          </button>
-        </div>
-
-        <ul class="landing-map" id="landingMap" aria-label="Jump to a section"></ul>
+  <div class="dashboard-layout">
+    <aside class="sidebar" id="sidebar" aria-label="Dashboard navigation">
+      <div class="sidebar-header">
+        <button class="brand" id="brandHome" aria-label="Go to dashboard overview">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">
+            <strong>SCST</strong>
+            <small id="brandDivision">Louis Riel School Division</small>
+          </span>
+        </button>
       </div>
-    </section>
 
-    <!-- ---------------------------------------------------------------- GUIDED -->
-    <section id="guided" class="screen" aria-label="Guided learning">
-      <div class="guided-frame">
-        <div class="guided-head">
-          <div class="progress" aria-hidden="true">
-            <div class="progress-bar"><span id="progressFill"></span></div>
-          </div>
-          <p class="progress-label">
-            <span id="stepNow">1</span> / <span id="stepTotal">9</span>
-            <span class="progress-name" id="stepName"></span>
-          </p>
-          <div class="guided-tools">
-            <button class="chip-btn" id="jumpToggle" aria-haspopup="true" aria-expanded="false">
-              <svg class="ico" aria-hidden="true"><use href="#i-map"></use></svg>
-              <span>Jump to section</span>
-            </button>
-          </div>
-          <ul class="jump-menu" id="jumpMenu" role="menu" hidden></ul>
-        </div>
+      <nav class="sidebar-nav" aria-label="Sections">
+        <p class="nav-group-label">Sections</p>
+        <ul class="nav-list" id="navList"></ul>
+      </nav>
 
-        <div class="guided-content" id="guidedContent" aria-live="polite"></div>
-
-        <div class="guided-nav">
-          <button class="nav-btn ghost" id="homeBtn">
-            <svg class="ico" aria-hidden="true"><use href="#i-home"></use></svg>
-            <span>Home</span>
-          </button>
-          <div class="nav-spacer"></div>
-          <button class="nav-btn" id="backBtn">
-            <svg class="ico" aria-hidden="true"><use href="#i-back"></use></svg>
-            <span>Back</span>
-          </button>
-          <button class="nav-btn primary" id="nextBtn">
-            <span id="nextLabel">Next</span>
-            <svg class="ico" aria-hidden="true"><use href="#i-next"></use></svg>
-          </button>
-        </div>
+      <div class="sidebar-footer">
+        <button class="pill-btn" id="openSearchBtn" aria-haspopup="dialog">
+          <svg class="ico" aria-hidden="true"><use href="#i-search"></use></svg>
+          <span>Search</span>
+          <kbd class="kbd">/</kbd>
+        </button>
+        <button
+          class="icon-btn"
+          id="themeToggle"
+          aria-pressed="false"
+          aria-label="Toggle dark mode"
+          title="Toggle dark mode"
+        >
+          <svg class="ico" aria-hidden="true"><use href="#i-sun"></use></svg>
+        </button>
       </div>
-    </section>
-  </main>
+    </aside>
+
+    <div class="main-content">
+      <header class="main-header" role="banner">
+        <button
+          class="icon-btn sidebar-toggle-btn"
+          id="sidebarToggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="sidebar"
+        >
+          <svg class="ico" aria-hidden="true"><use href="#i-map"></use></svg>
+        </button>
+        <div class="header-titles">
+          <p class="eyebrow" id="headerEyebrow"></p>
+          <h1 class="header-title" id="headerTitle"></h1>
+        </div>
+      </header>
+
+      <main id="main" class="content-body" tabindex="-1" aria-live="polite">
+        <section class="dashboard-hero" id="dashboardHero">
+          <p class="hero-tagline" id="heroTagline"></p>
+          <p class="hero-intro" id="heroIntro"></p>
+        </section>
+        <div id="panelHost"></div>
+      </main>
+    </div>
+
+    <div class="sidebar-overlay" id="sidebarOverlay" hidden></div>
+  </div>
 
   <!-- ---------------------------------------------------------------- SEARCH OVERLAY -->
   <div
