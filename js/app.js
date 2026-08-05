@@ -133,9 +133,11 @@
           const ul = el("ul");
           card.points.forEach((p) => ul.append(el("li", { text: p })));
           grid.append(
-            el("div", { class: "mini-card" }, [
-              el("h4", { text: card.title }),
-              ul,
+            el("div", { class: "data-card mini-card" }, [
+              el("div", { class: "card-header" }, [
+                el("h4", { class: "card-title", text: card.title }),
+              ]),
+              el("div", { class: "card-body" }, [ul]),
             ])
           );
         });
@@ -164,18 +166,20 @@
       const items = el("ul", { class: "tier-items" });
       t.items.forEach((i) => items.append(el("li", { text: i })));
       grid.append(
-        el("article", { class: "tier-card", "data-tier": t.id, id: `card-${t.id}` }, [
-          el("div", { class: "tier-top" }, [
+        el("article", { class: "data-card tier-card", "data-tier": t.id, id: `card-${t.id}` }, [
+          el("div", { class: "card-header" }, [
             el("span", { class: "tier-level", text: t.level }),
             el("span", { class: "tier-reach", text: t.reach }),
           ]),
-          el("h4", { class: "tier-name", text: t.name }),
-          el("p", { class: "tier-summary", text: t.summary }),
-          items,
-          el("div", {
-            class: "tier-goal",
-            html: `<strong>Goal:</strong> ${escapeHtml(t.goal)}`,
-          }),
+          el("div", { class: "card-body" }, [
+            el("h4", { class: "card-title tier-name", text: t.name }),
+            el("p", { class: "tier-summary", text: t.summary }),
+            items,
+            el("div", {
+              class: "tier-goal",
+              html: `<strong>Goal:</strong> ${escapeHtml(t.goal)}`,
+            }),
+          ]),
         ])
       );
     });
@@ -231,14 +235,14 @@
   function renderArea(area, expanded) {
     const panelId = `panel-${area.id}`;
     const header = el("button", {
-      class: "area-header",
+      class: "card-header area-header",
       type: "button",
       "aria-expanded": String(expanded),
       "aria-controls": panelId,
       html:
-        `<span class="area-ico">${icon(area.icon)}</span>` +
+        `<span class="card-header-icon area-ico">${icon(area.icon)}</span>` +
         `<span class="area-meta">` +
-        `<span class="area-title">${escapeHtml(area.title)}</span>` +
+        `<span class="card-title area-title">${escapeHtml(area.title)}</span>` +
         `<span class="area-purpose">${escapeHtml(area.purpose)}</span>` +
         `</span>` +
         `<span class="area-count">${area.people.length} people</span>` +
@@ -262,12 +266,12 @@
 
     const panel = el("div", { class: "area-panel" }, [
       el("div", { class: "area-panel-inner" }, [
-        el("div", { class: "area-body", id: panelId }, bodyChildren),
+        el("div", { class: "card-body area-body", id: panelId }, bodyChildren),
       ]),
     ]);
 
     const node = el("div", {
-      class: "area",
+      class: "data-card area",
       "data-filter": area.filter,
       "data-area": area.id,
       "aria-expanded": String(expanded),
@@ -284,7 +288,7 @@
 
   function personCard(person, area) {
     return el("button", {
-      class: "person-card",
+      class: "data-card person-card",
       type: "button",
       "data-person": person.name,
       onclick: () => openPerson(person, area),
@@ -298,15 +302,18 @@
   }
 
   function renderHierarchy(nodes) {
-    return el("section", { class: "hierarchy-card", "aria-label": "Reporting structure" }, [
-      el("div", { class: "hierarchy-head" }, [
-        el("h3", { class: "hierarchy-title", text: "Reporting structure" }),
+    return el("section", { class: "data-card hierarchy-card", "aria-label": "Reporting structure" }, [
+      el("div", { class: "card-header" }, [
+        el("span", { class: "card-header-icon", html: icon("users"), "aria-hidden": "true" }),
+        el("h3", { class: "card-title", text: "Reporting structure" }),
+      ]),
+      el("div", { class: "card-body" }, [
         el("p", {
           class: "hierarchy-summary",
           text: "A classic tree view showing who each broader branch and sub-team reports through.",
         }),
+        hierarchyList(nodes),
       ]),
-      hierarchyList(nodes),
     ]);
   }
 
@@ -318,9 +325,10 @@
 
   function hierarchyNode(node, depth) {
     const item = el("li", { class: "hierarchy-node" });
-    const meta = el("div", { class: "hierarchy-person" }, [
+    const meta = el("div", { class: "hierarchy-person", "data-depth": String(depth) }, [
       el("span", { class: "hierarchy-avatar", text: initials(node.name), "aria-hidden": "true" }),
       el("div", { class: "hierarchy-meta" }, [
+        el("p", { class: "hierarchy-level", text: `Level ${depth + 1}` }),
         el("p", { class: "hierarchy-name", text: node.name }),
         el("p", { class: "hierarchy-role", text: node.title }),
       ]),
