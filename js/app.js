@@ -277,6 +277,8 @@
   function applyHierarchyFilter(card, filter) {
     if (filter === "All") {
       $$(".hierarchy-node", card).forEach((n) => { n.style.display = ""; });
+      const specSection = card.querySelector(".hierarchy-specialized");
+      if (specSection) specSection.style.display = "";
       card.style.display = "";
       return;
     }
@@ -300,7 +302,15 @@
       });
     }
     const anyVisible = walkVisible(C.teamStructure.hierarchy);
-    card.style.display = anyVisible ? "" : "none";
+
+    // Handle the specialized supports section separately.
+    const specSection = card.querySelector(".hierarchy-specialized");
+    if (specSection && Array.isArray(C.teamStructure.specializedSupports)) {
+      const specVisible = walkVisible(C.teamStructure.specializedSupports);
+      specSection.style.display = specVisible ? "" : "none";
+    }
+
+    card.style.display = (anyVisible || (specSection && specSection.style.display !== "none")) ? "" : "none";
   }
 
   function renderArea(area, expanded) {
@@ -374,18 +384,28 @@
 
   function renderHierarchy(nodes, filter) {
     const titleEl = el("h3", { class: "card-title", text: hierarchyTitle(filter || "All") });
+    const bodyChildren = [
+      el("p", {
+        class: "hierarchy-summary",
+        text: "A classic tree view showing who each broader branch and sub-team reports through.",
+      }),
+      hierarchyList(nodes),
+    ];
+
+    if (Array.isArray(C.teamStructure.specializedSupports) && C.teamStructure.specializedSupports.length) {
+      const specSection = el("div", { class: "hierarchy-specialized" }, [
+        el("p", { class: "hierarchy-specialized-label", text: "Specialized Supports" }),
+        hierarchyList(C.teamStructure.specializedSupports),
+      ]);
+      bodyChildren.push(specSection);
+    }
+
     const card = el("section", { class: "data-card hierarchy-card", "aria-label": "Reporting structure" }, [
       el("div", { class: "card-header" }, [
         el("span", { class: "card-header-icon", html: icon("users"), "aria-hidden": "true" }),
         titleEl,
       ]),
-      el("div", { class: "card-body" }, [
-        el("p", {
-          class: "hierarchy-summary",
-          text: "A classic tree view showing who each broader branch and sub-team reports through.",
-        }),
-        hierarchyList(nodes),
-      ]),
+      el("div", { class: "card-body" }, bodyChildren),
     ]);
     return { card, titleEl };
   }

@@ -633,6 +633,25 @@ body {
   font-size: 0.74rem;
   font-weight: 600;
 }
+.hierarchy-specialized {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 2px dashed var(--border);
+}
+.hierarchy-specialized-label {
+  margin: 0 0 14px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.hierarchy-specialized .hierarchy-tree {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+}
+.hierarchy-specialized .hierarchy-node { margin-top: 0; }
 .filter-bar {
   display: flex;
   flex-wrap: nowrap;
