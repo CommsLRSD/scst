@@ -406,10 +406,156 @@ const SCST_CONTENT = {
               {
                 id: "kelsey-lenaghan",
                 name: "Kelsey Lenaghan",
-                title: "Divisional Indigenous Leader",
+                title: "Divisional Indigenous Education Leader",
                 areaIds: ["indigenous"],
                 summary:
                   "Leads Indigenous education and intercultural understandings across the division. Works alongside schools to strengthen relationships, support IESAP planning, and embed Indigenous perspectives, identities, and ways of knowing into learning.",
+                reports: [
+                  {
+                    id: "sean-oliver",
+                    name: "Sean Oliver",
+                    title: "Indigenous Education",
+                    areaIds: ["indigenous"],
+                    summary:
+                      "Supports schools through land-based learning, cultural teachings, and IESAP — strengthening connection to culture, identity, and community, and creating meaningful learning experiences rooted in relationship.",
+                  },
+                  {
+                    id: "rose-bird",
+                    name: "Rose Bird",
+                    title: "Indigenous Education",
+                    areaIds: ["indigenous"],
+                    summary:
+                      "Partners with schools to support Indigenous language, culture, identity, and IESAP — deepening understanding, strengthening belonging, and creating inclusive learning environments grounded in respect and connection.",
+                  },
+                  {
+                    id: "judith-saunders-mckay",
+                    name: "Judith Saunders-McKay",
+                    title: "Indigenous Education",
+                    areaIds: ["indigenous"],
+                    summary:
+                      "Supports Indigenous education through language, cultural learning, relationship-building, and IESAP — fostering understanding, respect, and a strong sense of identity and belonging.",
+                  },
+                  {
+                    id: "sam-flamand",
+                    name: "Sam Flamand",
+                    title: "Indigenous Education",
+                    areaIds: ["indigenous"],
+                    summary:
+                      "Supports Indigenous language and cultural learning across schools and IESAP — strengthening culturally responsive practices and creating spaces where students feel seen, valued, and connected.",
+                  },
+                  {
+                    id: "trish-wilson",
+                    name: "Trish Wilson",
+                    title: "Indigenous Education",
+                    areaIds: ["indigenous"],
+                    summary:
+                      "Works with schools to support Indigenous education through cultural programming, relationship-building, student engagement, and IESAP — while supporting staff learning and inclusive, welcoming environments.",
+                  },
+                  {
+                    id: "tammy-bruce",
+                    name: "Tammy Bruce",
+                    title: "Community Liaison – Indigenous Academic Support",
+                    areaIds: ["indigenous"],
+                    summary:
+                      "Connects students, families, schools, and community supports — strengthening relationships, supporting student well-being, and ensuring schools are responsive to the needs and strengths of their communities.",
+                  },
+                  {
+                    id: "alice-mckay",
+                    name: "Alice McKay",
+                    title: "Ojibwe Teacher — Indigenous Language Team",
+                    areaIds: ["indigenous"],
+                    summary:
+                      "Teaches Ojibwe language and supports students in developing strong connections to language, culture, and identity, while supporting IESAP and deepening understanding of Indigenous ways of knowing.",
+                  },
+                  {
+                    id: "courtney-pranteau",
+                    name: "Courtney Pranteau",
+                    title: "Cree Teacher — Indigenous Language Team",
+                    areaIds: ["indigenous"],
+                    summary:
+                      "Teaches Cree language and works with students to build confidence and connection through language learning while supporting IESAP, cultural understanding, identity, and belonging.",
+                  },
+                  {
+                    id: "maxine-lavitt",
+                    name: "Maxine Lavitt",
+                    title: "Michif Instructor — Indigenous Language Team",
+                    areaIds: ["indigenous"],
+                    summary:
+                      "Teaches Michif, supporting language revitalization and cultural connection while supporting IESAP — strengthening identity, pride, and understanding of Métis culture through meaningful learning.",
+                  },
+                  {
+                    id: "cub-spring",
+                    name: "Cub Spring",
+                    title: "Ojibwe Instructor — Indigenous Language Team",
+                    areaIds: ["indigenous"],
+                    summary:
+                      "Supports students in learning Ojibwe language while fostering connection to culture and community and supporting IESAP — creating engaging, meaningful language learning opportunities.",
+                  },
+                  {
+                    id: "rhea-paul",
+                    name: "Rhea Paul",
+                    title: "Ojibwe Instructor — Indigenous Language Team",
+                    areaIds: ["indigenous"],
+                    summary:
+                      "Supports Ojibwe language learning across schools, helping students develop communication skills and cultural understanding while supporting IESAP and strengthening identity and belonging.",
+                  },
+                  {
+                    id: "alyssa-guimond",
+                    name: "Alyssa Guimond",
+                    title: "Ojibwe Instructor — Indigenous Language Team",
+                    areaIds: ["indigenous"],
+                    summary:
+                      "Supports students in learning Ojibwe language in engaging, responsive ways while supporting IESAP — working with school teams to support language development and cultural connection.",
+                  },
+                  {
+                    id: "hailey-mckay",
+                    name: "Hailey McKay",
+                    title: "Cree Instructor — Indigenous Language Team",
+                    areaIds: ["indigenous"],
+                    summary:
+                      "Supports Cree language learning and works with students to build connection, confidence, and cultural understanding while supporting IESAP and creating inclusive environments where language and identity are valued.",
+                  },
+                  {
+                    id: "destanee-ducharme",
+                    name: "Destanee Ducharme",
+                    title: "Cree Instructor — Indigenous Language Team",
+                    areaIds: ["indigenous"],
+                    summary:
+                      "Supports Cree language instruction and works with students to strengthen their understanding of culture, identity, and community while supporting IESAP and creating meaningful, connected learning experiences.",
+                  },
+                  {
+                    id: "rose-mckay",
+                    name: "Rose McKay",
+                    title: "Cree Instructor — Indigenous Language Team",
+                    areaIds: ["indigenous"],
+                    summary:
+                      "Supports Cree language learning through relationship, storytelling, and cultural connection while supporting IESAP — helping students build confidence and pride in language and identity.",
+                  },
+                ],
+              },
+              {
+                id: "kristyn-artibise",
+                name: "Kristyn Artibise",
+                title: "Instructional Support Teacher (Numeracy)",
+                areaIds: ["instructional"],
+                summary:
+                  "Supports schools in strengthening numeracy instruction through data-informed practices, targeted intervention planning, and collaborative problem solving — building confidence and capacity in teaching mathematics so all students can succeed.",
+              },
+              {
+                id: "kristen-mcdowell",
+                name: "Kristen McDowell",
+                title: "Instructional Support Teacher (Literacy)",
+                areaIds: ["instructional"],
+                summary:
+                  "Partners with schools to strengthen literacy instruction using structured, evidence-informed approaches, supporting educators through coaching, co-planning, and the use of data to guide responsive instruction.",
+              },
+              {
+                id: "genevieve-shyiak",
+                name: "Geneviève Shyiak",
+                title: "Instructional Support Teacher (Literacy)",
+                areaIds: ["instructional"],
+                summary:
+                  "Works collaboratively with school teams to enhance literacy learning and instructional practice, supporting teachers in using data to inform instruction, monitor progress, and create responsive learning environments.",
               },
             ],
           },
@@ -428,6 +574,56 @@ const SCST_CONTENT = {
                 areaIds: ["clinical"],
                 summary:
                   "Supports the delivery of clinical services across the division, coordinating interdisciplinary supports. Works with school teams to strengthen practices that support learning, communication, regulation, and well-being.",
+                reports: [
+                  {
+                    id: "robert-george",
+                    name: "Robert George",
+                    title: "Psychologist",
+                    areaIds: ["clinical"],
+                    summary:
+                      "Supports schools through assessment, consultation, and collaborative problem solving — helping educators understand student learning and well-being needs to guide effective, data-informed supports and interventions.",
+                  },
+                  {
+                    id: "travis-hoare",
+                    name: "Travis Hoare",
+                    title: "Occupational Therapist",
+                    areaIds: ["clinical"],
+                    summary:
+                      "Supports students in developing self-regulation, independence, and participation in learning, working with school teams to design inclusive, responsive strategies for daily classroom success.",
+                  },
+                  {
+                    id: "karla-guiterrez",
+                    name: "Karla Guiterrez",
+                    title: "Speech Language Pathologist",
+                    areaIds: ["clinical"],
+                    summary:
+                      "Supports students and educators in strengthening communication, language development, and literacy foundations, collaborating with school teams on strategies that support learning, engagement, and participation.",
+                  },
+                  {
+                    id: "kim-mackey",
+                    name: "Kim Mackey",
+                    title: "Social Worker",
+                    areaIds: ["clinical"],
+                    summary:
+                      "Supports students' social-emotional well-being, mental health, and sense of belonging — collaborating with educators, families, and community partners to help students build resilience and engage fully in learning.",
+                  },
+                ],
+              },
+              {
+                id: "kerri-bush",
+                name: "Kerri Bush",
+                title: "Instructional Support / Student Services",
+                areaIds: ["student-services"],
+                summary:
+                  "Supports schools in creating inclusive, responsive learning environments — strengthening classroom practices, supporting social-emotional learning, and building strategies that enhance student well-being and engagement.",
+              },
+              {
+                id: "rose-pagtakhan",
+                name: "Rose Pagtakhan",
+                title: "Instructional Support / Student Services",
+                areaIds: ["student-services"],
+                summary:
+                  "Specializes in supporting multilingual learners across the division, partnering with teachers to design inclusive, language-rich instruction that supports both academic achievement and language development.",
               },
             ],
           },
@@ -475,7 +671,7 @@ const SCST_CONTENT = {
           },
           {
             name: "Kelsey Lenaghan",
-            title: "Divisional Indigenous Leader",
+            title: "Divisional Indigenous Education Leader",
             summary:
               "Leads Indigenous education and intercultural understandings across the division. Works alongside schools to strengthen relationships, support IESAP planning, and embed Indigenous perspectives, identities, and ways of knowing into learning.",
           },
