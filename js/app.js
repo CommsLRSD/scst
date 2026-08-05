@@ -186,6 +186,10 @@
   function renderTeam() {
     const wrap = el("div", { class: "team-wrap" });
 
+    if (Array.isArray(C.teamStructure.hierarchy) && C.teamStructure.hierarchy.length) {
+      wrap.append(renderHierarchy(C.teamStructure.hierarchy));
+    }
+
     // Filter chips (plain-language labels).
     const filters = ["All", ...C.teamStructure.areas.map((a) => a.filter)];
     const bar = el("div", { class: "filter-bar", role: "group", "aria-label": "Filter team by area" });
@@ -291,6 +295,52 @@
         `<span class="person-role">${escapeHtml(person.title)}</span>` +
         `</span>`,
     });
+  }
+
+  function renderHierarchy(nodes) {
+    return el("section", { class: "hierarchy-card", "aria-label": "Reporting structure" }, [
+      el("div", { class: "hierarchy-head" }, [
+        el("h3", { class: "hierarchy-title", text: "Reporting structure" }),
+        el("p", {
+          class: "hierarchy-summary",
+          text: "A classic tree view showing who each broader branch and sub-team reports through.",
+        }),
+      ]),
+      hierarchyList(nodes),
+    ]);
+  }
+
+  function hierarchyList(nodes, depth = 0) {
+    const list = el("ol", { class: depth === 0 ? "hierarchy-tree" : "hierarchy-branch" });
+    nodes.forEach((node) => list.append(hierarchyNode(node, depth)));
+    return list;
+  }
+
+  function hierarchyNode(node, depth) {
+    const item = el("li", { class: "hierarchy-node" });
+    const meta = el("div", { class: "hierarchy-person" }, [
+      el("span", { class: "hierarchy-avatar", text: initials(node.name), "aria-hidden": "true" }),
+      el("div", { class: "hierarchy-meta" }, [
+        el("p", { class: "hierarchy-name", text: node.name }),
+        el("p", { class: "hierarchy-role", text: node.title }),
+      ]),
+    ]);
+    item.append(meta);
+
+    if (Array.isArray(node.areaIds) && node.areaIds.length) {
+      const chips = el("div", { class: "hierarchy-areas", "aria-label": "Areas" });
+      node.areaIds
+        .map((id) => C.teamStructure.areas.find((area) => area.id === id))
+        .filter(Boolean)
+        .forEach((area) => chips.append(el("span", { class: "hierarchy-area-chip", text: area.title })));
+      item.append(chips);
+    }
+
+    if (node.reports && node.reports.length) {
+      item.append(hierarchyList(node.reports, depth + 1));
+    }
+
+    return item;
   }
 
   /* ------------------------------------------------------------- Guided step */
