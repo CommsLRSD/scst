@@ -206,18 +206,28 @@
   }
 
   /* ----------------------------------------------------------- Team component */
+  function hierarchyTitle(filter) {
+    if (filter === "All") return "School and Classroom Supports";
+    const area = C.teamStructure.areas.find((a) => a.filter === filter);
+    return area ? area.title : filter;
+  }
+
   function renderTeam() {
     const wrap = el("div", { class: "team-wrap" });
 
-    let hierarchyCard = null;
-    if (Array.isArray(C.teamStructure.hierarchy) && C.teamStructure.hierarchy.length) {
-      hierarchyCard = renderHierarchy(C.teamStructure.hierarchy);
-      wrap.append(hierarchyCard);
-    }
-
-    // Filter chips (plain-language labels).
+    // Filter chips (plain-language labels) — rendered ABOVE the hierarchy.
     const filters = ["All", ...C.teamStructure.areas.map((a) => a.filter)];
     const bar = el("div", { class: "filter-bar", role: "group", "aria-label": "Filter team by area" });
+
+    let hierarchyCard = null;
+    let hierarchyTitleEl = null;
+
+    if (Array.isArray(C.teamStructure.hierarchy) && C.teamStructure.hierarchy.length) {
+      const result = renderHierarchy(C.teamStructure.hierarchy, State.teamFilter);
+      hierarchyCard = result.card;
+      hierarchyTitleEl = result.titleEl;
+    }
+
     filters.forEach((f) => {
       bar.append(
         el("button", {
@@ -230,6 +240,7 @@
             $$(".filter-chip", bar).forEach((c) =>
               c.setAttribute("aria-pressed", String(c.textContent === f))
             );
+            if (hierarchyTitleEl) hierarchyTitleEl.textContent = hierarchyTitle(f);
             applyTeamFilter(list, f);
             if (hierarchyCard) applyHierarchyFilter(hierarchyCard, f);
           },
@@ -237,6 +248,8 @@
       );
     });
     wrap.append(bar);
+
+    if (hierarchyCard) wrap.append(hierarchyCard);
 
     const list = el("div", { class: "area-list" });
     C.teamStructure.areas.forEach((area, idx) => {
@@ -259,7 +272,7 @@
    * Show only hierarchy nodes whose areaIds include the active filter area,
    * plus any ancestor nodes needed to maintain the chain up to the root.
    * When filter is "All", all nodes are visible.
-   * Hides the entire card when no nodes match (e.g. Specialized Supports).
+   * Hides the entire card when no nodes match.
    */
   function applyHierarchyFilter(card, filter) {
     if (filter === "All") {
@@ -359,11 +372,12 @@
     });
   }
 
-  function renderHierarchy(nodes) {
-    return el("section", { class: "data-card hierarchy-card", "aria-label": "Reporting structure" }, [
+  function renderHierarchy(nodes, filter) {
+    const titleEl = el("h3", { class: "card-title", text: hierarchyTitle(filter || "All") });
+    const card = el("section", { class: "data-card hierarchy-card", "aria-label": "Reporting structure" }, [
       el("div", { class: "card-header" }, [
         el("span", { class: "card-header-icon", html: icon("users"), "aria-hidden": "true" }),
-        el("h3", { class: "card-title", text: "Reporting structure" }),
+        titleEl,
       ]),
       el("div", { class: "card-body" }, [
         el("p", {
@@ -373,6 +387,7 @@
         hierarchyList(nodes),
       ]),
     ]);
+    return { card, titleEl };
   }
 
   function hierarchyList(nodes, depth = 0) {
