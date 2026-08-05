@@ -1,74 +1,76 @@
 /* =============================================================================
  * SCST — Interactive Knowledge Experience
- * Design goals: modern, sleek, calm, low-scroll, accessible.
+ * Visual language mirrors the CommsLRSD/school-dashboard design system:
+ * Poppins/Ubuntu type, LRSD red + green accents, light neutral surfaces,
+ * soft layered shadows and 10–12px radii.
  * Tokens live in :root (light) and [data-theme="dark"] (dark mode).
  * ========================================================================== */
 
 :root {
-  /* Palette — calm, education-appropriate teal/ink with warm accent */
-  --ink: #17252a;
-  --ink-soft: #41565c;
-  --ink-faint: #6b7f85;
-  --bg: #f4f7f6;
-  --bg-2: #e9efee;
+  /* Palette — school-dashboard neutrals + LRSD red/green accents */
+  --ink: #212529;
+  --ink-soft: #6b7280;
+  --ink-faint: #adb5bd;
+  --bg: #f8f9fa;
+  --bg-2: #eef0f2;
   --surface: #ffffff;
-  --surface-2: #f7faf9;
-  --border: #dbe5e3;
-  --border-strong: #c4d3d0;
+  --surface-2: #f8f9fa;
+  --border: #dee2e6;
+  --border-strong: #ced4da;
 
-  --brand: #0f6e6a;
-  --brand-2: #12857f;
-  --brand-ink: #0a4d4a;
-  --brand-tint: #e3f1ef;
-  --accent: #c9663a;
-  --accent-tint: #f7e9e1;
+  --brand: #BE5247;
+  --brand-2: #BE5247;
+  --brand-ink: #B23427;
+  --brand-tint: #f7eae8;
+  --accent: #2BA680;
+  --accent-tint: #e6f5ef;
 
-  --tier1: #2f7d6f;
-  --tier2: #b7791f;
-  --tier3: #b4512f;
+  --tier1: #2BA680;
+  --tier2: #f59e0b;
+  --tier3: #BE5247;
 
-  --focus: #1a936f;
-  --shadow-sm: 0 1px 2px rgba(23, 37, 42, 0.06), 0 1px 3px rgba(23, 37, 42, 0.05);
-  --shadow-md: 0 6px 20px -8px rgba(23, 37, 42, 0.18);
-  --shadow-lg: 0 24px 60px -20px rgba(23, 37, 42, 0.35);
+  --focus: #2BA680;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 
-  --radius: 16px;
+  --radius: 12px;
   --radius-sm: 10px;
-  --radius-lg: 26px;
+  --radius-lg: 12px;
   --maxw: 1080px;
 
-  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
-  --dur: 0.42s;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur: 0.3s;
 
-  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-sans: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Ubuntu", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 [data-theme="dark"] {
-  --ink: #eaf2f0;
-  --ink-soft: #b7c8c5;
-  --ink-faint: #8ba09c;
-  --bg: #0d1614;
-  --bg-2: #0a1210;
-  --surface: #14201e;
-  --surface-2: #1a2725;
-  --border: #26332f;
-  --border-strong: #33443f;
+  --ink: #f1f3f5;
+  --ink-soft: #c2c8ce;
+  --ink-faint: #98a1aa;
+  --bg: #16181b;
+  --bg-2: #1f2226;
+  --surface: #202327;
+  --surface-2: #26292e;
+  --border: #343a40;
+  --border-strong: #454b52;
 
-  --brand: #4fd1c5;
-  --brand-2: #38b2ac;
-  --brand-ink: #9beee6;
-  --brand-tint: #133430;
-  --accent: #e79a6f;
-  --accent-tint: #33221a;
+  --brand: #d8776b;
+  --brand-2: #d8776b;
+  --brand-ink: #eda093;
+  --brand-tint: #3a2422;
+  --accent: #45c79c;
+  --accent-tint: #1d3730;
 
-  --tier1: #5bc9b3;
-  --tier2: #e0b968;
-  --tier3: #e79370;
+  --tier1: #45c79c;
+  --tier2: #f0b34a;
+  --tier3: #d8776b;
 
-  --focus: #6ee7c7;
-  --shadow-md: 0 6px 22px -8px rgba(0, 0, 0, 0.6);
-  --shadow-lg: 0 28px 70px -20px rgba(0, 0, 0, 0.75);
+  --focus: #45c79c;
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
 }
 
 * { box-sizing: border-box; }
@@ -80,10 +82,7 @@ body {
   margin: 0;
   font-family: var(--font-sans);
   color: var(--ink);
-  background:
-    radial-gradient(1200px 600px at 15% -10%, var(--brand-tint), transparent 60%),
-    radial-gradient(900px 500px at 100% 110%, var(--accent-tint), transparent 55%),
-    var(--bg);
+  background-color: var(--bg);
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
@@ -152,7 +151,7 @@ body {
   width: 34px;
   height: 34px;
   border-radius: 11px;
-  background: linear-gradient(140deg, var(--brand-2), var(--brand-ink));
+  background: var(--brand);
   box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12), var(--shadow-sm);
   position: relative;
   flex: none;
@@ -235,11 +234,17 @@ body {
 }
 .landing-title {
   font-family: var(--font-serif);
-  font-weight: 500;
+  font-weight: 700;
   font-size: clamp(2.1rem, 5.5vw, 3.5rem);
   line-height: 1.05;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-variant: small-caps;
   margin: 0 0 14px;
+  background: linear-gradient(135deg, var(--brand) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .landing-tagline {
   font-size: clamp(1rem, 2.3vw, 1.2rem);
@@ -345,7 +350,7 @@ body {
   height: 100%;
   width: 11%;
   border-radius: 999px;
-  background: linear-gradient(90deg, var(--brand-2), var(--brand));
+  background: var(--accent);
   transition: width 0.5s var(--ease);
 }
 .progress-label {
@@ -447,7 +452,7 @@ body {
 .step-eyebrow .ico { width: 15px; height: 15px; }
 .step-title {
   font-family: var(--font-serif);
-  font-weight: 500;
+  font-weight: 700;
   font-size: clamp(1.5rem, 3.4vw, 2.1rem);
   line-height: 1.12;
   margin: 0 0 8px;
@@ -503,7 +508,7 @@ body {
   transform: rotate(-45deg);
 }
 .block-note {
-  background: linear-gradient(180deg, var(--surface-2), var(--surface));
+  background: var(--surface-2);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 16px 18px;
@@ -532,7 +537,7 @@ body {
   align-items: flex-start;
   padding: 18px 20px;
   border-radius: var(--radius);
-  background: linear-gradient(135deg, var(--brand-tint), color-mix(in srgb, var(--accent-tint) 60%, transparent));
+  background: var(--accent-tint);
   border: 1px solid color-mix(in srgb, var(--brand) 22%, transparent);
 }
 .takeaway .tk-badge {
@@ -572,7 +577,7 @@ body {
 }
 .nav-btn:hover:not(:disabled) { transform: translateY(-1px); border-color: var(--brand); }
 .nav-btn.primary {
-  background: linear-gradient(140deg, var(--brand-2), var(--brand-ink));
+  background: var(--brand);
   color: #fff;
   border-color: transparent;
 }
@@ -590,7 +595,7 @@ body {
 }
 .tier-intro {
   grid-column: 1 / -1;
-  background: linear-gradient(180deg, var(--surface-2), var(--surface));
+  background: var(--surface-2);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 16px 18px;
@@ -623,7 +628,7 @@ body {
   border-radius: 999px;
   padding: 3px 9px;
 }
-.tier-name { font-family: var(--font-serif); font-weight: 500; font-size: 1.2rem; margin: 6px 0 8px; }
+.tier-name { font-family: var(--font-serif); font-weight: 700; font-size: 1.2rem; margin: 6px 0 8px; }
 .tier-summary { font-size: 0.86rem; color: var(--ink-soft); line-height: 1.45; margin: 0 0 12px; }
 .tier-items { list-style: none; padding: 0; margin: 0 0 14px; display: grid; gap: 7px; }
 .tier-items li { font-size: 0.83rem; line-height: 1.4; padding-left: 18px; position: relative; color: var(--ink-soft); }
@@ -649,14 +654,14 @@ body {
   padding: 20px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  background: linear-gradient(180deg, var(--surface), var(--surface-2));
+  background: var(--surface);
   box-shadow: var(--shadow-sm);
 }
 .hierarchy-head { margin-bottom: 16px; }
 .hierarchy-title {
   margin: 0 0 6px;
   font-family: var(--font-serif);
-  font-weight: 500;
+  font-weight: 700;
   font-size: 1.35rem;
 }
 .hierarchy-summary {
@@ -709,7 +714,7 @@ body {
   font-size: 0.88rem;
   font-weight: 600;
   color: #fff;
-  background: linear-gradient(140deg, var(--brand-2), var(--brand-ink));
+  background: var(--brand);
 }
 .hierarchy-meta { min-width: 0; }
 .hierarchy-name {
@@ -761,7 +766,7 @@ body {
 }
 .filter-chip:hover { border-color: var(--brand); color: var(--brand-ink); }
 .filter-chip[aria-pressed="true"] {
-  background: linear-gradient(140deg, var(--brand-2), var(--brand-ink));
+  background: var(--brand);
   color: #fff;
   border-color: transparent;
 }
@@ -881,7 +886,7 @@ body {
   font-weight: 600;
   font-size: 0.9rem;
   color: #fff;
-  background: linear-gradient(140deg, var(--brand-2), var(--brand-ink));
+  background: var(--brand);
 }
 .person-meta { min-width: 0; }
 .person-name { font-weight: 600; font-size: 0.92rem; }
@@ -1008,7 +1013,7 @@ body {
   color: var(--brand);
   margin: 0 0 12px;
 }
-.modal-name { font-family: var(--font-serif); font-weight: 500; font-size: 1.7rem; margin: 0 0 4px; }
+.modal-name { font-family: var(--font-serif); font-weight: 700; font-size: 1.7rem; margin: 0 0 4px; }
 .modal-role { color: var(--ink-soft); font-weight: 500; margin: 0 0 16px; }
 .modal-summary { color: var(--ink-soft); line-height: 1.6; margin: 0; }
 .modal-actions { margin-top: 18px; display: flex; gap: 10px; }
