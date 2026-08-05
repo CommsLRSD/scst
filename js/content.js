@@ -671,7 +671,7 @@ const SCST_CONTENT = {
           },
           {
             name: "Kelsey Lenaghan",
-            title: "Divisional Indigenous Leader",
+            title: "Divisional Indigenous Education Leader",
             summary:
               "Leads Indigenous education and intercultural understandings across the division. Works alongside schools to strengthen relationships, support IESAP planning, and embed Indigenous perspectives, identities, and ways of knowing into learning.",
           },

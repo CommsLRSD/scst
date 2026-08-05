@@ -209,8 +209,10 @@
   function renderTeam() {
     const wrap = el("div", { class: "team-wrap" });
 
+    let hierarchyCard = null;
     if (Array.isArray(C.teamStructure.hierarchy) && C.teamStructure.hierarchy.length) {
-      wrap.append(renderHierarchy(C.teamStructure.hierarchy));
+      hierarchyCard = renderHierarchy(C.teamStructure.hierarchy);
+      wrap.append(hierarchyCard);
     }
 
     // Filter chips (plain-language labels).
@@ -229,6 +231,7 @@
               c.setAttribute("aria-pressed", String(c.textContent === f))
             );
             applyTeamFilter(list, f);
+            if (hierarchyCard) applyHierarchyFilter(hierarchyCard, f);
           },
         })
       );
@@ -241,6 +244,7 @@
     });
     wrap.append(list);
     applyTeamFilter(list, State.teamFilter);
+    if (hierarchyCard) applyHierarchyFilter(hierarchyCard, State.teamFilter);
     return wrap;
   }
 
@@ -249,6 +253,41 @@
       const show = filter === "All" || node.dataset.filter === filter;
       node.style.display = show ? "" : "none";
     });
+  }
+
+  /**
+   * Show only hierarchy nodes whose areaIds include the active filter area,
+   * plus any ancestor nodes needed to maintain the chain up to the root.
+   * When filter is "All", all nodes are visible.
+   * Hides the entire card when no nodes match (e.g. Specialized Supports).
+   */
+  function applyHierarchyFilter(card, filter) {
+    if (filter === "All") {
+      $$(".hierarchy-node", card).forEach((n) => { n.style.display = ""; });
+      card.style.display = "";
+      return;
+    }
+    // Find the matching area id for the active filter label.
+    const area = C.teamStructure.areas.find((a) => a.filter === filter);
+    const activeId = area ? area.id : null;
+
+    // Walk each node: show it if its areaIds includes the active area OR if
+    // it has any visible descendant (so the chain from root is preserved).
+    function walkVisible(nodes) {
+      // Returns true if any node in the list (or its subtree) matches.
+      return nodes.some((node) => {
+        const nodeEl = card.querySelector(`[data-node-id="${node.id}"]`);
+        const selfMatches = Array.isArray(node.areaIds) && node.areaIds.includes(activeId);
+        const childMatches = Array.isArray(node.reports) && node.reports.length
+          ? walkVisible(node.reports)
+          : false;
+        const visible = selfMatches || childMatches;
+        if (nodeEl) nodeEl.style.display = visible ? "" : "none";
+        return visible;
+      });
+    }
+    const anyVisible = walkVisible(C.teamStructure.hierarchy);
+    card.style.display = anyVisible ? "" : "none";
   }
 
   function renderArea(area, expanded) {
@@ -343,7 +382,7 @@
   }
 
   function hierarchyNode(node, depth) {
-    const item = el("li", { class: "hierarchy-node" });
+    const item = el("li", { class: "hierarchy-node", "data-node-id": node.id || "" });
     const meta = el("div", { class: "hierarchy-person", "data-depth": String(depth) }, [
       el("span", { class: "hierarchy-avatar", text: initials(node.name), "aria-hidden": "true" }),
       el("div", { class: "hierarchy-meta" }, [
