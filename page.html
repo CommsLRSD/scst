@@ -1,1023 +1,514 @@
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<!-- Load fonts (same as the other page) -->
 
+<p>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+	<br>
+</p>
 <div class="lrsd-page-content">
-  <div class="page-container">
+	<div class="page-container">
+		<main class="main-content">
 
-    <!-- ── Intro ─────────────────────────────────────────────────────── -->
-    <section class="intro-section">
-      <p class="intro-tagline">Supporting Every School. Strengthening Every Classroom. Ensuring Every Student Thrives.</p>
-      <p class="intro-body">An interactive guide to how the School and Classroom Support Team (SCST) partners with schools across Louis Riel School Division to strengthen student learning, well-being, and belonging.</p>
-    </section>
+			<h1 class="page-title" style="text-align: center;">School &amp; Classroom Support Team</h1>
 
-    <!-- ── SVG Sprite ─────────────────────────────────────────────────── -->
-    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-      <defs>
-        <symbol id="i-compass" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></g></symbol>
-        <symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 20s-7-4.4-9.3-8.5A4.7 4.7 0 0 1 12 6a4.7 4.7 0 0 1 9.3 5.5C19 15.6 12 20 12 20Z"/></symbol>
-        <symbol id="i-handshake" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m3 12 4-4 4 3 3-1 4 4M11 11l2 2m-2 4 2 2 2-2 2 2M3 12v4l3 3M21 14v-4"/></symbol>
-        <symbol id="i-layers" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m12 3 9 5-9 5-9-5 9-5Zm9 9-9 5-9-5m18 4-9 5-9-5"/></symbol>
-        <symbol id="i-chart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 20V4m0 16h16M8 16v-4m4 4V8m4 8v-6"/></symbol>
-        <symbol id="i-users" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0M16 5.5a3 3 0 0 1 0 5.9M17 14a6 6 0 0 1 4 6"/></g></symbol>
-        <symbol id="i-building" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 21V5l7-2 7 2v16M9 8h.01M9 12h.01M9 16h.01M15 8h.01M15 12h.01M15 16h.01"/></symbol>
-        <symbol id="i-route" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M8 19h6a4 4 0 0 0 0-8H10a4 4 0 0 1 0-8h6"/></g></symbol>
-        <symbol id="i-telescope" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m3 14 12-6 3 5-12 6-3-5Zm12-6 3-4 4 2-3 5M9 17l-2 4m6-6-1 6"/></symbol>
-        <symbol id="i-star" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="m12 3 2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.9l1-5.8L3.5 9.9l5.9-.9L12 3Z"/></symbol>
-        <symbol id="i-book" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 5a2 2 0 0 1 2-2h6v16H6a2 2 0 0 0-2 2V5Zm16 0a2 2 0 0 0-2-2h-6v16h6a2 2 0 0 1 2 2V5Z"/></symbol>
-        <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3 5 6v5c0 4.5 3 8 7 10 4-2 7-5.5 7-10V6l-7-3Zm-2 8 1.6 1.6L15 9"/></symbol>
-        <symbol id="i-feather" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20 4A8 8 0 0 0 8 5L4 9v11M20 4c1 6-2 11-8 12l-4 .5M20 4 9 15m5-5H9"/></symbol>
-        <symbol id="i-pulse" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 12h4l2-6 4 12 2-6h6"/></symbol>
-        <symbol id="i-sparkles" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3v6m0 6v6m-9-9h6m6 0h6M6 6l3 3m6 6 3 3m0-12-3 3m-6 6-3 3"/></symbol>
-        <symbol id="i-chevron" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></symbol>
-      </defs>
-    </svg>
+			<p class="page-subtitle" style="text-align: center;"><strong>Supporting Every School. Strengthening Every Classroom. Ensuring Every Student Thrives.</strong>
+				<br>How the School and Classroom Support Team (SCST) partners with schools across Louis Riel School Division to strengthen student learning, well-being, and belonging.</p>
+		</main>
 
-    <!-- 1. Who We Are -->
-    <div class="scst-section">
-      <button class="acc-toggle" aria-expanded="true" aria-controls="sec-overview">
-        <span class="acc-icon"><svg><use href="#i-compass"/></svg></span>
-        <span class="acc-text">
-          <span class="acc-eyebrow">Overview</span>
-          <span class="acc-title">Who We Are</span>
-        </span>
-        <svg class="acc-chevron" aria-hidden="true"><use href="#i-chevron"/></svg>
-      </button>
-      <div class="acc-body" id="sec-overview">
-        <p class="lead-text">The School and Classroom Support Team (SCST) partners with schools across the Louis Riel School Division to strengthen student learning, well-being, and belonging.</p>
+		<main class="main-content">
+			<br>
+			<section class="info-section">
+				<div class="info-content">
 
-        <div class="two-col">
-          <div class="info-block">
-            <h3>Our work is grounded in</h3>
-            <ul class="bullet-list">
-              <li>Equity and reconciliation</li>
-              <li>Evidence-informed practice</li>
-              <li>Strong, relational partnerships with school teams and communities</li>
-            </ul>
-          </div>
-          <div class="info-block">
-            <h3>We work alongside schools to</h3>
-            <ul class="bullet-list">
-              <li>Build instructional and system capacity</li>
-              <li>Respond to identified student and school needs</li>
-              <li>Close opportunity gaps — particularly for Indigenous students and learners experiencing barriers</li>
-            </ul>
-          </div>
-        </div>
+					<h2>Who We Are</h2>
 
-        <div class="callout">
-          SCST is a coordinated, system-level team that integrates leadership, instructional support, clinical services, Indigenous education, and specialized supports into one aligned model.
-        </div>
+					<p>The School and Classroom Support Team (SCST) partners with schools across the Louis Riel School Division to strengthen student learning, well-being, and belonging.</p>
 
-        <div class="takeaway-bar">
-          <strong>Key takeaway:</strong> SCST is one aligned, system-level team focused on equity, evidence, and strong partnerships with schools.
-        </div>
-      </div>
-    </div>
+					<p>SCST is a coordinated, system-level team that integrates leadership, instructional support, clinical services, Indigenous education, and specialized supports into one aligned model.</p>
 
-    <!-- 2. Why This Matters -->
-    <div class="scst-section">
-      <button class="acc-toggle" aria-expanded="false" aria-controls="sec-why">
-        <span class="acc-icon"><svg><use href="#i-heart"/></svg></span>
-        <span class="acc-text">
-          <span class="acc-eyebrow">Why This Matters</span>
-          <span class="acc-title">Why This Work Matters</span>
-        </span>
-        <svg class="acc-chevron" aria-hidden="true"><use href="#i-chevron"/></svg>
-      </button>
-      <div class="acc-body" id="sec-why" hidden>
-        <div class="three-col">
-          <div class="info-block">
-            <h3>Divisional data continues to highlight</h3>
-            <ul class="bullet-list">
-              <li>Persistent achievement gaps across schools</li>
-              <li>Disproportionate impact on Indigenous students</li>
-              <li>Students with multiple indicators of risk (academic, engagement, attendance)</li>
-            </ul>
-          </div>
-          <div class="info-block">
-            <h3>This data informs how SCST prioritizes support</h3>
-            <ul class="bullet-list">
-              <li>Schools with the greatest need receive more intensive and coordinated support</li>
-              <li>Supports are constantly monitored and adjusted based on impact</li>
-            </ul>
-          </div>
-          <div class="info-block">
-            <h3>Advancing the LRSD Multi-Year Strategic Plan through</h3>
-            <ul class="bullet-list">
-              <li>Closing opportunity gaps</li>
-              <li>Strengthening responsive instruction</li>
-              <li>Supporting belonging and well-being</li>
-              <li>Embedding Indigenous education and reconciliation</li>
-            </ul>
-          </div>
-        </div>
-        <div class="takeaway-bar">
-          <strong>Key takeaway:</strong> Data reveals real gaps — SCST directs the most coordinated support to the schools that need it most.
-        </div>
-      </div>
-    </div>
+					<div class="two-col">
+						<div>
+							<h3>Our work is grounded in</h3>
+							<ul>
+								<li>Equity and reconciliation</li>
+								<li>Evidence-informed practice</li>
+								<li>Strong, relational partnerships with school teams and communities</li>
+							</ul>
+						</div>
+						<div>
+							<h3>We work alongside schools to</h3>
+							<ul>
+								<li>Build instructional and system capacity</li>
+								<li>Respond to identified student and school needs</li>
+								<li>Close opportunity gaps — particularly for Indigenous students and learners experiencing barriers</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
 
-    <!-- 3. How We Support Schools -->
-    <div class="scst-section">
-      <button class="acc-toggle" aria-expanded="false" aria-controls="sec-how">
-        <span class="acc-icon"><svg><use href="#i-handshake"/></svg></span>
-        <span class="acc-text">
-          <span class="acc-eyebrow">How Support Works</span>
-          <span class="acc-title">How We Support Schools</span>
-        </span>
-        <svg class="acc-chevron" aria-hidden="true"><use href="#i-chevron"/></svg>
-      </button>
-      <div class="acc-body" id="sec-how" hidden>
-        <p class="lead-text">SCST provides differentiated, data-informed support, collaborating with schools rather than working in isolation.</p>
-        <div class="info-section">
-          <h3>SCST collaborates with schools to</h3>
-          <ul class="bullet-list">
-            <li>Analyze data</li>
-            <li>Strengthen instructional practice</li>
-            <li>Support professional learning</li>
-            <li>Mentor staff</li>
-            <li>Build inclusive and culturally responsive environments</li>
-          </ul>
-        </div>
-        <div class="takeaway-bar">
-          <strong>Key takeaway:</strong> Support is differentiated and collaborative — grounded in data and focused on building lasting capacity.
-        </div>
-      </div>
-    </div>
+		<main class="main-content">
+			<br>
+			<section class="info-section">
+				<div class="info-content">
 
-    <!-- 4. Levels of Support (Tiers) -->
-    <div class="scst-section">
-      <button class="acc-toggle" aria-expanded="false" aria-controls="sec-tiers">
-        <span class="acc-icon"><svg><use href="#i-layers"/></svg></span>
-        <span class="acc-text">
-          <span class="acc-eyebrow">Levels / Tiers</span>
-          <span class="acc-title">Levels of Support</span>
-        </span>
-        <svg class="acc-chevron" aria-hidden="true"><use href="#i-chevron"/></svg>
-      </button>
-      <div class="acc-body" id="sec-tiers" hidden>
-        <p class="lead-text">SCST support is organized into three tiers — each tier builds on the one before it.</p>
+					<h2>Why This Work Matters</h2>
 
-        <div class="tier-grid">
-          <div class="tier-card tier-1">
-            <div class="tier-badge-row">
-              <span class="tier-badge">Tier 1</span>
-              <span class="tier-reach">All schools</span>
-            </div>
-            <h3>Universal Support</h3>
-            <p class="tier-summary">Building strong, inclusive, and responsive learning environments for every school.</p>
-            <ul class="tier-list">
-              <li>Access to divisional professional learning opportunities</li>
-              <li>Universal resources, tools, and frameworks</li>
-              <li>Consultation upon request</li>
-              <li>Support for divisional priorities (literacy, numeracy, well-being, Indigenous education)</li>
-              <li>Networking and collaboration across schools</li>
-            </ul>
-            <p class="tier-goal"><em>Goal: Proactive capacity building so all students experience a high-quality, equitable learning environment.</em></p>
-          </div>
+					<p>Divisional data continues to highlight persistent achievement gaps across schools, disproportionate impact on Indigenous students, and students with multiple indicators of risk.</p>
 
-          <div class="tier-card tier-2">
-            <div class="tier-badge-row">
-              <span class="tier-badge">Tier 2</span>
-              <span class="tier-reach">Identified schools</span>
-            </div>
-            <h3>Targeted Support</h3>
-            <p class="tier-summary">Short- to medium-term support focused on specific areas of need identified through data and context.</p>
-            <ul class="tier-list">
-              <li>Planned cycles of support (coaching, consultation, or collaborative inquiry)</li>
-              <li>Evidence-informed strategy implementation</li>
-              <li>Joint problem-solving with school teams and leadership</li>
-              <li>Tailored professional learning</li>
-              <li>Check-ins to monitor progress and adjust supports</li>
-            </ul>
-            <p class="tier-goal"><em>Goal: Strengthen key practices, build staff confidence, and address emerging needs before they intensify.</em></p>
-          </div>
+					<div class="two-col">
+						<div>
+							<h3>This data informs how SCST prioritizes support</h3>
+							<ul>
+								<li>Schools with the greatest need receive more intensive and coordinated support</li>
+								<li>Supports are constantly monitored and adjusted based on impact</li>
+							</ul>
+						</div>
+						<div>
+							<h3>Advancing the LRSD Multi-Year Strategic Plan through</h3>
+							<ul>
+								<li>Closing opportunity gaps</li>
+								<li>Strengthening responsive instruction</li>
+								<li>Supporting belonging and well-being</li>
+								<li>Embedding Indigenous education and reconciliation</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
 
-          <div class="tier-card tier-3">
-            <div class="tier-badge-row">
-              <span class="tier-badge">Tier 3</span>
-              <span class="tier-reach">Highest-need schools</span>
-            </div>
-            <h3>Intensive Support</h3>
-            <p class="tier-summary">The highest level of involvement — frequent, collaborative, and responsive to complex or urgent needs.</p>
-            <ul class="tier-list">
-              <li>Ongoing, embedded support from multidisciplinary team members</li>
-              <li>Regular in-school presence to co-plan, co-teach, and model practices</li>
-              <li>Intensive data analysis and progress monitoring</li>
-              <li>Comprehensive school-based action planning</li>
-              <li>Coordination with external agencies and specialized services</li>
-              <li>Focused efforts to address significant gaps in achievement, well-being, or engagement</li>
-            </ul>
-            <p class="tier-goal"><em>Goal: Stabilize systems, address immediate needs, and build sustainable structures for continued growth.</em></p>
-          </div>
-        </div>
+		<main class="main-content">
+			<br>
+			<section class="info-section">
+				<div class="info-content">
 
-        <div class="takeaway-bar">
-          <strong>Key takeaway:</strong> Every school gets Tier 1 universal support; Tier 2 and Tier 3 add targeted and intensive help where data shows need.
-        </div>
-      </div>
-    </div>
+					<h2>How We Support Schools</h2>
 
-    <!-- 5. Using Data -->
-    <div class="scst-section">
-      <button class="acc-toggle" aria-expanded="false" aria-controls="sec-data">
-        <span class="acc-icon"><svg><use href="#i-chart"/></svg></span>
-        <span class="acc-text">
-          <span class="acc-eyebrow">Data-Informed</span>
-          <span class="acc-title">Using Data to Guide Our Work</span>
-        </span>
-        <svg class="acc-chevron" aria-hidden="true"><use href="#i-chevron"/></svg>
-      </button>
-      <div class="acc-body" id="sec-data" hidden>
-        <div class="two-col">
-          <div class="info-block">
-            <h3>Data sources used to identify need and monitor impact</h3>
-            <ul class="bullet-list">
-              <li>Literacy and numeracy screening</li>
-              <li>Progress monitoring data</li>
-              <li>Attendance and well-being indicators</li>
-              <li>Indigenous student gap indicators</li>
-              <li>Classroom and school context</li>
-            </ul>
-          </div>
-          <div class="info-block">
-            <h3>This ensures</h3>
-            <ul class="bullet-list">
-              <li>Early identification of students requiring support</li>
-              <li>Targeted and responsive intervention</li>
-              <li>Ongoing monitoring and adjustment</li>
-            </ul>
-          </div>
-        </div>
-        <div class="takeaway-bar">
-          <strong>Key takeaway:</strong> Data drives every decision — from spotting need early to adjusting supports based on impact.
-        </div>
-      </div>
-    </div>
+					<p>SCST provides differentiated, data-informed support, collaborating with schools rather than working in isolation.</p>
 
-    <!-- 6. Team Structure -->
-    <div class="scst-section">
-      <button class="acc-toggle" aria-expanded="false" aria-controls="sec-team">
-        <span class="acc-icon"><svg><use href="#i-users"/></svg></span>
-        <span class="acc-text">
-          <span class="acc-eyebrow">Team Structure</span>
-          <span class="acc-title">Our Team Structure</span>
-        </span>
-        <svg class="acc-chevron" aria-hidden="true"><use href="#i-chevron"/></svg>
-      </button>
-      <div class="acc-body" id="sec-team" hidden>
-        <div class="callout">
-          SCST is organized into six integrated areas — Leadership, Instructional Support, Student Support Services, Indigenous Education, Clinical Services, and Specialized Supports — working as one aligned team.
-        </div>
+					<h3>SCST collaborates with schools to</h3>
+					<ul>
+						<li>Analyze data</li>
+						<li>Strengthen instructional practice</li>
+						<li>Support professional learning</li>
+						<li>Mentor staff</li>
+						<li>Build inclusive and culturally responsive environments</li>
+					</ul>
+				</div>
+			</section>
+		</main>
 
-        <div class="area-grid">
+		<main class="main-content">
+			<br>
+			<h2 class="section-heading">Levels of Support</h2>
+			<p>SCST support is organized into three tiers — each tier builds on the one before it.</p>
 
-          <!-- Leadership -->
-          <div class="area-card">
-            <div class="area-card-head">
-              <span class="area-icon"><svg><use href="#i-star"/></svg></span>
-              <h3>Leadership</h3>
-            </div>
-            <p class="area-purpose">Ensures system coherence, alignment to the Multi-Year Strategic Plan, and coordinated support across all SCST areas.</p>
-            <div class="chip-row">
-              <span class="chip">Divisional alignment</span>
-              <span class="chip">Cross-team coordination</span>
-              <span class="chip">Equity-driven decisions</span>
-            </div>
-            <div class="people-list">
-              <div class="person"><span class="avatar">NK</span><div><p class="person-name">Nicholas Kelly</p><p class="person-title">Director of School and Classroom Support</p></div></div>
-              <div class="person"><span class="avatar">NM</span><div><p class="person-name">Nicole Mager</p><p class="person-title">Divisional Principal (Instructional &amp; Indigenous Education)</p></div></div>
-              <div class="person"><span class="avatar">MV</span><div><p class="person-name">Megan Vankoughnett</p><p class="person-title">Divisional Principal (Clinical &amp; Student Services)</p></div></div>
-              <div class="person"><span class="avatar">LT</span><div><p class="person-name">Lisa Tymchuk</p><p class="person-title">Assistant Director, Clinical Services</p></div></div>
-              <div class="person"><span class="avatar">KL</span><div><p class="person-name">Kelsey Lenaghan</p><p class="person-title">Divisional Indigenous Education Leader</p></div></div>
-            </div>
-          </div>
+			<section class="cards-container">
+				<div class="tier-card tier-1">
+					<div class="tier-badge-row">
+						<span class="tier-badge tier-badge-1">Tier 1</span>
+						<span class="tier-reach">All schools</span>
+					</div>
+					<h3>Universal Support</h3>
+					<p>Building strong, inclusive, and responsive learning environments for every school.</p>
+					<ul>
+						<li>Access to divisional professional learning opportunities</li>
+						<li>Universal resources, tools, and frameworks</li>
+						<li>Consultation upon request</li>
+						<li>Support for divisional priorities (literacy, numeracy, well-being, Indigenous education)</li>
+						<li>Networking and collaboration across schools</li>
+					</ul>
+					<p><em>Goal: Proactive capacity building so all students experience a high-quality, equitable learning environment.</em></p>
+				</div>
 
-          <!-- Instructional Support -->
-          <div class="area-card">
-            <div class="area-card-head">
-              <span class="area-icon"><svg><use href="#i-book"/></svg></span>
-              <h3>Instructional Support</h3>
-            </div>
-            <p class="area-purpose">Strengthens classroom practice, improves student achievement, and builds teacher capacity in literacy and numeracy.</p>
-            <div class="chip-row">
-              <span class="chip">Literacy</span>
-              <span class="chip">Numeracy</span>
-              <span class="chip">Coaching</span>
-              <span class="chip">Co-teaching</span>
-              <span class="chip">Intervention planning</span>
-            </div>
-            <div class="people-list">
-              <div class="person"><span class="avatar">KA</span><div><p class="person-name">Kristyn Artibise</p><p class="person-title">Instructional Support Teacher (Numeracy)</p></div></div>
-              <div class="person"><span class="avatar">KM</span><div><p class="person-name">Kristen McDowell</p><p class="person-title">Instructional Support Teacher (Literacy)</p></div></div>
-              <div class="person"><span class="avatar">GS</span><div><p class="person-name">Geneviève Shyiak</p><p class="person-title">Instructional Support Teacher (Literacy)</p></div></div>
-            </div>
-          </div>
+				<div class="tier-card tier-2">
+					<div class="tier-badge-row">
+						<span class="tier-badge tier-badge-2">Tier 2</span>
+						<span class="tier-reach">Identified schools</span>
+					</div>
+					<h3>Targeted Support</h3>
+					<p>Short- to medium-term support focused on specific areas of need identified through data and context.</p>
+					<ul>
+						<li>Planned cycles of support (coaching, consultation, or collaborative inquiry)</li>
+						<li>Evidence-informed strategy implementation</li>
+						<li>Joint problem-solving with school teams and leadership</li>
+						<li>Tailored professional learning</li>
+						<li>Check-ins to monitor progress and adjust supports</li>
+					</ul>
+					<p><em>Goal: Strengthen key practices, build staff confidence, and address emerging needs before they intensify.</em></p>
+				</div>
 
-          <!-- Student Support Services -->
-          <div class="area-card">
-            <div class="area-card-head">
-              <span class="area-icon"><svg><use href="#i-shield"/></svg></span>
-              <h3>Student Support Services</h3>
-            </div>
-            <p class="area-purpose">Creates inclusive, responsive environments that address academic, behavioural, and social-emotional needs.</p>
-            <div class="chip-row">
-              <span class="chip">MEECL / RAF / TCIS</span>
-              <span class="chip">Transitions planning</span>
-              <span class="chip">Multilingual learners</span>
-              <span class="chip">New teacher mentorship</span>
-            </div>
-            <div class="people-list">
-              <div class="person"><span class="avatar">KB</span><div><p class="person-name">Kerri Bush</p><p class="person-title">Instructional Support / Student Services</p></div></div>
-              <div class="person"><span class="avatar">RP</span><div><p class="person-name">Rose Pagtakhan</p><p class="person-title">Instructional Support / Student Services</p></div></div>
-            </div>
-          </div>
+				<div class="tier-card tier-3">
+					<div class="tier-badge-row">
+						<span class="tier-badge tier-badge-3">Tier 3</span>
+						<span class="tier-reach">Highest-need schools</span>
+					</div>
+					<h3>Intensive Support</h3>
+					<p>The highest level of involvement — frequent, collaborative, and responsive to complex or urgent needs.</p>
+					<ul>
+						<li>Ongoing, embedded support from multidisciplinary team members</li>
+						<li>Regular in-school presence to co-plan, co-teach, and model practices</li>
+						<li>Intensive data analysis and progress monitoring</li>
+						<li>Comprehensive school-based action planning</li>
+						<li>Coordination with external agencies and specialized services</li>
+						<li>Focused efforts to address significant gaps in achievement, well-being, or engagement</li>
+					</ul>
+					<p><em>Goal: Stabilize systems, address immediate needs, and build sustainable structures for continued growth.</em></p>
+				</div>
+			</section>
+		</main>
 
-          <!-- Indigenous Education -->
-          <div class="area-card">
-            <div class="area-card-head">
-              <span class="area-icon"><svg><use href="#i-feather"/></svg></span>
-              <h3>Indigenous Education</h3>
-            </div>
-            <p class="area-purpose">Partners with schools to advance Indigenous student success through culture, identity, language, and relationship.</p>
-            <div class="chip-row">
-              <span class="chip">IESAP</span>
-              <span class="chip">Cultural teachings</span>
-              <span class="chip">Land-based learning</span>
-              <span class="chip">Language programming</span>
-              <span class="chip">Elders &amp; Knowledge Keepers</span>
-            </div>
-            <div class="callout callout-sm">
-              <strong>IESAP Process:</strong> Schools form Indigenous Education Action Teams, analyze data and community voice, identify strengths and barriers, then develop and implement action plans.
-            </div>
-            <div class="people-list">
-              <div class="person"><span class="avatar">KL</span><div><p class="person-name">Kelsey Lenaghan</p><p class="person-title">Divisional Indigenous Education Leader</p></div></div>
-              <div class="person"><span class="avatar">SO</span><div><p class="person-name">Sean Oliver</p><p class="person-title">Indigenous Education</p></div></div>
-              <div class="person"><span class="avatar">RB</span><div><p class="person-name">Rose Bird</p><p class="person-title">Indigenous Education</p></div></div>
-              <div class="person"><span class="avatar">JS</span><div><p class="person-name">Judith Saunders-McKay</p><p class="person-title">Indigenous Education</p></div></div>
-              <div class="person"><span class="avatar">SF</span><div><p class="person-name">Sam Flamand</p><p class="person-title">Indigenous Education</p></div></div>
-              <div class="person"><span class="avatar">TW</span><div><p class="person-name">Trish Wilson</p><p class="person-title">Indigenous Education</p></div></div>
-              <div class="person"><span class="avatar">TB</span><div><p class="person-name">Tammy Bruce</p><p class="person-title">Community Liaison – Indigenous Academic Support</p></div></div>
-            </div>
-            <p class="sub-group-label">Indigenous Language Team</p>
-            <div class="people-list">
-              <div class="person"><span class="avatar">AM</span><div><p class="person-name">Alice McKay</p><p class="person-title">Ojibwe Teacher</p></div></div>
-              <div class="person"><span class="avatar">CP</span><div><p class="person-name">Courtney Pranteau</p><p class="person-title">Cree Teacher</p></div></div>
-              <div class="person"><span class="avatar">ML</span><div><p class="person-name">Maxine Lavitt</p><p class="person-title">Michif Instructor</p></div></div>
-              <div class="person"><span class="avatar">CS</span><div><p class="person-name">Cub Spring</p><p class="person-title">Ojibwe Instructor</p></div></div>
-              <div class="person"><span class="avatar">RP2</span><div><p class="person-name">Rhea Paul</p><p class="person-title">Ojibwe Instructor</p></div></div>
-              <div class="person"><span class="avatar">AG</span><div><p class="person-name">Alyssa Guimond</p><p class="person-title">Ojibwe Instructor</p></div></div>
-              <div class="person"><span class="avatar">HM</span><div><p class="person-name">Hailey McKay</p><p class="person-title">Cree Instructor</p></div></div>
-              <div class="person"><span class="avatar">DD</span><div><p class="person-name">Destanee Ducharme</p><p class="person-title">Cree Instructor</p></div></div>
-              <div class="person"><span class="avatar">RM</span><div><p class="person-name">Rose McKay</p><p class="person-title">Cree Instructor</p></div></div>
-            </div>
-          </div>
+		<main class="main-content">
+			<br>
+			<section class="info-section">
+				<div class="info-content">
 
-          <!-- Clinical Services -->
-          <div class="area-card">
-            <div class="area-card-head">
-              <span class="area-icon"><svg><use href="#i-pulse"/></svg></span>
-              <h3>Clinical Services</h3>
-            </div>
-            <p class="area-purpose">Supports communication, regulation, and well-being through interdisciplinary collaboration with school teams.</p>
-            <div class="chip-row">
-              <span class="chip">Occupational Therapy</span>
-              <span class="chip">Psychology</span>
-              <span class="chip">Speech-Language Pathology</span>
-              <span class="chip">Social Work</span>
-              <span class="chip">Transition planning</span>
-            </div>
-            <div class="people-list">
-              <div class="person"><span class="avatar">RG</span><div><p class="person-name">Robert George</p><p class="person-title">Psychologist</p></div></div>
-              <div class="person"><span class="avatar">TH</span><div><p class="person-name">Travis Hoare</p><p class="person-title">Occupational Therapist</p></div></div>
-              <div class="person"><span class="avatar">KG</span><div><p class="person-name">Karla Guiterrez</p><p class="person-title">Speech Language Pathologist</p></div></div>
-              <div class="person"><span class="avatar">KM2</span><div><p class="person-name">Kim Mackey</p><p class="person-title">Social Worker</p></div></div>
-            </div>
-          </div>
+					<h2>Using Data to Guide Our Work</h2>
 
-          <!-- Specialized Supports -->
-          <div class="area-card">
-            <div class="area-card-head">
-              <span class="area-icon"><svg><use href="#i-sparkles"/></svg></span>
-              <h3>Specialized Supports</h3>
-            </div>
-            <p class="area-purpose">Enhances school programming, engagement, and discipline-specific instruction across the division.</p>
-            <div class="chip-row">
-              <span class="chip">Library Services</span>
-              <span class="chip">Physical Education</span>
-              <span class="chip">Athletics</span>
-              <span class="chip">Arts</span>
-              <span class="chip">Applied Technology</span>
-              <span class="chip">Human Ecology</span>
-            </div>
-            <div class="people-list">
-              <div class="person"><span class="avatar">KA2</span><div><p class="person-name">Kathy Atkin</p><p class="person-title">Divisional Teacher Librarian</p></div></div>
-              <div class="person"><span class="avatar">SC</span><div><p class="person-name">Shaemus Campbell</p><p class="person-title">Physical Education &amp; Healthy Living</p></div></div>
-              <div class="person"><span class="avatar">JM</span><div><p class="person-name">Jordana Milne</p><p class="person-title">Manager of Athletics and Healthy Living</p></div></div>
-              <div class="person"><span class="avatar">RS</span><div><p class="person-name">Ryan Sabourin</p><p class="person-title">Applied Technology / Human Ecology</p></div></div>
-              <div class="person"><span class="avatar">AS</span><div><p class="person-name">Allan Suban</p><p class="person-title">LRSD Arts (Music, Visual Arts, Drama)</p></div></div>
-            </div>
-          </div>
+					<div class="two-col">
+						<div>
+							<h3>Data sources used to identify need and monitor impact</h3>
+							<ul>
+								<li>Literacy and numeracy screening</li>
+								<li>Progress monitoring data</li>
+								<li>Attendance and well-being indicators</li>
+								<li>Indigenous student gap indicators</li>
+								<li>Classroom and school context</li>
+							</ul>
+						</div>
+						<div>
+							<h3>This ensures</h3>
+							<ul>
+								<li>Early identification of students requiring support</li>
+								<li>Targeted and responsive intervention</li>
+								<li>Ongoing monitoring and adjustment</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
 
-        </div><!-- /area-grid -->
-        <div class="takeaway-bar">
-          <strong>Key takeaway:</strong> Six integrated areas — all working as one aligned team focused on equity and student outcomes.
-        </div>
-      </div>
-    </div>
+		<main class="main-content">
+			<br>
+			<h2 class="section-heading">Our Team Structure</h2>
+			<p>SCST is organized into six integrated areas — Leadership, Instructional Support, Student Support Services, Indigenous Education, Clinical Services, and Specialized Supports — working as one aligned team.</p>
 
-    <!-- 7. School-Based Support Model -->
-    <div class="scst-section">
-      <button class="acc-toggle" aria-expanded="false" aria-controls="sec-school">
-        <span class="acc-icon"><svg><use href="#i-building"/></svg></span>
-        <span class="acc-text">
-          <span class="acc-eyebrow">School-Based Model</span>
-          <span class="acc-title">School-Based Support Model</span>
-        </span>
-        <svg class="acc-chevron" aria-hidden="true"><use href="#i-chevron"/></svg>
-      </button>
-      <div class="acc-body" id="sec-school" hidden>
-        <p class="lead-text">SCST provides supports based on divisional data, school-level context, and identified student and staff needs — aligning resources to where they will have the greatest impact while building long-term capacity across all schools.</p>
+			<section class="team-grid">
 
-        <div class="two-col">
-          <div class="callout">
-            SCST works in partnership with school teams to analyze data (achievement, well-being, attendance, and engagement) and to co-develop plans that are strengths-based, culturally responsive, and focused on improving outcomes for all learners.
-          </div>
-          <div class="callout callout-accent">
-            <strong>Equity Support School Model</strong><br>
-            SCST uses a tiered model to differentiate levels of support across schools — allowing targeted allocation of time, expertise, and resources while keeping a strong focus on equity, inclusion, and capacity building.
-          </div>
-        </div>
+				<div class="team-card">
+					<h3>Leadership</h3>
+					<p>Ensures system coherence, alignment to the Multi-Year Strategic Plan, and coordinated support across all SCST areas.</p>
+					<ul>
+						<li><strong>Nicholas Kelly</strong> — Director of School and Classroom Support</li>
+						<li><strong>Nicole Mager</strong> — Divisional Principal (Instructional &amp; Indigenous Education)</li>
+						<li><strong>Megan Vankoughnett</strong> — Divisional Principal (Clinical &amp; Student Services)</li>
+						<li><strong>Lisa Tymchuk</strong> — Assistant Director, Clinical Services</li>
+						<li><strong>Kelsey Lenaghan</strong> — Divisional Indigenous Education Leader</li>
+					</ul>
+				</div>
 
-        <div class="info-section" style="margin-top:1.5rem;">
-          <h3>Embedded support rationale — staff are assigned to schools based on</h3>
-          <ul class="bullet-list">
-            <li>Indigenous student opportunity gaps</li>
-            <li>Attendance and engagement indicators</li>
-            <li>Literacy and numeracy data</li>
-            <li>Number of students with multiple risk factors</li>
-            <li>Need for sustained relational support</li>
-          </ul>
-        </div>
+				<div class="team-card">
+					<h3>Instructional Support</h3>
+					<p>Strengthens classroom practice, improves student achievement, and builds teacher capacity in literacy and numeracy.</p>
+					<ul>
+						<li><strong>Kristyn Artibise</strong> — Instructional Support Teacher (Numeracy)</li>
+						<li><strong>Kristen McDowell</strong> — Instructional Support Teacher (Literacy)</li>
+						<li><strong>Geneviève Shyiak</strong> — Instructional Support Teacher (Literacy)</li>
+					</ul>
+				</div>
 
-        <div class="takeaway-bar">
-          <strong>Key takeaway:</strong> Support follows the data — staff are embedded where opportunity gaps and risk factors are greatest, always with equity at the centre.
-        </div>
-      </div>
-    </div>
+				<div class="team-card">
+					<h3>Student Support Services</h3>
+					<p>Creates inclusive, responsive environments that address academic, behavioural, and social-emotional needs.</p>
+					<ul>
+						<li><strong>Kerri Bush</strong> — Instructional Support / Student Services</li>
+						<li><strong>Rose Pagtakhan</strong> — Instructional Support / Student Services</li>
+					</ul>
+				</div>
 
-    <!-- 8. Current Direction -->
-    <div class="scst-section">
-      <button class="acc-toggle" aria-expanded="false" aria-controls="sec-direction">
-        <span class="acc-icon"><svg><use href="#i-route"/></svg></span>
-        <span class="acc-text">
-          <span class="acc-eyebrow">Current Direction</span>
-          <span class="acc-title">Instructional Support — Current Direction</span>
-        </span>
-        <svg class="acc-chevron" aria-hidden="true"><use href="#i-chevron"/></svg>
-      </button>
-      <div class="acc-body" id="sec-direction" hidden>
-        <div class="focus-grid">
-          <div class="focus-card">
-            <h3>Literacy (2026–2027)</h3>
-            <ul class="bullet-list">
-              <li>Wave-based support model across priority schools</li>
-              <li>Focused on highest-need schools identified through data</li>
-            </ul>
-          </div>
-          <div class="focus-card">
-            <h3>Numeracy (2026–2027)</h3>
-            <ul class="bullet-list">
-              <li>Wave-based support model across priority schools</li>
-              <li>Focused on highest-need schools identified through data</li>
-            </ul>
-          </div>
-        </div>
-        <div class="takeaway-bar">
-          <strong>Key takeaway:</strong> Literacy and numeracy support is moving to a wave-based model, concentrating effort on the highest-need schools.
-        </div>
-      </div>
-    </div>
+				<div class="team-card">
+					<h3>Indigenous Education</h3>
+					<p>Partners with schools to advance Indigenous student success through culture, identity, language, and relationship.</p>
+					<ul>
+						<li><strong>Kelsey Lenaghan</strong> — Divisional Indigenous Education Leader</li>
+						<li><strong>Sean Oliver</strong> — Indigenous Education</li>
+						<li><strong>Rose Bird</strong> — Indigenous Education</li>
+						<li><strong>Judith Saunders-McKay</strong> — Indigenous Education</li>
+						<li><strong>Sam Flamand</strong> — Indigenous Education</li>
+						<li><strong>Trish Wilson</strong> — Indigenous Education</li>
+						<li><strong>Tammy Bruce</strong> — Community Liaison – Indigenous Academic Support</li>
+					</ul>
+					<p><strong>Indigenous Language Team:</strong> Alice McKay (Ojibwe), Courtney Pranteau (Cree), Maxine Lavitt (Michif), Cub Spring (Ojibwe), Rhea Paul (Ojibwe), Alyssa Guimond (Ojibwe), Hailey McKay (Cree), Destanee Ducharme (Cree), Rose McKay (Cree).</p>
+				</div>
 
-    <!-- 9. Looking Ahead -->
-    <div class="scst-section">
-      <button class="acc-toggle" aria-expanded="false" aria-controls="sec-ahead">
-        <span class="acc-icon"><svg><use href="#i-telescope"/></svg></span>
-        <span class="acc-text">
-          <span class="acc-eyebrow">Looking Ahead</span>
-          <span class="acc-title">Looking Ahead</span>
-        </span>
-        <svg class="acc-chevron" aria-hidden="true"><use href="#i-chevron"/></svg>
-      </button>
-      <div class="acc-body" id="sec-ahead" hidden>
-        <div class="two-col">
-          <div class="info-section">
-            <h3>SCST continues to evolve to</h3>
-            <ul class="bullet-list">
-              <li>Increase embedded, in-school support</li>
-              <li>Strengthen collaboration across teams</li>
-              <li>Refine data-informed decision-making</li>
-              <li>Expand impact through tiered instructional models</li>
-              <li>Improve outcomes for students, particularly those experiencing barriers</li>
-            </ul>
-          </div>
-          <div class="callout callout-accent">
-            <strong>Specialized Teacher Mentorship</strong><br><br>
-            Mentorship spans Library, Phys. Ed, Music, Applied Technology, Human Ecology, Student Services, and Teachers New to LRSD.
-          </div>
-        </div>
-        <div class="takeaway-bar">
-          <strong>Key takeaway:</strong> The direction is clear: more embedded support, stronger collaboration, sharper use of data, and better outcomes for students facing barriers.
-        </div>
-      </div>
-    </div>
+				<div class="team-card">
+					<h3>Clinical Services</h3>
+					<p>Supports communication, regulation, and well-being through interdisciplinary collaboration with school teams.</p>
+					<ul>
+						<li><strong>Robert George</strong> — Psychologist</li>
+						<li><strong>Travis Hoare</strong> — Occupational Therapist</li>
+						<li><strong>Karla Guiterrez</strong> — Speech Language Pathologist</li>
+						<li><strong>Kim Mackey</strong> — Social Worker</li>
+					</ul>
+				</div>
 
-  </div><!-- /page-container -->
+				<div class="team-card">
+					<h3>Specialized Supports</h3>
+					<p>Enhances school programming, engagement, and discipline-specific instruction across the division.</p>
+					<ul>
+						<li><strong>Kathy Atkin</strong> — Divisional Teacher Librarian</li>
+						<li><strong>Shaemus Campbell</strong> — Physical Education &amp; Healthy Living</li>
+						<li><strong>Jordana Milne</strong> — Manager of Athletics and Healthy Living</li>
+						<li><strong>Ryan Sabourin</strong> — Applied Technology / Human Ecology</li>
+						<li><strong>Allan Suban</strong> — LRSD Arts (Music, Visual Arts, Drama)</li>
+					</ul>
+				</div>
 
-  <style>
-    .lrsd-page-content {
-      --primary:       #264e74;
-      --accent:        #b23427;
-      --light-bg:      #f5f7fa;
-      --white:         #fff;
-      --text:          #222;
-      --text-soft:     #555;
-      --border:        rgba(38, 78, 116, .12);
-      --shadow-light:  0 2px 6px rgba(34, 60, 80, .08);
-      --shadow-medium: 0 8px 20px rgba(0,0,0,.12), 0 3px 6px rgba(0,0,0,.08);
-      --tier1-color:   #2a7a59;
-      --tier2-color:   #b07d1a;
-      --tier3-color:   #b23427;
-      --header-font:   "Montserrat", sans-serif;
-      --body-font:     "Poppins", sans-serif;
-      font-family:     var(--body-font);
-      font-size:       16px;
-      font-weight:     400;
-      color:           var(--text);
-      line-height:     1.7;
-      box-sizing:      border-box;
-    }
+			</section>
+		</main>
 
-    .lrsd-page-content * { box-sizing: border-box; }
+		<main class="main-content">
+			<br>
+			<section class="info-section">
+				<div class="info-content">
 
-    .lrsd-page-content *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
-      font-family: var(--body-font) !important;
-    }
-    .lrsd-page-content h1,
-    .lrsd-page-content h2,
-    .lrsd-page-content h3,
-    .lrsd-page-content h4 {
-      font-family: var(--header-font) !important;
-    }
+					<h2>School-Based Support Model</h2>
 
-    .lrsd-page-content .page-container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 1.5rem 1.5rem 4rem;
-    }
+					<p>SCST provides supports based on divisional data, school-level context, and identified student and staff needs — aligning resources to where they will have the greatest impact while building long-term capacity across all schools.</p>
 
-    .lrsd-page-content .intro-section {
-      background: var(--light-bg);
-      border-left: 4px solid var(--primary);
-      border-radius: 0 12px 12px 0;
-      padding: 1.5rem 2rem;
-      margin-bottom: 2rem;
-    }
-    .lrsd-page-content .intro-tagline {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--primary);
-      margin: 0 0 .5rem;
-      line-height: 1.4;
-    }
-    .lrsd-page-content .intro-body {
-      font-size: .95rem;
-      color: var(--text-soft);
-      margin: 0;
-    }
+					<p>SCST works in partnership with school teams to analyze data (achievement, well-being, attendance, and engagement) and to co-develop plans that are strengths-based, culturally responsive, and focused on improving outcomes for all learners.</p>
 
-    .lrsd-page-content .scst-section {
-      background: var(--white);
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-light);
-      margin-bottom: 1rem;
-      overflow: hidden;
-      transition: box-shadow .2s;
-    }
-    .lrsd-page-content .scst-section:hover {
-      box-shadow: var(--shadow-medium);
-    }
+					<h3>Embedded support rationale — staff are assigned to schools based on</h3>
+					<ul>
+						<li>Indigenous student opportunity gaps</li>
+						<li>Attendance and engagement indicators</li>
+						<li>Literacy and numeracy data</li>
+						<li>Number of students with multiple risk factors</li>
+						<li>Need for sustained relational support</li>
+					</ul>
+				</div>
+			</section>
+		</main>
 
-    .lrsd-page-content .acc-toggle {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      width: 100%;
-      background: none;
-      border: none;
-      padding: 1.1rem 1.5rem;
-      cursor: pointer;
-      text-align: left;
-      color: var(--text);
-      transition: background .15s;
-    }
-    .lrsd-page-content .acc-toggle:hover { background: var(--light-bg); }
+		<main class="main-content">
+			<br>
+			<section class="info-section">
+				<div class="info-content">
 
-    .lrsd-page-content .acc-icon {
-      flex-shrink: 0;
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      background: var(--light-bg);
-      color: var(--primary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1.5px solid var(--border);
-    }
-    .lrsd-page-content .acc-icon svg { width: 18px; height: 18px; }
+					<h2>Instructional Support — Current Direction (2026–2027)</h2>
 
-    .lrsd-page-content .acc-text { flex: 1; }
-    .lrsd-page-content .acc-eyebrow {
-      display: block;
-      font-size: .7rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      color: var(--accent);
-      margin-bottom: .1rem;
-    }
-    .lrsd-page-content .acc-title {
-      display: block;
-      font-family: var(--header-font) !important;
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--primary);
-      line-height: 1.2;
-    }
+					<p>Literacy and numeracy support is moving to a wave-based model, concentrating effort on the highest-need schools.</p>
 
-    .lrsd-page-content .acc-chevron {
-      flex-shrink: 0;
-      width: 20px;
-      height: 20px;
-      color: var(--text-soft);
-      transition: transform .25s;
-    }
-    .lrsd-page-content .acc-toggle[aria-expanded="true"] .acc-chevron { transform: rotate(180deg); }
+					<div class="two-col">
+						<div>
+							<h3>Literacy</h3>
+							<ul>
+								<li>Wave-based support model across priority schools</li>
+								<li>Focused on highest-need schools identified through data</li>
+							</ul>
+						</div>
+						<div>
+							<h3>Numeracy</h3>
+							<ul>
+								<li>Wave-based support model across priority schools</li>
+								<li>Focused on highest-need schools identified through data</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
 
-    .lrsd-page-content .acc-body {
-      padding: 0 1.5rem 1.5rem;
-      border-top: 1px solid var(--border);
-    }
+		<main class="main-content">
+			<br>
+			<section class="info-section">
+				<div class="info-content">
 
-    .lrsd-page-content .lead-text {
-      font-size: 1rem;
-      font-weight: 500;
-      color: var(--text);
-      margin: 1.25rem 0;
-      line-height: 1.65;
-    }
-    .lrsd-page-content h3 {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--primary);
-      margin: 1.25rem 0 .5rem;
-      border-bottom: 2px solid var(--accent);
-      display: inline-block;
-      padding-bottom: .15rem;
-    }
-    .lrsd-page-content .bullet-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: .35rem;
-    }
-    .lrsd-page-content .bullet-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: .6rem;
-      font-size: .9rem;
-      line-height: 1.5;
-    }
-    .lrsd-page-content .bullet-list li::before {
-      content: "";
-      flex-shrink: 0;
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--accent);
-      margin-top: .52em;
-    }
+					<h2>Looking Ahead</h2>
 
-    .lrsd-page-content .callout {
-      background: var(--light-bg);
-      border-left: 4px solid var(--primary);
-      border-radius: 0 10px 10px 0;
-      padding: 1rem 1.25rem;
-      font-size: .9rem;
-      color: var(--text);
-      margin-top: 1.25rem;
-    }
-    .lrsd-page-content .callout-sm {
-      font-size: .85rem;
-      padding: .75rem 1rem;
-      margin-top: .75rem;
-      margin-bottom: .75rem;
-    }
-    .lrsd-page-content .callout-accent {
-      border-left-color: var(--accent);
-      background: #fdf2f1;
-    }
-    .lrsd-page-content .info-section {
-      background: var(--light-bg);
-      border-left: 4px solid var(--primary);
-      border-radius: 0 10px 10px 0;
-      padding: 1.25rem 1.5rem;
-      margin-top: 1.25rem;
-    }
-    .lrsd-page-content .info-section h3 {
-      margin-top: 0;
-    }
+					<p>The direction is clear: more embedded support, stronger collaboration, sharper use of data, and better outcomes for students facing barriers.</p>
 
-    .lrsd-page-content .takeaway-bar {
-      margin-top: 1.25rem;
-      padding: .85rem 1.1rem;
-      background: var(--light-bg);
-      border-radius: 8px;
-      font-size: .88rem;
-      color: var(--text-soft);
-      border: 1px solid var(--border);
-    }
-    .lrsd-page-content .takeaway-bar strong { color: var(--primary); }
+					<h3>SCST continues to evolve to</h3>
+					<ul>
+						<li>Increase embedded, in-school support</li>
+						<li>Strengthen collaboration across teams</li>
+						<li>Refine data-informed decision-making</li>
+						<li>Expand impact through tiered instructional models</li>
+						<li>Improve outcomes for students, particularly those experiencing barriers</li>
+					</ul>
 
-    .lrsd-page-content .two-col {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    .lrsd-page-content .three-col {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-    }
+					<p><strong>Specialized Teacher Mentorship</strong> spans Library, Phys. Ed, Music, Applied Technology, Human Ecology, Student Services, and Teachers New to LRSD.</p>
+				</div>
+			</section>
+		</main>
 
-    .lrsd-page-content .tier-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.25rem;
-      margin-top: 1.25rem;
-    }
-    .lrsd-page-content .tier-card {
-      background: var(--white);
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-light);
-      padding: 1.5rem;
-      border-top: 4px solid transparent;
-    }
-    .lrsd-page-content .tier-1 { border-top-color: var(--tier1-color); }
-    .lrsd-page-content .tier-2 { border-top-color: var(--tier2-color); }
-    .lrsd-page-content .tier-3 { border-top-color: var(--tier3-color); }
+	</div>
+	<style>
+		.lrsd-page-content {
+			--primary-color: #264e74; --accent-color: #b23427; --tier1-color: #2a7a59; --tier2-color: #b07d1a; --tier3-color: #b23427; --light-blue: #f5f7fa; --border-color: #ccc; --text-color: #222; --white: #fff; --max-width: 1300px; --shadow-light: 0 2px 6px rgba(34, 60, 80, .08); --shadow-medium: 0 8px 20px rgba(0, 0, 0, .14), 0 3px 6px rgba(0, 0, 0, .10);
+			--header-font: "Montserrat", sans-serif; --body-font: "Poppins", sans-serif; box-sizing: border-box; font-family: var(--body-font); font-size: 16px; font-weight: 400; color: var(--text-color); line-height: 1.7; text-align: left;
+		}
 
-    .lrsd-page-content .tier-badge-row {
-      display: flex;
-      align-items: center;
-      gap: .6rem;
-      margin-bottom: .75rem;
-    }
-    .lrsd-page-content .tier-badge {
-      font-size: .72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .07em;
-      padding: .2rem .65rem;
-      border-radius: 99px;
-      color: var(--white);
-    }
-    .lrsd-page-content .tier-1 .tier-badge { background: var(--tier1-color); }
-    .lrsd-page-content .tier-2 .tier-badge { background: var(--tier2-color); }
-    .lrsd-page-content .tier-3 .tier-badge { background: var(--tier3-color); }
-    .lrsd-page-content .tier-reach {
-      font-size: .8rem;
-      color: var(--text-soft);
-    }
-    .lrsd-page-content .tier-card h3 {
-      font-size: 1.05rem;
-      border-bottom: none;
-      margin: 0 0 .5rem;
-    }
-    .lrsd-page-content .tier-1 h3 { color: var(--tier1-color); }
-    .lrsd-page-content .tier-2 h3 { color: var(--tier2-color); }
-    .lrsd-page-content .tier-3 h3 { color: var(--tier3-color); }
-    .lrsd-page-content .tier-summary {
-      font-size: .88rem;
-      color: var(--text-soft);
-      margin-bottom: .9rem;
-      line-height: 1.5;
-    }
-    .lrsd-page-content .tier-list {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 .9rem;
-      display: flex;
-      flex-direction: column;
-      gap: .35rem;
-    }
-    .lrsd-page-content .tier-list li {
-      font-size: .85rem;
-      display: flex;
-      align-items: flex-start;
-      gap: .5rem;
-      line-height: 1.5;
-    }
-    .lrsd-page-content .tier-list li::before {
-      content: "✓";
-      font-weight: 700;
-      font-size: .78rem;
-      flex-shrink: 0;
-      margin-top: .15em;
-    }
-    .lrsd-page-content .tier-1 .tier-list li::before { color: var(--tier1-color); }
-    .lrsd-page-content .tier-2 .tier-list li::before { color: var(--tier2-color); }
-    .lrsd-page-content .tier-3 .tier-list li::before { color: var(--tier3-color); }
-    .lrsd-page-content .tier-goal {
-      font-size: .8rem;
-      color: var(--text-soft);
-      border-top: 1px solid var(--border);
-      padding-top: .65rem;
-      margin: 0;
-    }
+		.lrsd-page-content * {
+			box-sizing: border-box;
+		}
 
-    .lrsd-page-content .area-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-      gap: 1.25rem;
-      margin-top: 1.25rem;
-    }
-    .lrsd-page-content .area-card {
-      background: var(--white);
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-light);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-    .lrsd-page-content .area-card-head {
-      display: flex;
-      align-items: center;
-      gap: .75rem;
-      padding: 1rem 1.25rem;
-      background: var(--light-bg);
-      border-bottom: 1px solid var(--border);
-    }
-    .lrsd-page-content .area-card-head h3 {
-      margin: 0;
-      font-size: .95rem;
-      border-bottom: none;
-      color: var(--primary);
-    }
-    .lrsd-page-content .area-icon {
-      flex-shrink: 0;
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      background: var(--white);
-      color: var(--primary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1.5px solid var(--border);
-    }
-    .lrsd-page-content .area-icon svg { width: 16px; height: 16px; }
+		.lrsd-page-content *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+			font-family: var(--body-font) !important;
+		}
 
-    .lrsd-page-content .area-card > *:not(.area-card-head) { padding: 0 1.25rem; }
-    .lrsd-page-content .area-card > *:last-child { padding-bottom: 1.25rem; }
+		.lrsd-page-content h1,
+		.lrsd-page-content h2,
+		.lrsd-page-content h3,
+		.lrsd-page-content h4,
+		.lrsd-page-content h5,
+		.lrsd-page-content h6 {
+			font-family: var(--header-font) !important;
+		}
 
-    .lrsd-page-content .area-purpose {
-      font-size: .85rem;
-      color: var(--text-soft);
-      margin: .9rem 0 0;
-      line-height: 1.5;
-    }
+		.lrsd-page-content .page-container {
+			max-width: var(--max-width); margin: 0 auto; padding: 1rem 1.5rem;
+		}
 
-    .lrsd-page-content .chip-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .35rem;
-      margin: .75rem 0;
-    }
-    .lrsd-page-content .chip {
-      font-size: .72rem;
-      background: var(--light-bg);
-      border: 1px solid var(--border);
-      border-radius: 99px;
-      padding: .2rem .65rem;
-      color: var(--primary);
-      font-weight: 500;
-    }
+		.lrsd-page-content .page-title {
+			font-size: 2.5rem; font-weight: 700; color: var(--primary-color); margin: 0 0 1rem 0; text-align: center;
+		}
 
-    .lrsd-page-content .people-list {
-      display: flex;
-      flex-direction: column;
-      gap: .55rem;
-      margin: 0;
-    }
-    .lrsd-page-content .person {
-      display: flex;
-      align-items: flex-start;
-      gap: .65rem;
-    }
-    .lrsd-page-content .avatar {
-      flex-shrink: 0;
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      background: var(--primary);
-      color: var(--white);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: .65rem;
-      font-weight: 700;
-      letter-spacing: .02em;
-    }
-    .lrsd-page-content .person-name {
-      font-size: .88rem;
-      font-weight: 600;
-      color: var(--text);
-      margin: 0;
-      line-height: 1.3;
-    }
-    .lrsd-page-content .person-title {
-      font-size: .78rem;
-      color: var(--text-soft);
-      margin: .1rem 0 0;
-      line-height: 1.3;
-    }
-    .lrsd-page-content .sub-group-label {
-      font-size: .72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .07em;
-      color: var(--accent);
-      margin: 1rem 0 .5rem;
-      border-top: 1px solid var(--border);
-      padding-top: .75rem;
-    }
+		.lrsd-page-content .page-subtitle {
+			font-size: 1.2rem; font-weight: 400; color: var(--primary-color); margin: 0; opacity: .8; text-align: center;
+		}
 
-    .lrsd-page-content .focus-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.25rem;
-      margin-top: 1.25rem;
-    }
-    .lrsd-page-content .focus-card {
-      background: var(--white);
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-light);
-      padding: 1.25rem;
-      border-top: 4px solid var(--primary);
-    }
-    .lrsd-page-content .focus-card h3 {
-      font-size: 1rem;
-      margin-top: 0;
-      margin-bottom: .6rem;
-      border-bottom: none;
-      color: var(--primary);
-    }
+		.lrsd-page-content .section-heading {
+			font-size: 1.8rem; font-weight: 700; color: var(--primary-color); margin: 0 0 0.75rem 0;
+		}
 
-    @media (max-width: 640px) {
-      .lrsd-page-content .page-container { padding: 1rem 1rem 3rem; }
-      .lrsd-page-content .acc-toggle { padding: .9rem 1rem; }
-      .lrsd-page-content .acc-body { padding: 0 1rem 1.25rem; }
-      .lrsd-page-content .intro-section { padding: 1.1rem 1.25rem; }
-      .lrsd-page-content .tier-grid,
-      .lrsd-page-content .area-grid,
-      .lrsd-page-content .focus-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+		.lrsd-page-content .info-section {
+			background: var(--light-blue); border-radius: 12px; padding: 2.5rem 2rem 2.5rem 3.5rem; box-shadow: var(--shadow-light); border-left: 4px solid var(--primary-color); margin-top: 0;
+		}
 
-  <script>
-  (function () {
-    var container = document.currentScript
-      ? document.currentScript.closest('.lrsd-page-content')
-      : document.querySelector('.lrsd-page-content');
-    if (!container) { return; }
-    container.querySelectorAll('.acc-toggle').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var expanded = btn.getAttribute('aria-expanded') === 'true';
-        var body = document.getElementById(btn.getAttribute('aria-controls'));
-        btn.setAttribute('aria-expanded', String(!expanded));
-        body.hidden = expanded;
-      });
-    });
-  })();
-  </script>
+		.lrsd-page-content .info-content h2 {
+			font-size: 1.5rem; font-weight: 700; color: var(--primary-color); margin: 0 0 1rem 0; border-bottom: 3px solid var(--accent-color); display: inline-block; padding-bottom: .3rem;
+		}
 
-</div><!-- /lrsd-page-content -->
+		.lrsd-page-content .info-content h3 {
+			font-size: 1.05rem; font-weight: 700; color: var(--primary-color); margin: 1.25rem 0 .5rem;
+		}
+
+		.lrsd-page-content .info-content p {
+			margin: 0 0 1rem 0;
+		}
+
+		.lrsd-page-content .info-content ul {
+			margin: 0 0 1rem 0; padding-left: 1.2rem;
+		}
+
+		.lrsd-page-content .info-content li {
+			margin-bottom: .5rem; line-height: 1.6;
+		}
+
+		.lrsd-page-content .two-col {
+			display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 1rem;
+		}
+
+		/* Tier cards */
+		.lrsd-page-content .cards-container {
+			display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;
+		}
+
+		.lrsd-page-content .tier-card {
+			background: var(--white); border-radius: 12px; box-shadow: var(--shadow-light); border: 1px solid rgba(38, 78, 116, .1); padding: 1.5rem; border-top: 4px solid transparent;
+		}
+
+		.lrsd-page-content .tier-card.tier-1 { border-top-color: var(--tier1-color); }
+		.lrsd-page-content .tier-card.tier-2 { border-top-color: var(--tier2-color); }
+		.lrsd-page-content .tier-card.tier-3 { border-top-color: var(--tier3-color); }
+
+		.lrsd-page-content .tier-badge-row {
+			display: flex; align-items: center; gap: .6rem; margin-bottom: .75rem;
+		}
+
+		.lrsd-page-content .tier-badge {
+			font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; padding: .2rem .65rem; border-radius: 99px; color: var(--white);
+		}
+
+		.lrsd-page-content .tier-badge-1 { background: var(--tier1-color); }
+		.lrsd-page-content .tier-badge-2 { background: var(--tier2-color); }
+		.lrsd-page-content .tier-badge-3 { background: var(--tier3-color); }
+
+		.lrsd-page-content .tier-reach {
+			font-size: .85rem; color: #555;
+		}
+
+		.lrsd-page-content .tier-card h3 {
+			font-size: 1.1rem; font-weight: 700; margin: 0 0 .5rem 0; color: var(--primary-color);
+		}
+
+		.lrsd-page-content .tier-card.tier-1 h3 { color: var(--tier1-color); }
+		.lrsd-page-content .tier-card.tier-2 h3 { color: var(--tier2-color); }
+		.lrsd-page-content .tier-card.tier-3 h3 { color: var(--tier3-color); }
+
+		.lrsd-page-content .tier-card p {
+			font-size: .9rem; margin: 0 0 .75rem 0; line-height: 1.5;
+		}
+
+		.lrsd-page-content .tier-card ul {
+			margin: 0 0 .75rem 0; padding-left: 1.1rem;
+		}
+
+		.lrsd-page-content .tier-card li {
+			font-size: .88rem; margin-bottom: .35rem; line-height: 1.5;
+		}
+
+		/* Team grid */
+		.lrsd-page-content .team-grid {
+			display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;
+		}
+
+		.lrsd-page-content .team-card {
+			background: var(--white); border-radius: 12px; box-shadow: var(--shadow-light); border: 1px solid rgba(38, 78, 116, .1); padding: 1.5rem; border-top: 4px solid var(--primary-color);
+		}
+
+		.lrsd-page-content .team-card h3 {
+			font-size: 1.1rem; font-weight: 700; color: var(--primary-color); margin: 0 0 .6rem 0;
+		}
+
+		.lrsd-page-content .team-card p {
+			font-size: .9rem; color: #555; margin: 0 0 .75rem 0; line-height: 1.5;
+		}
+
+		.lrsd-page-content .team-card ul {
+			margin: 0; padding-left: 1.1rem;
+		}
+
+		.lrsd-page-content .team-card li {
+			font-size: .88rem; margin-bottom: .4rem; line-height: 1.5;
+		}
+
+		@media (max-width:768px) {
+			.lrsd-page-content .cards-container, .lrsd-page-content .team-grid {
+				grid-template-columns: 1fr; gap: 1.5rem;
+			}
+		}
+
+		@media (max-width:600px) {
+			.lrsd-page-content .page-container {
+				padding: 1.5rem 1rem;
+			}
+			.lrsd-page-content .page-title {
+				font-size: 2rem;
+			}
+			.lrsd-page-content .page-subtitle {
+				font-size: 1.1rem;
+			}
+			.lrsd-page-content .info-section {
+				padding: 2rem 1.5rem 2rem 2rem;
+			}
+			.lrsd-page-content .two-col {
+				grid-template-columns: 1fr;
+			}
+		}
+
+	</style>
+</div>
