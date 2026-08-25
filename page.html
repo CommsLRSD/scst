@@ -533,19 +533,6 @@
 
   </div><!-- /page-container -->
 
-  <script>
-  (function () {
-    document.querySelectorAll('.acc-toggle').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var expanded = btn.getAttribute('aria-expanded') === 'true';
-        var body = document.getElementById(btn.getAttribute('aria-controls'));
-        btn.setAttribute('aria-expanded', String(!expanded));
-        body.hidden = expanded;
-      });
-    });
-  })();
-  </script>
-
   <style>
     .lrsd-page-content {
       --primary:       #264e74;
@@ -1015,5 +1002,22 @@
       .lrsd-page-content .focus-grid { grid-template-columns: 1fr; }
     }
   </style>
+
+  <script>
+  (function () {
+    var container = document.currentScript
+      ? document.currentScript.closest('.lrsd-page-content')
+      : document.querySelector('.lrsd-page-content');
+    if (!container) { return; }
+    container.querySelectorAll('.acc-toggle').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        var body = document.getElementById(btn.getAttribute('aria-controls'));
+        btn.setAttribute('aria-expanded', String(!expanded));
+        body.hidden = expanded;
+      });
+    });
+  })();
+  </script>
 
 </div><!-- /lrsd-page-content -->
