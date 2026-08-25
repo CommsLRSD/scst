@@ -1,22 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>School &amp; Classroom Support Team — LRSD</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
-</head>
-<body>
-
-<!-- =====================================================================
-     SCST — Single Page Reference (for LRSD page builder)
-     Mirrors the visual language of lrsd.net:
-       primary  #264e74  (navy)
-       accent   #b23427  (red)
-       fonts    Montserrat headings / Poppins body
-     No external JS/CSS dependencies beyond Google Fonts.
-     All content is inline — no dependency on app.js / content.js.
-====================================================================== -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <div class="lrsd-page-content">
   <div class="page-container">
@@ -26,21 +8,6 @@
       <p class="intro-tagline">Supporting Every School. Strengthening Every Classroom. Ensuring Every Student Thrives.</p>
       <p class="intro-body">An interactive guide to how the School and Classroom Support Team (SCST) partners with schools across Louis Riel School Division to strengthen student learning, well-being, and belonging.</p>
     </section>
-
-    <!-- ── Search ────────────────────────────────────────────────────── -->
-    <div class="search-wrap" role="search">
-      <svg class="search-ico" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      <input
-        id="scstSearch"
-        class="search-input"
-        type="search"
-        placeholder="Search people, roles, services, tiers…"
-        autocomplete="off"
-        aria-label="Search content"
-      />
-      <button class="search-clear" id="searchClear" aria-label="Clear search" hidden>&#10005;</button>
-    </div>
-    <p class="search-status" id="searchStatus" aria-live="polite"></p>
 
     <!-- ── SVG Sprite ─────────────────────────────────────────────────── -->
     <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -64,12 +31,8 @@
       </defs>
     </svg>
 
-    <!-- ================================================================
-         SECTIONS — each has data-search-text for the search feature
-    ================================================================= -->
-
     <!-- 1. Who We Are -->
-    <div class="scst-section" data-search-text="who we are overview equity reconciliation evidence practice partnerships capacity opportunity gaps Indigenous learners">
+    <div class="scst-section">
       <button class="acc-toggle" aria-expanded="true" aria-controls="sec-overview">
         <span class="acc-icon"><svg><use href="#i-compass"/></svg></span>
         <span class="acc-text">
@@ -111,7 +74,7 @@
     </div>
 
     <!-- 2. Why This Matters -->
-    <div class="scst-section" data-search-text="why this matters data gaps achievement Indigenous students attendance well-being risk strategic plan reconciliation responsive instruction belonging">
+    <div class="scst-section">
       <button class="acc-toggle" aria-expanded="false" aria-controls="sec-why">
         <span class="acc-icon"><svg><use href="#i-heart"/></svg></span>
         <span class="acc-text">
@@ -154,7 +117,7 @@
     </div>
 
     <!-- 3. How We Support Schools -->
-    <div class="scst-section" data-search-text="how support works collaboration coaching co-planning mentoring inclusive culturally responsive differentiated">
+    <div class="scst-section">
       <button class="acc-toggle" aria-expanded="false" aria-controls="sec-how">
         <span class="acc-icon"><svg><use href="#i-handshake"/></svg></span>
         <span class="acc-text">
@@ -182,7 +145,7 @@
     </div>
 
     <!-- 4. Levels of Support (Tiers) -->
-    <div class="scst-section" data-search-text="tiers levels support tier 1 tier 2 tier 3 universal targeted intensive all schools identified schools highest need coaching embedded co-teach progress monitoring">
+    <div class="scst-section">
       <button class="acc-toggle" aria-expanded="false" aria-controls="sec-tiers">
         <span class="acc-icon"><svg><use href="#i-layers"/></svg></span>
         <span class="acc-text">
@@ -255,7 +218,7 @@
     </div>
 
     <!-- 5. Using Data -->
-    <div class="scst-section" data-search-text="data informed screening literacy numeracy progress monitoring attendance well-being Indigenous gap indicators early identification intervention adjustment">
+    <div class="scst-section">
       <button class="acc-toggle" aria-expanded="false" aria-controls="sec-data">
         <span class="acc-icon"><svg><use href="#i-chart"/></svg></span>
         <span class="acc-text">
@@ -292,7 +255,7 @@
     </div>
 
     <!-- 6. Team Structure -->
-    <div class="scst-section" data-search-text="team structure leadership Nicholas Kelly Nicole Mager Megan Vankoughnett Lisa Tymchuk Kelsey Lenaghan instructional support Kristyn Artibise Kristen McDowell Genevieve Shyiak student services Kerri Bush Rose Pagtakhan Indigenous education Sean Oliver Rose Bird Judith Saunders-McKay Sam Flamand Trish Wilson Tammy Bruce Alice McKay Courtney Pranteau Maxine Lavitt Cub Spring Rhea Paul Alyssa Guimond Hailey McKay Destanee Ducharme Rose McKay clinical services Robert George Travis Hoare Karla Guiterrez Kim Mackey specialized Kathy Atkin Shaemus Campbell Jordana Milne Ryan Sabourin Allan Suban">
+    <div class="scst-section">
       <button class="acc-toggle" aria-expanded="false" aria-controls="sec-team">
         <span class="acc-icon"><svg><use href="#i-users"/></svg></span>
         <span class="acc-text">
@@ -463,7 +426,7 @@
     </div>
 
     <!-- 7. School-Based Support Model -->
-    <div class="scst-section" data-search-text="school-based model equity support school embedded allocation time expertise relational data achievement attendance engagement strengths-based culturally responsive opportunity gaps risk factors">
+    <div class="scst-section">
       <button class="acc-toggle" aria-expanded="false" aria-controls="sec-school">
         <span class="acc-icon"><svg><use href="#i-building"/></svg></span>
         <span class="acc-text">
@@ -503,7 +466,7 @@
     </div>
 
     <!-- 8. Current Direction -->
-    <div class="scst-section" data-search-text="current direction 2026 2027 wave-based literacy numeracy priority schools instructional support">
+    <div class="scst-section">
       <button class="acc-toggle" aria-expanded="false" aria-controls="sec-direction">
         <span class="acc-icon"><svg><use href="#i-route"/></svg></span>
         <span class="acc-text">
@@ -536,7 +499,7 @@
     </div>
 
     <!-- 9. Looking Ahead -->
-    <div class="scst-section" data-search-text="looking ahead future embedded collaboration data-informed tiered instructional mentorship library phys ed music applied technology human ecology student services teachers new LRSD">
+    <div class="scst-section">
       <button class="acc-toggle" aria-expanded="false" aria-controls="sec-ahead">
         <span class="acc-icon"><svg><use href="#i-telescope"/></svg></span>
         <span class="acc-text">
@@ -568,630 +531,489 @@
       </div>
     </div>
 
-    <!-- No-results message -->
-    <div class="no-results" id="noResults" hidden>
-      <p>No sections match your search. Try different keywords.</p>
-    </div>
-
   </div><!-- /page-container -->
-</div><!-- /lrsd-page-content -->
 
-<script>
-(function () {
-  // ── Accordion ────────────────────────────────────────────────────────────
-  document.querySelectorAll('.acc-toggle').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var expanded = btn.getAttribute('aria-expanded') === 'true';
-      var body = document.getElementById(btn.getAttribute('aria-controls'));
-      btn.setAttribute('aria-expanded', String(!expanded));
-      body.hidden = expanded;
+  <script>
+  (function () {
+    document.querySelectorAll('.acc-toggle').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        var body = document.getElementById(btn.getAttribute('aria-controls'));
+        btn.setAttribute('aria-expanded', String(!expanded));
+        body.hidden = expanded;
+      });
     });
-  });
+  })();
+  </script>
 
-  // ── Search ───────────────────────────────────────────────────────────────
-  var searchInput  = document.getElementById('scstSearch');
-  var clearBtn     = document.getElementById('searchClear');
-  var statusEl     = document.getElementById('searchStatus');
-  var noResults    = document.getElementById('noResults');
-  var sections     = document.querySelectorAll('.scst-section');
-
-  function doSearch (query) {
-    var q = query.trim().toLowerCase();
-    clearBtn.hidden = q.length === 0;
-
-    if (!q) {
-      sections.forEach(function (s) { s.hidden = false; });
-      statusEl.textContent = '';
-      noResults.hidden = true;
-      return;
+  <style>
+    .lrsd-page-content {
+      --primary:       #264e74;
+      --accent:        #b23427;
+      --light-bg:      #f5f7fa;
+      --white:         #fff;
+      --text:          #222;
+      --text-soft:     #555;
+      --border:        rgba(38, 78, 116, .12);
+      --shadow-light:  0 2px 6px rgba(34, 60, 80, .08);
+      --shadow-medium: 0 8px 20px rgba(0,0,0,.12), 0 3px 6px rgba(0,0,0,.08);
+      --tier1-color:   #2a7a59;
+      --tier2-color:   #b07d1a;
+      --tier3-color:   #b23427;
+      --header-font:   "Montserrat", sans-serif;
+      --body-font:     "Poppins", sans-serif;
+      font-family:     var(--body-font);
+      font-size:       16px;
+      font-weight:     400;
+      color:           var(--text);
+      line-height:     1.7;
+      box-sizing:      border-box;
     }
 
-    var visible = 0;
-    sections.forEach(function (s) {
-      // Search in data-search-text attribute AND visible text content
-      var haystack = (s.getAttribute('data-search-text') || '') + ' ' +
-                     s.textContent;
-      var words    = q.split(/\s+/);
-      var match    = words.every(function (w) { return haystack.toLowerCase().indexOf(w) !== -1; });
-      s.hidden = !match;
-      if (match) {
-        visible++;
-        // Auto-expand matched sections
-        var btn  = s.querySelector('.acc-toggle');
-        var body = document.getElementById(btn.getAttribute('aria-controls'));
-        btn.setAttribute('aria-expanded', 'true');
-        body.hidden = false;
-      }
-    });
+    .lrsd-page-content * { box-sizing: border-box; }
 
-    noResults.hidden = visible > 0;
-    statusEl.textContent = visible > 0
-      ? visible + ' section' + (visible === 1 ? '' : 's') + ' found'
-      : '';
-  }
+    .lrsd-page-content *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+      font-family: var(--body-font) !important;
+    }
+    .lrsd-page-content h1,
+    .lrsd-page-content h2,
+    .lrsd-page-content h3,
+    .lrsd-page-content h4 {
+      font-family: var(--header-font) !important;
+    }
 
-  searchInput.addEventListener('input', function () { doSearch(searchInput.value); });
+    .lrsd-page-content .page-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.5rem 1.5rem 4rem;
+    }
 
-  clearBtn.addEventListener('click', function () {
-    searchInput.value = '';
-    searchInput.focus();
-    doSearch('');
-  });
+    .lrsd-page-content .intro-section {
+      background: var(--light-bg);
+      border-left: 4px solid var(--primary);
+      border-radius: 0 12px 12px 0;
+      padding: 1.5rem 2rem;
+      margin-bottom: 2rem;
+    }
+    .lrsd-page-content .intro-tagline {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin: 0 0 .5rem;
+      line-height: 1.4;
+    }
+    .lrsd-page-content .intro-body {
+      font-size: .95rem;
+      color: var(--text-soft);
+      margin: 0;
+    }
 
-  // Allow pressing Escape to clear
-  searchInput.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') { searchInput.value = ''; doSearch(''); }
-  });
-})();
-</script>
+    .lrsd-page-content .scst-section {
+      background: var(--white);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-light);
+      margin-bottom: 1rem;
+      overflow: hidden;
+      transition: box-shadow .2s;
+    }
+    .lrsd-page-content .scst-section:hover {
+      box-shadow: var(--shadow-medium);
+    }
 
-<style>
-  /* ──────────────────────────────────────────────────────────────────────────
-     SCST Page Styles — scoped under .lrsd-page-content
-     Matches lrsd.net design language:
-       primary  #264e74  navy
-       accent   #b23427  red
-       fonts    Montserrat headings / Poppins body
-  ────────────────────────────────────────────────────────────────────────── */
+    .lrsd-page-content .acc-toggle {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.1rem 1.5rem;
+      cursor: pointer;
+      text-align: left;
+      color: var(--text);
+      transition: background .15s;
+    }
+    .lrsd-page-content .acc-toggle:hover { background: var(--light-bg); }
 
-  .lrsd-page-content {
-    --primary:       #264e74;
-    --accent:        #b23427;
-    --light-bg:      #f5f7fa;
-    --white:         #fff;
-    --text:          #222;
-    --text-soft:     #555;
-    --border:        rgba(38, 78, 116, .12);
-    --shadow-light:  0 2px 6px rgba(34, 60, 80, .08);
-    --shadow-medium: 0 8px 20px rgba(0,0,0,.12), 0 3px 6px rgba(0,0,0,.08);
-    --tier1-color:   #2a7a59;
-    --tier2-color:   #b07d1a;
-    --tier3-color:   #b23427;
-    --header-font:   "Montserrat", sans-serif;
-    --body-font:     "Poppins", sans-serif;
-    font-family:     var(--body-font);
-    font-size:       16px;
-    font-weight:     400;
-    color:           var(--text);
-    line-height:     1.7;
-    box-sizing:      border-box;
-  }
+    .lrsd-page-content .acc-icon {
+      flex-shrink: 0;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--light-bg);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1.5px solid var(--border);
+    }
+    .lrsd-page-content .acc-icon svg { width: 18px; height: 18px; }
 
-  .lrsd-page-content * { box-sizing: border-box; }
+    .lrsd-page-content .acc-text { flex: 1; }
+    .lrsd-page-content .acc-eyebrow {
+      display: block;
+      font-size: .7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--accent);
+      margin-bottom: .1rem;
+    }
+    .lrsd-page-content .acc-title {
+      display: block;
+      font-family: var(--header-font) !important;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.2;
+    }
 
-  .lrsd-page-content *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
-    font-family: var(--body-font) !important;
-  }
-  .lrsd-page-content h1,
-  .lrsd-page-content h2,
-  .lrsd-page-content h3,
-  .lrsd-page-content h4 {
-    font-family: var(--header-font) !important;
-  }
+    .lrsd-page-content .acc-chevron {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      color: var(--text-soft);
+      transition: transform .25s;
+    }
+    .lrsd-page-content .acc-toggle[aria-expanded="true"] .acc-chevron { transform: rotate(180deg); }
 
-  .lrsd-page-content .page-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 1.5rem 1.5rem 4rem;
-  }
+    .lrsd-page-content .acc-body {
+      padding: 0 1.5rem 1.5rem;
+      border-top: 1px solid var(--border);
+    }
 
-  /* ── Intro ─────────────────────────────────────────────────────────────── */
-  .lrsd-page-content .intro-section {
-    background: var(--light-bg);
-    border-left: 4px solid var(--primary);
-    border-radius: 0 12px 12px 0;
-    padding: 1.5rem 2rem;
-    margin-bottom: 2rem;
-  }
-  .lrsd-page-content .intro-tagline {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--primary);
-    margin: 0 0 .5rem;
-    line-height: 1.4;
-  }
-  .lrsd-page-content .intro-body {
-    font-size: .95rem;
-    color: var(--text-soft);
-    margin: 0;
-  }
+    .lrsd-page-content .lead-text {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text);
+      margin: 1.25rem 0;
+      line-height: 1.65;
+    }
+    .lrsd-page-content h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 1.25rem 0 .5rem;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+      padding-bottom: .15rem;
+    }
+    .lrsd-page-content .bullet-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: .35rem;
+    }
+    .lrsd-page-content .bullet-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: .6rem;
+      font-size: .9rem;
+      line-height: 1.5;
+    }
+    .lrsd-page-content .bullet-list li::before {
+      content: "";
+      flex-shrink: 0;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      margin-top: .52em;
+    }
 
-  /* ── Search ────────────────────────────────────────────────────────────── */
-  .lrsd-page-content .search-wrap {
-    position: relative;
-    margin-bottom: .5rem;
-  }
-  .lrsd-page-content .search-ico {
-    position: absolute;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 18px;
-    height: 18px;
-    color: var(--text-soft);
-    pointer-events: none;
-  }
-  .lrsd-page-content .search-input {
-    width: 100%;
-    padding: .75rem 2.75rem .75rem 2.75rem;
-    font-size: .95rem;
-    border: 2px solid var(--border);
-    border-radius: 10px;
-    background: var(--white);
-    color: var(--text);
-    outline: none;
-    transition: border-color .2s;
-    -webkit-appearance: none;
-  }
-  .lrsd-page-content .search-input:focus {
-    border-color: var(--primary);
-  }
-  .lrsd-page-content .search-clear {
-    position: absolute;
-    right: .9rem;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    color: var(--text-soft);
-    padding: .2rem .4rem;
-  }
-  .lrsd-page-content .search-status {
-    font-size: .8rem;
-    color: var(--text-soft);
-    margin: 0 0 1.25rem;
-    min-height: 1.2em;
-  }
+    .lrsd-page-content .callout {
+      background: var(--light-bg);
+      border-left: 4px solid var(--primary);
+      border-radius: 0 10px 10px 0;
+      padding: 1rem 1.25rem;
+      font-size: .9rem;
+      color: var(--text);
+      margin-top: 1.25rem;
+    }
+    .lrsd-page-content .callout-sm {
+      font-size: .85rem;
+      padding: .75rem 1rem;
+      margin-top: .75rem;
+      margin-bottom: .75rem;
+    }
+    .lrsd-page-content .callout-accent {
+      border-left-color: var(--accent);
+      background: #fdf2f1;
+    }
+    .lrsd-page-content .info-section {
+      background: var(--light-bg);
+      border-left: 4px solid var(--primary);
+      border-radius: 0 10px 10px 0;
+      padding: 1.25rem 1.5rem;
+      margin-top: 1.25rem;
+    }
+    .lrsd-page-content .info-section h3 {
+      margin-top: 0;
+    }
 
-  /* ── Section (accordion) ───────────────────────────────────────────────── */
-  .lrsd-page-content .scst-section {
-    background: var(--white);
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow-light);
-    margin-bottom: 1rem;
-    overflow: hidden;
-    transition: box-shadow .2s;
-  }
-  .lrsd-page-content .scst-section:hover {
-    box-shadow: var(--shadow-medium);
-  }
+    .lrsd-page-content .takeaway-bar {
+      margin-top: 1.25rem;
+      padding: .85rem 1.1rem;
+      background: var(--light-bg);
+      border-radius: 8px;
+      font-size: .88rem;
+      color: var(--text-soft);
+      border: 1px solid var(--border);
+    }
+    .lrsd-page-content .takeaway-bar strong { color: var(--primary); }
 
-  .lrsd-page-content .acc-toggle {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-    background: none;
-    border: none;
-    padding: 1.1rem 1.5rem;
-    cursor: pointer;
-    text-align: left;
-    color: var(--text);
-    transition: background .15s;
-  }
-  .lrsd-page-content .acc-toggle:hover { background: var(--light-bg); }
+    .lrsd-page-content .two-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .lrsd-page-content .three-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
 
-  .lrsd-page-content .acc-icon {
-    flex-shrink: 0;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background: var(--light-bg);
-    color: var(--primary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1.5px solid var(--border);
-  }
-  .lrsd-page-content .acc-icon svg { width: 18px; height: 18px; }
+    .lrsd-page-content .tier-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.25rem;
+    }
+    .lrsd-page-content .tier-card {
+      background: var(--white);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-light);
+      padding: 1.5rem;
+      border-top: 4px solid transparent;
+    }
+    .lrsd-page-content .tier-1 { border-top-color: var(--tier1-color); }
+    .lrsd-page-content .tier-2 { border-top-color: var(--tier2-color); }
+    .lrsd-page-content .tier-3 { border-top-color: var(--tier3-color); }
 
-  .lrsd-page-content .acc-text { flex: 1; }
-  .lrsd-page-content .acc-eyebrow {
-    display: block;
-    font-size: .7rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: .08em;
-    color: var(--accent);
-    margin-bottom: .1rem;
-  }
-  .lrsd-page-content .acc-title {
-    display: block;
-    font-family: var(--header-font) !important;
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: var(--primary);
-    line-height: 1.2;
-  }
+    .lrsd-page-content .tier-badge-row {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      margin-bottom: .75rem;
+    }
+    .lrsd-page-content .tier-badge {
+      font-size: .72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      padding: .2rem .65rem;
+      border-radius: 99px;
+      color: var(--white);
+    }
+    .lrsd-page-content .tier-1 .tier-badge { background: var(--tier1-color); }
+    .lrsd-page-content .tier-2 .tier-badge { background: var(--tier2-color); }
+    .lrsd-page-content .tier-3 .tier-badge { background: var(--tier3-color); }
+    .lrsd-page-content .tier-reach {
+      font-size: .8rem;
+      color: var(--text-soft);
+    }
+    .lrsd-page-content .tier-card h3 {
+      font-size: 1.05rem;
+      border-bottom: none;
+      margin: 0 0 .5rem;
+    }
+    .lrsd-page-content .tier-1 h3 { color: var(--tier1-color); }
+    .lrsd-page-content .tier-2 h3 { color: var(--tier2-color); }
+    .lrsd-page-content .tier-3 h3 { color: var(--tier3-color); }
+    .lrsd-page-content .tier-summary {
+      font-size: .88rem;
+      color: var(--text-soft);
+      margin-bottom: .9rem;
+      line-height: 1.5;
+    }
+    .lrsd-page-content .tier-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 .9rem;
+      display: flex;
+      flex-direction: column;
+      gap: .35rem;
+    }
+    .lrsd-page-content .tier-list li {
+      font-size: .85rem;
+      display: flex;
+      align-items: flex-start;
+      gap: .5rem;
+      line-height: 1.5;
+    }
+    .lrsd-page-content .tier-list li::before {
+      content: "✓";
+      font-weight: 700;
+      font-size: .78rem;
+      flex-shrink: 0;
+      margin-top: .15em;
+    }
+    .lrsd-page-content .tier-1 .tier-list li::before { color: var(--tier1-color); }
+    .lrsd-page-content .tier-2 .tier-list li::before { color: var(--tier2-color); }
+    .lrsd-page-content .tier-3 .tier-list li::before { color: var(--tier3-color); }
+    .lrsd-page-content .tier-goal {
+      font-size: .8rem;
+      color: var(--text-soft);
+      border-top: 1px solid var(--border);
+      padding-top: .65rem;
+      margin: 0;
+    }
 
-  .lrsd-page-content .acc-chevron {
-    flex-shrink: 0;
-    width: 20px;
-    height: 20px;
-    color: var(--text-soft);
-    transition: transform .25s;
-  }
-  .lrsd-page-content .acc-toggle[aria-expanded="true"] .acc-chevron { transform: rotate(180deg); }
+    .lrsd-page-content .area-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.25rem;
+    }
+    .lrsd-page-content .area-card {
+      background: var(--white);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-light);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .lrsd-page-content .area-card-head {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      padding: 1rem 1.25rem;
+      background: var(--light-bg);
+      border-bottom: 1px solid var(--border);
+    }
+    .lrsd-page-content .area-card-head h3 {
+      margin: 0;
+      font-size: .95rem;
+      border-bottom: none;
+      color: var(--primary);
+    }
+    .lrsd-page-content .area-icon {
+      flex-shrink: 0;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--white);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1.5px solid var(--border);
+    }
+    .lrsd-page-content .area-icon svg { width: 16px; height: 16px; }
 
-  .lrsd-page-content .acc-body {
-    padding: 0 1.5rem 1.5rem;
-    border-top: 1px solid var(--border);
-  }
+    .lrsd-page-content .area-card > *:not(.area-card-head) { padding: 0 1.25rem; }
+    .lrsd-page-content .area-card > *:last-child { padding-bottom: 1.25rem; }
 
-  /* ── Typography inside sections ────────────────────────────────────────── */
-  .lrsd-page-content .lead-text {
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--text);
-    margin: 1.25rem 0;
-    line-height: 1.65;
-  }
-  .lrsd-page-content h3 {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--primary);
-    margin: 1.25rem 0 .5rem;
-    border-bottom: 2px solid var(--accent);
-    display: inline-block;
-    padding-bottom: .15rem;
-  }
-  .lrsd-page-content .bullet-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: .35rem;
-  }
-  .lrsd-page-content .bullet-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: .6rem;
-    font-size: .9rem;
-    line-height: 1.5;
-  }
-  .lrsd-page-content .bullet-list li::before {
-    content: "";
-    flex-shrink: 0;
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--accent);
-    margin-top: .52em;
-  }
+    .lrsd-page-content .area-purpose {
+      font-size: .85rem;
+      color: var(--text-soft);
+      margin: .9rem 0 0;
+      line-height: 1.5;
+    }
 
-  /* ── Callout / info-section ────────────────────────────────────────────── */
-  .lrsd-page-content .callout {
-    background: var(--light-bg);
-    border-left: 4px solid var(--primary);
-    border-radius: 0 10px 10px 0;
-    padding: 1rem 1.25rem;
-    font-size: .9rem;
-    color: var(--text);
-    margin-top: 1.25rem;
-  }
-  .lrsd-page-content .callout-sm {
-    font-size: .85rem;
-    padding: .75rem 1rem;
-    margin-top: .75rem;
-    margin-bottom: .75rem;
-  }
-  .lrsd-page-content .callout-accent {
-    border-left-color: var(--accent);
-    background: #fdf2f1;
-  }
-  .lrsd-page-content .info-section {
-    background: var(--light-bg);
-    border-left: 4px solid var(--primary);
-    border-radius: 0 10px 10px 0;
-    padding: 1.25rem 1.5rem;
-    margin-top: 1.25rem;
-  }
-  .lrsd-page-content .info-section h3 {
-    margin-top: 0;
-  }
+    .lrsd-page-content .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .35rem;
+      margin: .75rem 0;
+    }
+    .lrsd-page-content .chip {
+      font-size: .72rem;
+      background: var(--light-bg);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      padding: .2rem .65rem;
+      color: var(--primary);
+      font-weight: 500;
+    }
 
-  /* ── Takeaway bar ──────────────────────────────────────────────────────── */
-  .lrsd-page-content .takeaway-bar {
-    margin-top: 1.25rem;
-    padding: .85rem 1.1rem;
-    background: var(--light-bg);
-    border-radius: 8px;
-    font-size: .88rem;
-    color: var(--text-soft);
-    border: 1px solid var(--border);
-  }
-  .lrsd-page-content .takeaway-bar strong { color: var(--primary); }
+    .lrsd-page-content .people-list {
+      display: flex;
+      flex-direction: column;
+      gap: .55rem;
+      margin: 0;
+    }
+    .lrsd-page-content .person {
+      display: flex;
+      align-items: flex-start;
+      gap: .65rem;
+    }
+    .lrsd-page-content .avatar {
+      flex-shrink: 0;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+    .lrsd-page-content .person-name {
+      font-size: .88rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 0;
+      line-height: 1.3;
+    }
+    .lrsd-page-content .person-title {
+      font-size: .78rem;
+      color: var(--text-soft);
+      margin: .1rem 0 0;
+      line-height: 1.3;
+    }
+    .lrsd-page-content .sub-group-label {
+      font-size: .72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      color: var(--accent);
+      margin: 1rem 0 .5rem;
+      border-top: 1px solid var(--border);
+      padding-top: .75rem;
+    }
 
-  /* ── Grid layouts ──────────────────────────────────────────────────────── */
-  .lrsd-page-content .two-col {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-  .lrsd-page-content .three-col {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-  .lrsd-page-content .info-block { /* no extra style needed */ }
+    .lrsd-page-content .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.25rem;
+    }
+    .lrsd-page-content .focus-card {
+      background: var(--white);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-light);
+      padding: 1.25rem;
+      border-top: 4px solid var(--primary);
+    }
+    .lrsd-page-content .focus-card h3 {
+      font-size: 1rem;
+      margin-top: 0;
+      margin-bottom: .6rem;
+      border-bottom: none;
+      color: var(--primary);
+    }
 
-  /* ── Tier cards ────────────────────────────────────────────────────────── */
-  .lrsd-page-content .tier-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.25rem;
-    margin-top: 1.25rem;
-  }
-  .lrsd-page-content .tier-card {
-    background: var(--white);
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow-light);
-    padding: 1.5rem;
-    border-top: 4px solid transparent;
-  }
-  .lrsd-page-content .tier-1 { border-top-color: var(--tier1-color); }
-  .lrsd-page-content .tier-2 { border-top-color: var(--tier2-color); }
-  .lrsd-page-content .tier-3 { border-top-color: var(--tier3-color); }
+    @media (max-width: 640px) {
+      .lrsd-page-content .page-container { padding: 1rem 1rem 3rem; }
+      .lrsd-page-content .acc-toggle { padding: .9rem 1rem; }
+      .lrsd-page-content .acc-body { padding: 0 1rem 1.25rem; }
+      .lrsd-page-content .intro-section { padding: 1.1rem 1.25rem; }
+      .lrsd-page-content .tier-grid,
+      .lrsd-page-content .area-grid,
+      .lrsd-page-content .focus-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 
-  .lrsd-page-content .tier-badge-row {
-    display: flex;
-    align-items: center;
-    gap: .6rem;
-    margin-bottom: .75rem;
-  }
-  .lrsd-page-content .tier-badge {
-    font-size: .72rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: .07em;
-    padding: .2rem .65rem;
-    border-radius: 99px;
-    color: var(--white);
-  }
-  .lrsd-page-content .tier-1 .tier-badge { background: var(--tier1-color); }
-  .lrsd-page-content .tier-2 .tier-badge { background: var(--tier2-color); }
-  .lrsd-page-content .tier-3 .tier-badge { background: var(--tier3-color); }
-  .lrsd-page-content .tier-reach {
-    font-size: .8rem;
-    color: var(--text-soft);
-  }
-  .lrsd-page-content .tier-card h3 {
-    font-size: 1.05rem;
-    border-bottom: none;
-    margin: 0 0 .5rem;
-  }
-  .lrsd-page-content .tier-1 h3 { color: var(--tier1-color); }
-  .lrsd-page-content .tier-2 h3 { color: var(--tier2-color); }
-  .lrsd-page-content .tier-3 h3 { color: var(--tier3-color); }
-  .lrsd-page-content .tier-summary {
-    font-size: .88rem;
-    color: var(--text-soft);
-    margin-bottom: .9rem;
-    line-height: 1.5;
-  }
-  .lrsd-page-content .tier-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 .9rem;
-    display: flex;
-    flex-direction: column;
-    gap: .35rem;
-  }
-  .lrsd-page-content .tier-list li {
-    font-size: .85rem;
-    display: flex;
-    align-items: flex-start;
-    gap: .5rem;
-    line-height: 1.5;
-  }
-  .lrsd-page-content .tier-list li::before {
-    content: "✓";
-    font-weight: 700;
-    font-size: .78rem;
-    flex-shrink: 0;
-    margin-top: .15em;
-  }
-  .lrsd-page-content .tier-1 .tier-list li::before { color: var(--tier1-color); }
-  .lrsd-page-content .tier-2 .tier-list li::before { color: var(--tier2-color); }
-  .lrsd-page-content .tier-3 .tier-list li::before { color: var(--tier3-color); }
-  .lrsd-page-content .tier-goal {
-    font-size: .8rem;
-    color: var(--text-soft);
-    border-top: 1px solid var(--border);
-    padding-top: .65rem;
-    margin: 0;
-  }
-
-  /* ── Area cards (team) ─────────────────────────────────────────────────── */
-  .lrsd-page-content .area-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-    gap: 1.25rem;
-    margin-top: 1.25rem;
-  }
-  .lrsd-page-content .area-card {
-    background: var(--white);
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow-light);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-  }
-  .lrsd-page-content .area-card-head {
-    display: flex;
-    align-items: center;
-    gap: .75rem;
-    padding: 1rem 1.25rem;
-    background: var(--light-bg);
-    border-bottom: 1px solid var(--border);
-  }
-  .lrsd-page-content .area-card-head h3 {
-    margin: 0;
-    font-size: .95rem;
-    border-bottom: none;
-    color: var(--primary);
-  }
-  .lrsd-page-content .area-icon {
-    flex-shrink: 0;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background: var(--white);
-    color: var(--primary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1.5px solid var(--border);
-  }
-  .lrsd-page-content .area-icon svg { width: 16px; height: 16px; }
-
-  .lrsd-page-content .area-card > *:not(.area-card-head) { padding: 0 1.25rem; }
-  .lrsd-page-content .area-card > *:last-child { padding-bottom: 1.25rem; }
-
-  .lrsd-page-content .area-purpose {
-    font-size: .85rem;
-    color: var(--text-soft);
-    margin: .9rem 0 0;
-    line-height: 1.5;
-  }
-
-  /* ── Chips ─────────────────────────────────────────────────────────────── */
-  .lrsd-page-content .chip-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .35rem;
-    margin: .75rem 0;
-  }
-  .lrsd-page-content .chip {
-    font-size: .72rem;
-    background: var(--light-bg);
-    border: 1px solid var(--border);
-    border-radius: 99px;
-    padding: .2rem .65rem;
-    color: var(--primary);
-    font-weight: 500;
-  }
-
-  /* ── People list ───────────────────────────────────────────────────────── */
-  .lrsd-page-content .people-list {
-    display: flex;
-    flex-direction: column;
-    gap: .55rem;
-    margin: 0;
-  }
-  .lrsd-page-content .person {
-    display: flex;
-    align-items: flex-start;
-    gap: .65rem;
-  }
-  .lrsd-page-content .avatar {
-    flex-shrink: 0;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background: var(--primary);
-    color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: .65rem;
-    font-weight: 700;
-    letter-spacing: .02em;
-  }
-  .lrsd-page-content .person-name {
-    font-size: .88rem;
-    font-weight: 600;
-    color: var(--text);
-    margin: 0;
-    line-height: 1.3;
-  }
-  .lrsd-page-content .person-title {
-    font-size: .78rem;
-    color: var(--text-soft);
-    margin: .1rem 0 0;
-    line-height: 1.3;
-  }
-  .lrsd-page-content .sub-group-label {
-    font-size: .72rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: .07em;
-    color: var(--accent);
-    margin: 1rem 0 .5rem;
-    border-top: 1px solid var(--border);
-    padding-top: .75rem;
-  }
-
-  /* ── Focus (direction) cards ───────────────────────────────────────────── */
-  .lrsd-page-content .focus-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.25rem;
-    margin-top: 1.25rem;
-  }
-  .lrsd-page-content .focus-card {
-    background: var(--white);
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow-light);
-    padding: 1.25rem;
-    border-top: 4px solid var(--primary);
-  }
-  .lrsd-page-content .focus-card h3 {
-    font-size: 1rem;
-    margin-top: 0;
-    margin-bottom: .6rem;
-    border-bottom: none;
-    color: var(--primary);
-  }
-
-  /* ── No-results ────────────────────────────────────────────────────────── */
-  .lrsd-page-content .no-results {
-    text-align: center;
-    padding: 3rem 1rem;
-    color: var(--text-soft);
-    font-size: .95rem;
-  }
-
-  /* ── Responsive ────────────────────────────────────────────────────────── */
-  @media (max-width: 640px) {
-    .lrsd-page-content .page-container { padding: 1rem 1rem 3rem; }
-    .lrsd-page-content .acc-toggle { padding: .9rem 1rem; }
-    .lrsd-page-content .acc-body { padding: 0 1rem 1.25rem; }
-    .lrsd-page-content .intro-section { padding: 1.1rem 1.25rem; }
-    .lrsd-page-content .tier-grid,
-    .lrsd-page-content .area-grid,
-    .lrsd-page-content .focus-grid { grid-template-columns: 1fr; }
-  }
-</style>
-
-</body>
-</html>
+</div><!-- /lrsd-page-content -->
