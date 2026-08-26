@@ -1126,7 +1126,7 @@
 	}
 	
 	.fr-view #scst-wrapper {
-		max-width: 1180px !important; margin-top: 0 !important; margin-right: auto !important; margin-bottom: 0 !important; margin-left: calc((100vw - 1180px) / 2) !important; padding: 0 2rem 4rem !important; font-family: 'Poppins', sans-serif !important; font-size: 16px !important; color: #222222 !important; line-height: 1.6 !important; background: transparent !important; text-align: left !important;
+		max-width: 1180px !important; margin: 0 auto !important; padding: 0 2rem 4rem !important; font-family: 'Poppins', sans-serif !important; font-size: 16px !important; color: #222222 !important; line-height: 1.6 !important; background: transparent !important; text-align: left !important; position: relative !important; left: -80px !important;
 	}
 	
 	.fr-view #scst-wrapper h1,
@@ -1459,13 +1459,10 @@
 	}
 	/* ── Responsive ── */
 	
-	@media (max-width: 1340px) {
-		.fr-view #scst-wrapper {
-			margin: 0 auto !important;
-		}
-	}
-
 	@media (max-width: 860px) {
+		.fr-view #scst-wrapper {
+			left: 0 !important;
+		}
 		.fr-view #scst-wrapper .pillars-grid,
 		.fr-view #scst-wrapper .tier-grid,
 		.fr-view #scst-wrapper .equity-tier-grid {
