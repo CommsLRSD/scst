@@ -11,8 +11,14 @@
 
 			<p class="mysp-header-subtitle">Supporting Every School. Strengthening Every Classroom. Ensuring Every Student Thrives.</p>
 		</div></div>
+	<div id="main-section-nav" style="display:flex;flex-wrap:wrap;gap:1.25rem;border-bottom:1px solid #d6dee8;margin:0 0 1.75rem;padding:0 0 0.6rem;font-family:'Poppins',sans-serif;">
+		<button class="scst-main-tab" data-main-tab="who" type="button" style="background:transparent;border:none;padding:0 0 0.3rem;margin:0;font-size:1rem;font-weight:600;color:#264e74;cursor:pointer;border-bottom:3px solid #264e74;line-height:1.2;">Who we are</button>
+		<button class="scst-main-tab" data-main-tab="why" type="button" style="background:transparent;border:none;padding:0 0 0.3rem;margin:0;font-size:1rem;font-weight:600;color:#5f7185;cursor:pointer;border-bottom:3px solid transparent;line-height:1.2;">Why this work matters</button>
+		<button class="scst-main-tab" data-main-tab="how" type="button" style="background:transparent;border:none;padding:0 0 0.3rem;margin:0;font-size:1rem;font-weight:600;color:#5f7185;cursor:pointer;border-bottom:3px solid transparent;line-height:1.2;">How we support schools</button>
+		<button class="scst-main-tab" data-main-tab="team" type="button" style="background:transparent;border:none;padding:0 0 0.3rem;margin:0;font-size:1rem;font-weight:600;color:#5f7185;cursor:pointer;border-bottom:3px solid transparent;line-height:1.2;">The team</button>
+	</div>
 	<!-- Who We Are -->
-	<div class="info-section">
+	<div class="info-section" data-main-section="who">
 
 		<h2>Who We Are</h2>
 
@@ -44,7 +50,7 @@
 		<p>SCST is a coordinated, system-level team that integrates leadership, instructional support, clinical services, Indigenous education, and specialized supports into one aligned model.</p>
 	</div>
 	<!-- Why This Work Matters -->
-	<div class="info-section">
+	<div class="info-section" data-main-section="why">
 
 		<h2>Why This Work Matters</h2>
 
@@ -61,7 +67,7 @@
 		<p>This work directly advances the LRSD Multi-Year Strategic Plan through closing opportunity gaps, strengthening responsive instruction, supporting belonging and well-being, and embedding Indigenous education and reconciliation.</p>
 	</div>
 	<!-- How We Support Schools -->
-	<div class="info-section">
+	<div class="info-section" data-main-section="how">
 
 		<h2>How We Support Schools</h2>
 
@@ -95,9 +101,17 @@
 				</ul>
 			</div></div></div>
 	<!-- ── TEAM CONTROLS ── -->
-	<div id="team-controls" style="margin-bottom:2rem;background:#ffffff;border-radius:14px;padding:1.25rem 1.5rem;box-shadow:0 2px 10px rgba(0,0,0,0.08);border:1px solid #e0e8f0;font-family:'Poppins',sans-serif;">
+	<div id="team-controls" data-main-section="team" style="margin-bottom:2rem;background:#ffffff;border-radius:14px;padding:1.25rem 1.5rem;box-shadow:0 2px 10px rgba(0,0,0,0.08);border:1px solid #e0e8f0;font-family:'Poppins',sans-serif;">
+		<!-- View switcher -->
+		<div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:1rem;">
+			<p style="font-size:0.75rem;font-weight:700;color:#264e74;text-transform:uppercase;letter-spacing:0.08em;margin:0 0.5rem 0 0;">View</p>
+			<div style="display:flex;gap:0;background:#f0f4f8;border-radius:10px;padding:4px;">
+				<button id="btn-cards"     aria-pressed="true"  style="background:#264e74;color:#fff;border:none;border-radius:7px;padding:0.45rem 1.1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;display:flex;align-items:center;gap:0.4rem;transition:background 0.15s,color 0.15s;"><svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><rect x="0" y="0" width="6" height="6" rx="1"/><rect x="8" y="0" width="6" height="6" rx="1"/><rect x="0" y="8" width="6" height="6" rx="1"/><rect x="8" y="8" width="6" height="6" rx="1"/></svg> Cards</button>
+				<button id="btn-hierarchy" aria-pressed="false" style="background:transparent;color:#264e74;border:none;border-radius:7px;padding:0.45rem 1.1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;display:flex;align-items:center;gap:0.4rem;transition:background 0.15s,color 0.15s;"><svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><rect x="5" y="0" width="4" height="4" rx="1"/><rect x="0" y="10" width="4" height="4" rx="1"/><rect x="5" y="10" width="4" height="4" rx="1"/><rect x="10" y="10" width="4" height="4" rx="1"/><rect x="6" y="4" width="2" height="3"/><rect x="1" y="7" width="2" height="3"/><rect x="6" y="7" width="2" height="3"/><rect x="11" y="7" width="2" height="3"/><rect x="1" y="6" width="12" height="2"/></svg> Hierarchy</button>
+			</div>
+		</div>
 		<!-- Filter tabs -->
-		<div id="team-filter-bar" style="margin-bottom:1rem;">
+		<div id="team-filter-bar">
 			<p style="font-size:0.75rem;font-weight:700;color:#264e74;text-transform:uppercase;letter-spacing:0.08em;margin:0 0 0.6rem;">Show team</p>
 			<div style="display:flex;flex-wrap:wrap;gap:0;background:#f0f4f8;border-radius:10px;padding:4px;width:fit-content;max-width:100%;">
 				<button class="scst-tab" data-filter="all"              style="background:#264e74;color:#fff;border:none;border-radius:7px;padding:0.45rem 1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;white-space:nowrap;transition:background 0.15s,color 0.15s;">All</button>
@@ -109,18 +123,10 @@
 				<button class="scst-tab" data-filter="specialized"      style="background:transparent;color:#264e74;border:none;border-radius:7px;padding:0.45rem 1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;white-space:nowrap;transition:background 0.15s,color 0.15s;">Specialized Supports</button>
 			</div>
 		</div>
-		<!-- View switcher -->
-		<div style="display:flex;align-items:center;gap:0.5rem;">
-			<p style="font-size:0.75rem;font-weight:700;color:#264e74;text-transform:uppercase;letter-spacing:0.08em;margin:0 0.5rem 0 0;">View</p>
-			<div style="display:flex;gap:0;background:#f0f4f8;border-radius:10px;padding:4px;">
-				<button id="btn-cards"     aria-pressed="true"  style="background:#264e74;color:#fff;border:none;border-radius:7px;padding:0.45rem 1.1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;display:flex;align-items:center;gap:0.4rem;transition:background 0.15s,color 0.15s;"><svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><rect x="0" y="0" width="6" height="6" rx="1"/><rect x="8" y="0" width="6" height="6" rx="1"/><rect x="0" y="8" width="6" height="6" rx="1"/><rect x="8" y="8" width="6" height="6" rx="1"/></svg> Cards</button>
-				<button id="btn-hierarchy" aria-pressed="false" style="background:transparent;color:#264e74;border:none;border-radius:7px;padding:0.45rem 1.1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;display:flex;align-items:center;gap:0.4rem;transition:background 0.15s,color 0.15s;"><svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><rect x="5" y="0" width="4" height="4" rx="1"/><rect x="0" y="10" width="4" height="4" rx="1"/><rect x="5" y="10" width="4" height="4" rx="1"/><rect x="10" y="10" width="4" height="4" rx="1"/><rect x="6" y="4" width="2" height="3"/><rect x="1" y="7" width="2" height="3"/><rect x="6" y="7" width="2" height="3"/><rect x="11" y="7" width="2" height="3"/><rect x="1" y="6" width="12" height="2"/></svg> Hierarchy</button>
-			</div>
-		</div>
 	</div>
 
 	<!-- ── HIERARCHY VIEW ── -->
-	<div id="hierarchy-view" style="display:none;font-family:'Poppins',sans-serif;color:#222;text-align:left;direction:ltr;margin-bottom:3rem;">
+	<div id="hierarchy-view" data-main-section="team" style="display:none;font-family:'Poppins',sans-serif;color:#222;text-align:left;direction:ltr;margin-bottom:3rem;">
 
 		<!-- Director — always shown, also serves as Leadership entry -->
 		<div style="background:#ffffff;border-radius:14px;box-shadow:0 4px 16px rgba(0,0,0,0.12);overflow:hidden;margin-bottom:1.5rem;">
@@ -331,7 +337,7 @@
 
 	<!-- ── TEAM SECTIONS ── -->
 	<!-- 1. Leadership -->
-	<div class="team-section" id="section-leadership">
+	<div class="team-section" id="section-leadership" data-main-section="team">
 		<div class="team-section-header">
 			<div class="team-section-num">1</div>
 			<div class="team-section-info">
@@ -399,7 +405,7 @@
 						<p class="person-bio">Kelsey leads Indigenous education and intercultural understandings across the division. She works alongside schools to strengthen relationships, support Indigenous Education School-based Action Planning, and embed Indigenous perspectives, identities, and ways of knowing into learning.</p>
 					</div></div></div></div></div>
 	<!-- 2. Instructional Support -->
-	<div class="team-section" id="section-instructional">
+	<div class="team-section" id="section-instructional" data-main-section="team">
 		<div class="team-section-header">
 			<div class="team-section-num">2</div>
 			<div class="team-section-info">
@@ -460,7 +466,7 @@
 						<p class="person-bio">Genevi&egrave;ve works collaboratively with school teams to enhance literacy learning and instructional practice. She supports teachers in using data to inform instruction, monitor progress, and create responsive learning environments that meet the needs of all students.</p>
 					</div></div></div></div></div>
 	<!-- 3. Student Support Services -->
-	<div class="team-section" id="section-student-support">
+	<div class="team-section" id="section-student-support" data-main-section="team">
 		<div class="team-section-header">
 			<div class="team-section-num">3</div>
 			<div class="team-section-info">
@@ -510,7 +516,7 @@
 						<p class="person-bio">Rose specializes in supporting multilingual learners across the division. She partners with teachers to design inclusive, language-rich instruction that supports both academic achievement and language development, helping students feel confident, capable, and connected in their learning.</p>
 					</div></div></div></div></div>
 	<!-- 4. Indigenous Education -->
-	<div class="team-section" id="section-indigenous">
+	<div class="team-section" id="section-indigenous" data-main-section="team">
 		<div class="team-section-header">
 			<div class="team-section-num">4</div>
 			<div class="team-section-info">
@@ -695,7 +701,7 @@
 						<p class="person-bio">Rose supports Cree language learning through relationship, storytelling, and cultural connection. She works with students to build confidence and pride in language and identity.</p>
 					</div></div></div></div></div>
 	<!-- 5. Clinical Services -->
-	<div class="team-section" id="section-clinical">
+	<div class="team-section" id="section-clinical" data-main-section="team">
 		<div class="team-section-header">
 			<div class="team-section-num">5</div>
 			<div class="team-section-info">
@@ -767,7 +773,7 @@
 						<p class="person-bio">Kim supports students&rsquo; social-emotional well-being, mental health, and overall sense of belonging within the school community. She collaborates with educators, families and caregivers, and community partners to provide responsive supports that help students navigate challenges, build resilience, and engage fully in their learning.</p>
 					</div></div></div></div></div>
 	<!-- 6. Specialized Supports -->
-	<div class="team-section" id="section-specialized">
+	<div class="team-section" id="section-specialized" data-main-section="team">
 		<div class="team-section-header">
 			<div class="team-section-num">6</div>
 			<div class="team-section-info">
@@ -847,7 +853,7 @@
 						<p class="person-bio">Allan supports arts programming in schools, helping to foster creativity, expression, and student engagement. He works with educators to strengthen music, visual arts and drama experiences that enrich learning and build student confidence.</p>
 					</div></div></div></div></div>
 	<!-- School-Based Support -->
-	<div class="info-box">
+	<div class="info-box" data-main-section="who">
 
 		<h3>School-Based Support</h3>
 
@@ -874,7 +880,7 @@
 		<p><strong>Numeracy (2026&ndash;2027):</strong> Wave-based support model across priority schools, focused on highest-need schools identified through data.</p>
 	</div>
 	<!-- Equity Support School Model -->
-	<div class="info-box">
+	<div class="info-box" data-main-section="who">
 
 		<h3>Equity Support School Model</h3>
 
@@ -924,7 +930,7 @@
 					</ul>
 				</div></div></div></div>
 	<!-- Looking Ahead -->
-	<div class="looking-ahead">
+	<div class="looking-ahead" data-main-section="how">
 
 		<h2>Looking Ahead</h2>
 
@@ -943,14 +949,51 @@
 		var wrapper = document.getElementById('scst-wrapper');
 		if (wrapper) wrapper.classList.add('js-ready');
 
+		// ── Main section tabs ─────────────────────────────────────────────
+		var mainTabs = document.querySelectorAll('.scst-main-tab');
+		var mainSections = document.querySelectorAll('[data-main-section]');
+		var activeMainSection = 'who';
+		var currentFilter = 'leadership';
+		var MAIN_TAB_ACTIVE = 'background:transparent;border:none;padding:0 0 0.3rem;margin:0;font-size:1rem;font-weight:600;color:#264e74;cursor:pointer;border-bottom:3px solid #264e74;line-height:1.2;';
+		var MAIN_TAB_INACTIVE = 'background:transparent;border:none;padding:0 0 0.3rem;margin:0;font-size:1rem;font-weight:600;color:#5f7185;cursor:pointer;border-bottom:3px solid transparent;line-height:1.2;';
+
+		function showMainSection(sectionKey)
+		{
+			activeMainSection = sectionKey;
+			mainTabs.forEach(function(tab)
+			{
+				tab.setAttribute('style', tab.dataset.mainTab === sectionKey ? MAIN_TAB_ACTIVE : MAIN_TAB_INACTIVE);
+			});
+			mainSections.forEach(function(section)
+			{
+				var matches = section.getAttribute('data-main-section') === sectionKey;
+				if (!matches)
+				{
+					section.style.display = 'none';
+					return;
+				}
+				if (section.id === 'hierarchy-view')
+				{
+					var hierarchyActive = btnHierarchy && btnHierarchy.getAttribute('aria-pressed') === 'true';
+					section.style.display = hierarchyActive ? '' : 'none';
+					return;
+				}
+				section.style.display = '';
+			});
+			applyFilter(currentFilter);
+		}
+
+		mainTabs.forEach(function(tab)
+		{
+			tab.addEventListener('click', function() { showMainSection(tab.dataset.mainTab); });
+		});
+
 		// ── Tab filter ────────────────────────────────────────────────────
 		var tabs = document.querySelectorAll('.scst-tab');
 		var teamSections = document.querySelectorAll('.team-section');
 
 		var TAB_ACTIVE   = 'background:#264e74;color:#fff;border:none;border-radius:7px;padding:0.45rem 1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:\'Poppins\',sans-serif;white-space:nowrap;transition:background 0.15s,color 0.15s;';
 		var TAB_INACTIVE = 'background:transparent;color:#264e74;border:none;border-radius:7px;padding:0.45rem 1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:\'Poppins\',sans-serif;white-space:nowrap;transition:background 0.15s,color 0.15s;';
-
-		var currentFilter = 'leadership';
 
 		// Hierarchy sections tagged with data-hier (space-separated team keys)
 		var hierSections = document.querySelectorAll('#hierarchy-view [data-hier]');
@@ -966,6 +1009,11 @@
 			var isHierarchyVisible = hierarchyView && hierarchyView.style.display !== 'none';
 			teamSections.forEach(function(section)
 			{
+				if (activeMainSection !== 'team')
+				{
+					section.style.display = 'none';
+					return;
+				}
 				if (isHierarchyVisible)
 				{
 					// Keep card sections hidden when hierarchy is showing
@@ -984,7 +1032,13 @@
 			});
 
 			// ── Hierarchy view filter ──
-			if (filter === 'leadership')
+			if (activeMainSection !== 'team')
+			{
+				if (hierarchyView)      hierarchyView.style.display = 'none';
+				if (hierLeadershipTeam) hierLeadershipTeam.style.display = 'none';
+				if (hierFullTree)       hierFullTree.style.display = 'none';
+			}
+			else if (filter === 'leadership')
 			{
 				// Show leadership team list, hide full portfolio tree
 				if (hierLeadershipTeam) hierLeadershipTeam.style.display = '';
@@ -1052,8 +1106,8 @@
 			});
 		});
 
-		// ── Apply default filter on load ──────────────────────────────────
-		applyFilter('leadership');
+		// ── Apply defaults on load ────────────────────────────────────────
+		showMainSection('who');
 	})();
 
 </script>
@@ -1072,7 +1126,7 @@
 	}
 	
 	.fr-view #scst-wrapper {
-		max-width: 1180px !important; margin: 0 auto !important; padding: 0 1.25rem 4rem !important; font-family: 'Poppins', sans-serif !important; font-size: 16px !important; color: #222222 !important; line-height: 1.6 !important; background: transparent !important;
+		max-width: 1180px !important; margin: 0 auto !important; padding: 0 2rem 4rem !important; font-family: 'Poppins', sans-serif !important; font-size: 16px !important; color: #222222 !important; line-height: 1.6 !important; background: transparent !important; text-align: left !important; position: relative !important; left: -80px !important;
 	}
 	
 	.fr-view #scst-wrapper h1,
@@ -1405,6 +1459,12 @@
 	}
 	/* ── Responsive ── */
 	
+	@media (max-width: 1340px) {
+		.fr-view #scst-wrapper {
+			left: 0 !important;
+		}
+	}
+
 	@media (max-width: 860px) {
 		.fr-view #scst-wrapper .pillars-grid,
 		.fr-view #scst-wrapper .tier-grid,
