@@ -712,10 +712,13 @@
 		var maxDelay = 0;
 		document.querySelectorAll('.person-cards-grid').forEach(function(grid)
 		{
-			grid.querySelectorAll('.person-card').forEach(function(card, i)
+			var cards = grid.querySelectorAll('.person-card');
+			var gridMaxDelay = cards.length ? 80 + (cards.length - 1) * 80 : 0;
+			if (gridMaxDelay > maxDelay) maxDelay = gridMaxDelay;
+
+			cards.forEach(function(card, i)
 			{
 				var delay = 80 + i * 80;
-				if (delay > maxDelay) maxDelay = delay;
 
 				setTimeout(function()
 				{
