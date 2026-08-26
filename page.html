@@ -187,8 +187,6 @@
 							<p class="org-title">Divisional Principal, Clinical &amp; Student Services</p>
 						</div>
 						<div class="org-children">
-							<div class="org-node"><div class="org-card"><p class="org-name">Kerri Bush</p><p class="org-title">Instructional Support / Student Services</p></div></div>
-							<div class="org-node"><div class="org-card"><p class="org-name">Rose Pagtakhan</p><p class="org-title">Instructional Support / Student Services</p></div></div>
 							<div class="org-node org-portfolio">
 								<div class="org-card">
 									<div class="org-photo"><img src="https://media.lrsd.net/media/Default/frl/lisa-tymchuk.68618d89380.jpg" alt="Lisa Tymchuk"></div>
@@ -196,6 +194,8 @@
 									<p class="org-title">Assistant Director, Clinical Services</p>
 								</div>
 								<div class="org-children">
+									<div class="org-node"><div class="org-card"><p class="org-name">Kerri Bush</p><p class="org-title">Instructional Support / Student Services</p></div></div>
+									<div class="org-node"><div class="org-card"><p class="org-name">Rose Pagtakhan</p><p class="org-title">Instructional Support / Student Services</p></div></div>
 									<div class="org-node"><div class="org-card"><p class="org-name">Robert George</p><p class="org-title">Psychologist</p></div></div>
 									<div class="org-node"><div class="org-card"><p class="org-name">Travis Hoare</p><p class="org-title">Occupational Therapist</p></div></div>
 									<div class="org-node"><div class="org-card"><p class="org-name">Karla Guiterrez</p><p class="org-title">Speech Language Pathologist</p></div></div>
@@ -872,13 +872,17 @@
 			if (btnCards) { btnCards.classList.toggle('active', !isHierarchy); btnCards.setAttribute('aria-pressed', String(!isHierarchy)); }
 			if (btnHierarchy) { btnHierarchy.classList.toggle('active', isHierarchy); btnHierarchy.setAttribute('aria-pressed', String(isHierarchy)); }
 			if (hierarchyView) hierarchyView.style.display = isHierarchy ? '' : 'none';
-			teamSections.forEach(function(s) { s.style.display = isHierarchy ? 'none' : ''; });
 			if (filterBar) filterBar.style.display = isHierarchy ? 'none' : '';
 			if (isHierarchy)
 			{
-				// Reset filter when switching to hierarchy
-				filterBtns.forEach(function(b) { b.classList.toggle('active', b.dataset.filter === 'all'); });
-				document.querySelectorAll('.person-card').forEach(function(c) { c.style.display = ''; });
+				teamSections.forEach(function(s) { s.style.display = 'none'; });
+			}
+			else
+			{
+				// Re-apply the currently active filter when returning to cards view
+				var activeBtn = document.querySelector('.filter-btn.active');
+				var activeFilter = activeBtn ? activeBtn.dataset.filter : 'all';
+				applyFilter(activeFilter);
 			}
 		}
 
