@@ -706,7 +706,7 @@
 	(function()
 	{
 		var wrapper = document.getElementById('scst-wrapper');
-		if (wrapper) wrapper.classList.add('js-ready');
+		if (wrapper) wrapper.classList.add('js-ready', 'is-animating');
 
 		// ── Staggered card entrance ───────────────────────────────────────
 		document.querySelectorAll('.person-cards-grid').forEach(function(grid)
@@ -719,6 +719,11 @@
 				}, 80 + i * 80);
 			});
 		});
+
+		setTimeout(function()
+		{
+			if (wrapper) wrapper.classList.remove('is-animating');
+		}, 2000);
 	})();
 
 </script>
@@ -913,11 +918,11 @@
 		background: #ffffff !important; border-radius: 12px !important; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13), 0 3px 8px rgba(0, 0, 0, 0.07) !important; overflow: hidden !important; display: flex !important; flex-direction: column !important; transition: box-shadow 0.25s, transform 0.2s !important;
 	}
 	
-	#scst-wrapper.js-ready .person-card {
-		opacity: 1 !important; transform: none !important;
+	#scst-wrapper.js-ready.is-animating .person-card {
+		opacity: 0 !important; transform: translateY(18px) !important;
 	}
 	
-	#scst-wrapper.js-ready .person-card.visible {
+	#scst-wrapper.js-ready.is-animating .person-card.visible {
 		animation: scst-fadeSlideIn 0.5s ease-out forwards !important;
 	}
 	
