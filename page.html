@@ -122,19 +122,51 @@
 	<!-- ── HIERARCHY VIEW ── -->
 	<div id="hierarchy-view" style="display:none;font-family:'Poppins',sans-serif;color:#222;text-align:left;direction:ltr;">
 
-		<!-- Director -->
+		<!-- Director — always shown, also serves as Leadership entry -->
 		<div style="background:#ffffff;border-radius:14px;box-shadow:0 4px 16px rgba(0,0,0,0.12);overflow:hidden;margin-bottom:1.5rem;">
 			<div style="background:linear-gradient(135deg,#1a3a58 0%,#264e74 100%);padding:1.5rem;display:flex;align-items:center;gap:1.25rem;text-align:left;">
 				<img src="https://media.lrsd.net/media/Default/frl/nicholas-kelly.4ad00389377.jpg" alt="Nicholas Kelly" style="width:72px;height:72px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,0.35);flex-shrink:0;">
-				<div style="text-align:left;">
+				<div style="flex:1;min-width:0;text-align:left;">
 					<p style="font-family:'Montserrat',sans-serif;font-size:1.15rem;font-weight:700;color:#fff;margin:0 0 0.2rem;text-align:left;">Nicholas Kelly</p>
 					<p style="font-size:0.82rem;color:rgba(255,255,255,0.8);margin:0;font-weight:500;text-align:left;">Director, School and Classroom Support</p>
 				</div>
 			</div>
 		</div>
 
-		<!-- Level 1 children wrapper -->
-		<div style="border-left:3px solid #d0dae6;margin-left:36px;padding-left:0;">
+		<!-- Leadership members shown only when leadership filter is active -->
+		<div id="hier-leadership-team" style="margin-bottom:1.5rem;">
+			<div style="display:flex;align-items:center;gap:0;margin-bottom:0.5rem;">
+				<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;"></div>
+				<div style="background:#f5f7fa;border-radius:8px;padding:0.6rem 0.9rem;display:flex;align-items:center;gap:0.75rem;flex:none;width:auto;max-width:420px;border-left:3px solid #264e74;text-align:left;">
+					<img src="https://media.lrsd.net/media/Default/frl/nicole-mager.da01da89378.jpg" alt="Nicole Mager" style="width:38px;height:38px;border-radius:50%;object-fit:cover;flex-shrink:0;">
+					<div style="text-align:left;"><p style="font-family:'Montserrat',sans-serif;font-size:0.82rem;font-weight:700;color:#264e74;margin:0 0 0.1rem;text-align:left;">Nicole Mager</p><p style="font-size:0.73rem;color:#666;margin:0;text-align:left;">Divisional Principal, Instructional &amp; Indigenous Education</p></div>
+				</div>
+			</div>
+			<div style="display:flex;align-items:center;gap:0;margin-bottom:0.5rem;">
+				<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;"></div>
+				<div style="background:#f5f7fa;border-radius:8px;padding:0.6rem 0.9rem;display:flex;align-items:center;gap:0.75rem;flex:none;width:auto;max-width:420px;border-left:3px solid #264e74;text-align:left;">
+					<img src="https://media.lrsd.net/media/Default/frl/megan-vankoughnett.100d8089379.jpg" alt="Megan Vankoughnett" style="width:38px;height:38px;border-radius:50%;object-fit:cover;flex-shrink:0;">
+					<div style="text-align:left;"><p style="font-family:'Montserrat',sans-serif;font-size:0.82rem;font-weight:700;color:#264e74;margin:0 0 0.1rem;text-align:left;">Megan Vankoughnett</p><p style="font-size:0.73rem;color:#666;margin:0;text-align:left;">Divisional Principal, Clinical &amp; Student Services</p></div>
+				</div>
+			</div>
+			<div style="display:flex;align-items:center;gap:0;margin-bottom:0.5rem;">
+				<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;"></div>
+				<div style="background:#f5f7fa;border-radius:8px;padding:0.6rem 0.9rem;display:flex;align-items:center;gap:0.75rem;flex:none;width:auto;max-width:420px;border-left:3px solid #264e74;text-align:left;">
+					<img src="https://media.lrsd.net/media/Default/frl/lisa-tymchuk.68618d89380.jpg" alt="Lisa Tymchuk" style="width:38px;height:38px;border-radius:50%;object-fit:cover;flex-shrink:0;">
+					<div style="text-align:left;"><p style="font-family:'Montserrat',sans-serif;font-size:0.82rem;font-weight:700;color:#264e74;margin:0 0 0.1rem;text-align:left;">Lisa Tymchuk</p><p style="font-size:0.73rem;color:#666;margin:0;text-align:left;">Assistant Director, Clinical Services</p></div>
+				</div>
+			</div>
+			<div style="display:flex;align-items:center;gap:0;margin-bottom:0.5rem;">
+				<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;"></div>
+				<div style="background:#f5f7fa;border-radius:8px;padding:0.6rem 0.9rem;display:flex;align-items:center;gap:0.75rem;flex:none;width:auto;max-width:420px;border-left:3px solid #264e74;text-align:left;">
+					<img src="https://media.lrsd.net/media/Default/frl/kelsey-leneghan.01377989381.jpg" alt="Kelsey Lenaghan" style="width:38px;height:38px;border-radius:50%;object-fit:cover;flex-shrink:0;">
+					<div style="text-align:left;"><p style="font-family:'Montserrat',sans-serif;font-size:0.82rem;font-weight:700;color:#264e74;margin:0 0 0.1rem;text-align:left;">Kelsey Lenaghan</p><p style="font-size:0.73rem;color:#666;margin:0;text-align:left;">Divisional Indigenous Leader</p></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Level 1 children wrapper — hidden when leadership filter is active -->
+		<div id="hier-full-tree" style="border-left:3px solid #d0dae6;margin-left:36px;padding-left:0;">
 
 			<!-- ── Portfolio 1: Nicole Mager (instructional + indigenous) ── -->
 			<div data-hier="instructional indigenous" style="margin-bottom:1.25rem;">
@@ -282,7 +314,7 @@
 				</div>
 			</div>
 
-		</div><!-- /level-1 -->
+		</div><!-- /hier-full-tree -->
 	</div>
 
 	<!-- ── TEAM SECTIONS ── -->
@@ -906,21 +938,28 @@
 		var TAB_ACTIVE   = 'background:#264e74;color:#fff;border:none;border-radius:7px;padding:0.45rem 1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:\'Poppins\',sans-serif;white-space:nowrap;transition:background 0.15s,color 0.15s;';
 		var TAB_INACTIVE = 'background:transparent;color:#264e74;border:none;border-radius:7px;padding:0.45rem 1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:\'Poppins\',sans-serif;white-space:nowrap;transition:background 0.15s,color 0.15s;';
 
-		var currentFilter = 'all';
+		var currentFilter = 'leadership';
 
 		// Hierarchy sections tagged with data-hier (space-separated team keys)
 		var hierSections = document.querySelectorAll('#hierarchy-view [data-hier]');
-		// Director banner always shown — never filtered
-		var hierDirector = document.querySelector('#hierarchy-view > div:first-child');
+		var hierLeadershipTeam = document.getElementById('hier-leadership-team');
+		var hierFullTree = document.getElementById('hier-full-tree');
 
 		function applyFilter(filter)
 		{
 			currentFilter = filter;
 			tabs.forEach(function(b) { b.setAttribute('style', b.dataset.filter === filter ? TAB_ACTIVE : TAB_INACTIVE); });
 
-			// ── Cards view filter ──
+			// ── Cards view filter (only affects visible card sections) ──
+			var isHierarchyVisible = hierarchyView && hierarchyView.style.display !== 'none';
 			teamSections.forEach(function(section)
 			{
+				if (isHierarchyVisible)
+				{
+					// Keep card sections hidden when hierarchy is showing
+					section.style.display = 'none';
+					return;
+				}
 				var cards = section.querySelectorAll('.person-card');
 				var visible = 0;
 				cards.forEach(function(card)
@@ -933,20 +972,27 @@
 			});
 
 			// ── Hierarchy view filter ──
-			hierSections.forEach(function(section)
-			{
-				if (filter === 'all')
-				{
-					section.style.display = '';
-					return;
-				}
-				var teams = (section.getAttribute('data-hier') || '').split(' ');
-				section.style.display = teams.indexOf(filter) !== -1 ? '' : 'none';
-			});
-			// leadership filter: show director banner only; hide all sub-sections
 			if (filter === 'leadership')
 			{
-				hierSections.forEach(function(s) { s.style.display = 'none'; });
+				// Show leadership team list, hide full portfolio tree
+				if (hierLeadershipTeam) hierLeadershipTeam.style.display = '';
+				if (hierFullTree)       hierFullTree.style.display = 'none';
+			}
+			else
+			{
+				// Hide leadership-only list, show full tree filtered by portfolio
+				if (hierLeadershipTeam) hierLeadershipTeam.style.display = 'none';
+				if (hierFullTree)       hierFullTree.style.display = '';
+				hierSections.forEach(function(section)
+				{
+					if (filter === 'all')
+					{
+						section.style.display = '';
+						return;
+					}
+					var teams = (section.getAttribute('data-hier') || '').split(' ');
+					section.style.display = teams.indexOf(filter) !== -1 ? '' : 'none';
+				});
 			}
 		}
 
@@ -970,17 +1016,10 @@
 			if (btnCards)     { btnCards.setAttribute('style', isHierarchy ? VIEW_BTN_INACTIVE : VIEW_BTN_ACTIVE);     btnCards.setAttribute('aria-pressed', String(!isHierarchy)); }
 			if (btnHierarchy) { btnHierarchy.setAttribute('style', isHierarchy ? VIEW_BTN_ACTIVE : VIEW_BTN_INACTIVE); btnHierarchy.setAttribute('aria-pressed', String(isHierarchy)); }
 			if (hierarchyView) hierarchyView.style.display = isHierarchy ? '' : 'none';
-			// Filter bar is always visible — it applies to both views
-			if (isHierarchy)
-			{
-				teamSections.forEach(function(s) { s.style.display = 'none'; });
-				// Re-apply filter to hierarchy sections
-				applyFilter(currentFilter);
-			}
-			else
-			{
-				applyFilter(currentFilter);
-			}
+			// Always hide card sections when hierarchy is showing
+			if (isHierarchy) teamSections.forEach(function(s) { s.style.display = 'none'; });
+			// Re-apply filter (cards view respects isHierarchyVisible; hierarchy filter always runs)
+			applyFilter(currentFilter);
 		}
 
 		if (btnCards)     btnCards.addEventListener('click',     function() { setView('cards'); });
@@ -1000,6 +1039,9 @@
 				if (chevron) chevron.style.transform = isOpen ? 'rotate(-90deg)' : '';
 			});
 		});
+
+		// ── Apply default filter on load ──────────────────────────────────
+		applyFilter('leadership');
 	})();
 
 </script>
