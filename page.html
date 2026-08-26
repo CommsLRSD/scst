@@ -953,6 +953,7 @@
 		var mainTabs = document.querySelectorAll('.scst-main-tab');
 		var mainSections = document.querySelectorAll('[data-main-section]');
 		var activeMainSection = 'who';
+		var currentFilter = 'leadership';
 		var MAIN_TAB_ACTIVE = 'background:transparent;border:none;padding:0 0 0.3rem;margin:0;font-size:1rem;font-weight:600;color:#264e74;cursor:pointer;border-bottom:3px solid #264e74;line-height:1.2;';
 		var MAIN_TAB_INACTIVE = 'background:transparent;border:none;padding:0 0 0.3rem;margin:0;font-size:1rem;font-weight:600;color:#5f7185;cursor:pointer;border-bottom:3px solid transparent;line-height:1.2;';
 
@@ -965,7 +966,19 @@
 			});
 			mainSections.forEach(function(section)
 			{
-				section.style.display = section.getAttribute('data-main-section') === sectionKey ? '' : 'none';
+				var matches = section.getAttribute('data-main-section') === sectionKey;
+				if (!matches)
+				{
+					section.style.display = 'none';
+					return;
+				}
+				if (section.id === 'hierarchy-view')
+				{
+					var hierarchyActive = btnHierarchy && btnHierarchy.getAttribute('aria-pressed') === 'true';
+					section.style.display = hierarchyActive ? '' : 'none';
+					return;
+				}
+				section.style.display = '';
 			});
 			applyFilter(currentFilter);
 		}
@@ -981,8 +994,6 @@
 
 		var TAB_ACTIVE   = 'background:#264e74;color:#fff;border:none;border-radius:7px;padding:0.45rem 1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:\'Poppins\',sans-serif;white-space:nowrap;transition:background 0.15s,color 0.15s;';
 		var TAB_INACTIVE = 'background:transparent;color:#264e74;border:none;border-radius:7px;padding:0.45rem 1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:\'Poppins\',sans-serif;white-space:nowrap;transition:background 0.15s,color 0.15s;';
-
-		var currentFilter = 'leadership';
 
 		// Hierarchy sections tagged with data-hier (space-separated team keys)
 		var hierSections = document.querySelectorAll('#hierarchy-view [data-hier]');
@@ -1096,7 +1107,6 @@
 		});
 
 		// ── Apply defaults on load ────────────────────────────────────────
-		applyFilter('leadership');
 		showMainSection('who');
 	})();
 
