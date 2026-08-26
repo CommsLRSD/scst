@@ -364,35 +364,6 @@
 			grid-template-columns: 1fr !important;
 		}
 	}
-	/* ── Team filter bar ── */
-	
-	#scst-team-filter {
-		display: flex !important; flex-wrap: wrap !important; gap: 0.5rem !important; margin: 0 0 2rem !important; padding: 1rem 1.25rem !important; background: #f5f7fa !important; border-radius: 12px !important; align-items: center !important;
-	}
-	
-	#scst-team-filter .filter-label {
-		font-family: 'Montserrat', sans-serif !important; font-size: 0.78rem !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 0.08em !important; color: #264e74 !important; margin-right: 0.5rem !important; white-space: nowrap !important;
-	}
-	
-	#scst-team-filter .filter-btn {
-		display: inline-flex !important; align-items: center !important; padding: 0.35rem 0.9rem !important; border-radius: 20px !important; border: 2px solid rgba(38, 78, 116, 0.25) !important; background: #ffffff !important; color: #264e74 !important; font-family: 'Poppins', sans-serif !important; font-size: 0.82rem !important; font-weight: 500 !important; cursor: pointer !important; transition: background 0.2s, border-color 0.2s, color 0.2s !important; white-space: nowrap !important;
-	}
-	
-	#scst-team-filter .filter-btn:hover {
-		background: rgba(38, 78, 116, 0.08) !important; border-color: #264e74 !important;
-	}
-	
-	#scst-team-filter .filter-btn.active {
-		background: #264e74 !important; color: #ffffff !important; border-color: #264e74 !important;
-	}
-	
-	.team-section.scst-hidden {
-		display: none !important;
-	}
-	
-	.person-card.scst-hidden {
-		display: none !important;
-	}
 
 </style>
 <div id="scst-wrapper">
@@ -491,16 +462,6 @@
 					<li>Coordinated instructional, clinical, and Indigenous education supports</li>
 				</ul>
 			</div></div></div>
-	<!-- Team filter -->
-	<div id="scst-team-filter"><span class="filter-label">Filter by team:</span>
-		<button class="filter-btn active" data-filter="all">All</button>
-		<button class="filter-btn" data-filter="leadership">Leadership</button>
-		<button class="filter-btn" data-filter="instructional">Instructional Support</button>
-		<button class="filter-btn" data-filter="student-support">Student Support Services</button>
-		<button class="filter-btn" data-filter="indigenous">Indigenous Education</button>
-		<button class="filter-btn" data-filter="clinical">Clinical Services</button>
-		<button class="filter-btn" data-filter="specialized">Specialized Supports</button>
-	</div>
 	<!-- ── TEAM SECTIONS ── -->
 	<!-- 1. Leadership -->
 	<div class="team-section" id="section-leadership">
@@ -1114,60 +1075,6 @@
 	{
 		var wrapper = document.getElementById('scst-wrapper');
 		if (wrapper) wrapper.classList.add('js-ready');
-
-		// ── Team filter ──────────────────────────────────────────────────
-		var filterBar = document.getElementById('scst-team-filter');
-		if (filterBar)
-		{
-			filterBar.addEventListener('click', function(e)
-			{
-				var btn = e.target.closest('.filter-btn');
-				if (!btn) return;
-					// Update active button
-				filterBar.querySelectorAll('.filter-btn').forEach(function(b)
-				{
-					b.classList.remove('active');
-				});
-				btn.classList.add('active');
-				var filter = btn.getAttribute('data-filter');
-					// Show/hide team sections and their cards
-				document.querySelectorAll('.team-section').forEach(function(sec)
-				{
-					if (filter === 'all')
-					{
-						sec.classList.remove('scst-hidden');
-						sec.querySelectorAll('.person-card').forEach(function(c)
-						{
-							c.classList.remove('scst-hidden');
-						});
-					}
-					else
-					{
-						var hasMatch = false;
-						sec.querySelectorAll('.person-card').forEach(function(c)
-						{
-							if (c.getAttribute('data-team') === filter)
-							{
-								c.classList.remove('scst-hidden');
-								hasMatch = true;
-							}
-							else
-							{
-								c.classList.add('scst-hidden');
-							}
-						});
-						if (hasMatch)
-						{
-							sec.classList.remove('scst-hidden');
-						}
-						else
-						{
-							sec.classList.add('scst-hidden');
-						}
-					}
-				});
-			});
-		}
 
 		// ── Staggered card entrance ───────────────────────────────────────
 		document.querySelectorAll('.person-cards-grid').forEach(function(grid)
