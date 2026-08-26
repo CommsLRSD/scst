@@ -1,0 +1,1185 @@
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500;600&display=swap');:root {
+		--scst-primary: #264e74; --scst-accent: #b23427; --scst-light-bg: #f5f7fa; --scst-white: #ffffff; --scst-text: #222222; --scst-header-font: 'Montserrat', sans-serif; --scst-body-font: 'Poppins', sans-serif; --scst-shadow-light: 0 2px 6px rgba(34, 60, 80, 0.08); --scst-shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.13), 0 3px 8px rgba(0, 0, 0, 0.07);
+	}
+	/* ── Scoped reset & base ── */
+	
+	#scst-wrapper *,
+	#scst-wrapper *::before,
+	#scst-wrapper *::after {
+		box-sizing: border-box !important;
+	}
+	
+	#scst-wrapper {
+		max-width: 1180px !important; margin: 0 auto !important; padding: 0 1.25rem 4rem !important; font-family: 'Poppins', sans-serif !important; font-size: 16px !important; color: #222222 !important; line-height: 1.6 !important; background: transparent !important;
+	}
+	
+	#scst-wrapper h1,
+	#scst-wrapper h2,
+	#scst-wrapper h3,
+	#scst-wrapper h4 {
+		font-family: 'Montserrat', sans-serif !important; color: #264e74 !important;
+	}
+	
+	#scst-wrapper p,
+	#scst-wrapper li,
+	#scst-wrapper span {
+		font-family: 'Poppins', sans-serif !important;
+	}
+	/* ── Page header ── */
+	
+	#scst-wrapper .mysp-page-header {
+		display: flex !important; align-items: center !important; gap: 2.5rem !important; padding: 1.5rem 0 2rem !important; margin: 0 0 2rem !important;
+	}
+	
+	#scst-wrapper .mysp-header-logo {
+		height: 150px !important; width: auto !important; object-fit: contain !important; flex-shrink: 0 !important;
+	}
+	
+	#scst-wrapper .mysp-header-divider {
+		width: 1px !important; height: 100px !important; background: rgba(38, 78, 116, 0.15) !important; flex-shrink: 0 !important;
+	}
+	
+	#scst-wrapper .mysp-header-content {
+		flex: 1 !important;
+	}
+	
+	#scst-wrapper .mysp-header-eyebrow {
+		font-size: 0.82rem !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 0.12em !important; color: #264e74 !important; opacity: 0.65 !important; margin: 0 0 0.3rem !important;
+	}
+	
+	#scst-wrapper .mysp-header-title {
+		font-family: 'Montserrat', sans-serif !important; font-size: 2.75rem !important; font-weight: 700 !important; color: #264e74 !important; margin: 0 0 0.4rem !important; line-height: 1.1 !important;
+	}
+	
+	#scst-wrapper .mysp-header-subtitle {
+		font-size: 0.95rem !important; color: #666 !important; margin: 0.35rem 0 0 !important;
+	}
+	/* ── Info sections ── */
+	
+	#scst-wrapper .info-section {
+		margin-bottom: 2.5rem !important;
+	}
+	
+	#scst-wrapper .info-section h2 {
+		font-size: 1.6rem !important; margin: 0 0 1rem !important; padding-bottom: 0.5rem !important; border-bottom: 3px solid #264e74 !important; display: inline-block !important;
+	}
+	
+	#scst-wrapper .info-section p {
+		font-size: 0.97rem !important; color: #444 !important; margin: 0 0 0.75rem !important;
+	}
+	
+	#scst-wrapper .info-section ul {
+		padding-left: 1.4rem !important; margin: 0 0 0.75rem !important;
+	}
+	
+	#scst-wrapper .info-section ul li {
+		font-size: 0.93rem !important; color: #444 !important; margin-bottom: 0.3rem !important;
+	}
+	/* ── Pillars grid ── */
+	
+	#scst-wrapper .pillars-grid {
+		display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 1rem !important; margin: 1.25rem 0 !important;
+	}
+	
+	#scst-wrapper .pillar-card {
+		background: #f5f7fa !important; border-radius: 12px !important; padding: 1.25rem !important; border-left: 4px solid #264e74 !important;
+	}
+	
+	#scst-wrapper .pillar-card h4 {
+		font-size: 0.9rem !important; margin: 0 0 0.4rem !important; color: #264e74 !important;
+	}
+	
+	#scst-wrapper .pillar-card p {
+		font-size: 0.85rem !important; margin: 0 !important; color: #555 !important;
+	}
+	/* ── Tier grid ── */
+	
+	#scst-wrapper .tier-grid {
+		display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 1rem !important; margin: 1.25rem 0 !important;
+	}
+	
+	#scst-wrapper .tier-card {
+		background: #ffffff !important; border-radius: 12px !important; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13), 0 3px 8px rgba(0, 0, 0, 0.07) !important; overflow: hidden !important;
+	}
+	
+	#scst-wrapper .tier-card-header {
+		padding: 0.85rem 1.1rem !important; font-family: 'Montserrat', sans-serif !important; font-size: 0.95rem !important; font-weight: 700 !important; color: #fff !important;
+	}
+	
+	#scst-wrapper .tier-card-header.tier-1 {
+		background: #a3b939 !important;
+	}
+	
+	#scst-wrapper .tier-card-header.tier-2 {
+		background: #3491cd !important;
+	}
+	
+	#scst-wrapper .tier-card-header.tier-3 {
+		background: #264e74 !important;
+	}
+	
+	#scst-wrapper .tier-card ul {
+		list-style: disc !important; padding: 0.9rem 1rem 0.9rem 1.6rem !important; margin: 0 !important;
+	}
+	
+	#scst-wrapper .tier-card ul li {
+		font-size: 0.85rem !important; color: #444 !important; margin-bottom: 0.3rem !important;
+	}
+	/* ── Team section ── */
+	
+	#scst-wrapper .team-section {
+		margin-bottom: 3rem !important;
+	}
+	
+	#scst-wrapper .team-section-header {
+		display: flex !important; align-items: center !important; gap: 1.25rem !important; background: linear-gradient(135deg, #1a3a58 0%, #264e74 100%) !important; border-radius: 14px 14px 0 0 !important; padding: 1.5rem 1.75rem !important; color: #fff !important;
+	}
+	
+	#scst-wrapper .team-section-num {
+		font-family: 'Montserrat', sans-serif !important; font-size: 3rem !important; font-weight: 700 !important; opacity: 0.2 !important; line-height: 1 !important; flex-shrink: 0 !important;
+	}
+	
+	#scst-wrapper .team-section-info h3 {
+		font-family: 'Montserrat', sans-serif !important; font-size: 1.4rem !important; font-weight: 700 !important; color: #fff !important; margin: 0 0 0.2rem !important;
+	}
+	
+	#scst-wrapper .team-section-info p {
+		font-size: 0.88rem !important; color: rgba(255, 255, 255, 0.75) !important; margin: 0 !important;
+	}
+	
+	#scst-wrapper .team-section-body {
+		background: #f5f7fa !important; border-radius: 0 0 14px 14px !important; padding: 1.5rem !important; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13), 0 3px 8px rgba(0, 0, 0, 0.07) !important;
+	}
+	
+	#scst-wrapper .team-purpose {
+		margin-bottom: 1.5rem !important; padding: 1rem 1.25rem !important; background: #ffffff !important; border-radius: 10px !important; border-left: 4px solid #264e74 !important;
+	}
+	
+	#scst-wrapper .team-purpose h4 {
+		font-size: 0.8rem !important; text-transform: uppercase !important; letter-spacing: 0.08em !important; color: #264e74 !important; margin: 0 0 0.4rem !important;
+	}
+	
+	#scst-wrapper .team-purpose p {
+		font-size: 0.9rem !important; color: #444 !important; margin: 0 !important;
+	}
+	
+	#scst-wrapper .team-key-work {
+		margin-bottom: 1.5rem !important; padding: 1rem 1.25rem !important; background: #ffffff !important; border-radius: 10px !important; border-left: 4px solid #3491cd !important;
+	}
+	
+	#scst-wrapper .team-key-work h4 {
+		font-size: 0.8rem !important; text-transform: uppercase !important; letter-spacing: 0.08em !important; color: #3491cd !important; margin: 0 0 0.4rem !important;
+	}
+	
+	#scst-wrapper .team-key-work ul {
+		padding-left: 1.2rem !important; margin: 0 !important;
+	}
+	
+	#scst-wrapper .team-key-work ul li {
+		font-size: 0.88rem !important; color: #444 !important; margin-bottom: 0.25rem !important;
+	}
+	/* ── Person cards grid ── */
+	
+	#scst-wrapper .person-cards-grid {
+		display: grid !important; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)) !important; gap: 1.25rem !important;
+	}
+	
+	#scst-wrapper .person-card {
+		background: #ffffff !important; border-radius: 12px !important; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13), 0 3px 8px rgba(0, 0, 0, 0.07) !important; overflow: hidden !important; display: flex !important; flex-direction: column !important; transition: box-shadow 0.25s, transform 0.2s !important;
+	}
+	
+	#scst-wrapper.js-ready .person-card {
+		opacity: 0 !important; transform: translateY(18px) !important;
+	}
+	
+	#scst-wrapper.js-ready .person-card.visible {
+		animation: scst-fadeSlideIn 0.5s ease-out forwards !important;
+	}
+	
+	#scst-wrapper .person-card:hover {
+		box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16), 0 4px 10px rgba(0, 0, 0, 0.1) !important; transform: translateY(-2px) !important;
+	}
+	
+	#scst-wrapper .person-photo {
+		width: 100% !important; aspect-ratio: 1 / 1 !important; background: linear-gradient(135deg, #d0dae6 0%, #b8c8d8 100%) !important; display: flex !important; align-items: center !important; justify-content: center !important; flex-shrink: 0 !important; overflow: hidden !important;
+	}
+	
+	#scst-wrapper .person-photo img {
+		width: 100% !important; height: 100% !important; object-fit: cover !important; display: block !important;
+	}
+	
+	#scst-wrapper .person-info {
+		padding: 1rem 1.1rem 1.1rem !important; flex: 1 !important; display: flex !important; flex-direction: column !important;
+	}
+	
+	#scst-wrapper .person-name {
+		font-family: 'Montserrat', sans-serif !important; font-size: 0.95rem !important; font-weight: 700 !important; color: #264e74 !important; margin: 0 0 0.2rem !important; line-height: 1.2 !important;
+	}
+	
+	#scst-wrapper .person-title {
+		font-size: 0.78rem !important; font-weight: 600 !important; text-transform: uppercase !important; letter-spacing: 0.05em !important; color: #3491cd !important; margin: 0 0 0.65rem !important;
+	}
+	
+	#scst-wrapper .person-bio {
+		font-size: 0.82rem !important; color: #555 !important; line-height: 1.55 !important; margin: 0 !important; flex: 1 !important;
+	}
+	/* ── Sub-team label ── */
+	
+	#scst-wrapper .sub-team-label {
+		font-family: 'Montserrat', sans-serif !important; font-size: 0.85rem !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 0.07em !important; color: #264e74 !important; margin: 1.5rem 0 0.75rem !important; padding-bottom: 0.3rem !important; border-bottom: 2px solid rgba(38, 78, 116, 0.15) !important;
+	}
+	/* ── Info box ── */
+	
+	#scst-wrapper .info-box {
+		background: #ffffff !important; border-radius: 12px !important; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13), 0 3px 8px rgba(0, 0, 0, 0.07) !important; padding: 1.5rem 1.75rem !important; margin-bottom: 2rem !important;
+	}
+	
+	#scst-wrapper .info-box h3 {
+		font-size: 1.2rem !important; margin: 0 0 0.75rem !important;
+	}
+	
+	#scst-wrapper .info-box p {
+		font-size: 0.93rem !important; color: #444 !important; margin: 0 0 0.75rem !important;
+	}
+	
+	#scst-wrapper .info-box ul {
+		padding-left: 1.3rem !important; margin: 0 0 0.5rem !important;
+	}
+	
+	#scst-wrapper .info-box ul li {
+		font-size: 0.9rem !important; color: #444 !important; margin-bottom: 0.3rem !important;
+	}
+	
+	#scst-wrapper .info-box h4 {
+		font-size: 0.92rem !important; color: #264e74 !important; margin: 1rem 0 0.4rem !important;
+	}
+	/* ── Equity tier cards ── */
+	
+	#scst-wrapper .equity-tier-grid {
+		display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 1.25rem !important; margin-top: 1.5rem !important;
+	}
+	
+	#scst-wrapper .equity-tier-card {
+		background: #ffffff !important; border-radius: 12px !important; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13), 0 3px 8px rgba(0, 0, 0, 0.07) !important; overflow: hidden !important;
+	}
+	
+	#scst-wrapper .equity-tier-hd {
+		padding: 1rem 1.2rem !important; font-family: 'Montserrat', sans-serif !important; font-size: 0.95rem !important; font-weight: 700 !important; color: #fff !important;
+	}
+	
+	#scst-wrapper .equity-tier-hd.t3 {
+		background: #264e74 !important;
+	}
+	
+	#scst-wrapper .equity-tier-hd.t2 {
+		background: #3491cd !important;
+	}
+	
+	#scst-wrapper .equity-tier-hd.t1 {
+		background: #a3b939 !important; color: #2a3500 !important;
+	}
+	
+	#scst-wrapper .equity-tier-bd {
+		padding: 1rem 1.2rem !important;
+	}
+	
+	#scst-wrapper .equity-tier-bd p {
+		font-size: 0.88rem !important; color: #444 !important; margin: 0 0 0.6rem !important;
+	}
+	
+	#scst-wrapper .equity-tier-bd ul {
+		padding-left: 1.2rem !important; margin: 0 !important;
+	}
+	
+	#scst-wrapper .equity-tier-bd ul li {
+		font-size: 0.85rem !important; color: #444 !important; margin-bottom: 0.25rem !important;
+	}
+	/* ── Looking ahead ── */
+	
+	#scst-wrapper .looking-ahead {
+		background: linear-gradient(135deg, #1a3a58 0%, #264e74 100%) !important; border-radius: 14px !important; padding: 2rem 2.25rem !important; color: #fff !important; margin-top: 2.5rem !important;
+	}
+	
+	#scst-wrapper .looking-ahead h2 {
+		font-family: 'Montserrat', sans-serif !important; color: #fff !important; font-size: 1.6rem !important; margin: 0 0 1rem !important;
+	}
+	
+	#scst-wrapper .looking-ahead ul {
+		padding-left: 1.3rem !important; margin: 0 !important; columns: 2 !important; column-gap: 2rem !important;
+	}
+	
+	#scst-wrapper .looking-ahead ul li {
+		font-size: 0.9rem !important; color: rgba(255, 255, 255, 0.85) !important; margin-bottom: 0.5rem !important; break-inside: avoid !important;
+	}
+	/* ── Animations ── */
+	
+	@keyframes scst-fadeSlideIn {
+		from {
+			opacity: 0; transform: translateY(18px);
+		}
+		to {
+			opacity: 1; transform: translateY(0);
+		}
+	}
+	/* ── Responsive ── */
+	
+	@media (max-width: 860px) {
+		#scst-wrapper .pillars-grid,
+		#scst-wrapper .tier-grid,
+		#scst-wrapper .equity-tier-grid {
+			grid-template-columns: 1fr !important;
+		}
+		#scst-wrapper .looking-ahead ul {
+			columns: 1 !important;
+		}
+	}
+	
+	@media (max-width: 600px) {
+		#scst-wrapper .scst-hero {
+			flex-direction: column !important; align-items: flex-start !important; gap: 1rem !important; padding: 1.75rem 1.5rem !important;
+		}
+		#scst-wrapper .hero-title {
+			font-size: 1.9rem !important;
+		}
+		#scst-wrapper .mysp-page-header {
+			flex-direction: column !important; align-items: flex-start !important; gap: 1.25rem !important; padding: 2rem 1.5rem 2rem !important;
+		}
+		#scst-wrapper .mysp-header-logo {
+			height: 90px !important;
+		}
+		#scst-wrapper .mysp-header-divider {
+			display: none !important;
+		}
+		#scst-wrapper .mysp-header-title {
+			font-size: 1.9rem !important;
+		}
+		#scst-wrapper .person-cards-grid {
+			grid-template-columns: repeat(2, 1fr) !important;
+		}
+	}
+	
+	@media (max-width: 400px) {
+		#scst-wrapper .person-cards-grid {
+			grid-template-columns: 1fr !important;
+		}
+	}
+	/* ── Team filter bar ── */
+	
+	#scst-team-filter {
+		display: flex !important; flex-wrap: wrap !important; gap: 0.5rem !important; margin: 0 0 2rem !important; padding: 1rem 1.25rem !important; background: #f5f7fa !important; border-radius: 12px !important; align-items: center !important;
+	}
+	
+	#scst-team-filter .filter-label {
+		font-family: 'Montserrat', sans-serif !important; font-size: 0.78rem !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 0.08em !important; color: #264e74 !important; margin-right: 0.5rem !important; white-space: nowrap !important;
+	}
+	
+	#scst-team-filter .filter-btn {
+		display: inline-flex !important; align-items: center !important; padding: 0.35rem 0.9rem !important; border-radius: 20px !important; border: 2px solid rgba(38, 78, 116, 0.25) !important; background: #ffffff !important; color: #264e74 !important; font-family: 'Poppins', sans-serif !important; font-size: 0.82rem !important; font-weight: 500 !important; cursor: pointer !important; transition: background 0.2s, border-color 0.2s, color 0.2s !important; white-space: nowrap !important;
+	}
+	
+	#scst-team-filter .filter-btn:hover {
+		background: rgba(38, 78, 116, 0.08) !important; border-color: #264e74 !important;
+	}
+	
+	#scst-team-filter .filter-btn.active {
+		background: #264e74 !important; color: #ffffff !important; border-color: #264e74 !important;
+	}
+	
+	.team-section.scst-hidden {
+		display: none !important;
+	}
+	
+	.person-card.scst-hidden {
+		display: none !important;
+	}
+
+</style>
+<div id="scst-wrapper">
+	<div class="mysp-page-header"><img src="https://media.lrsd.net/media/Default/medialib/lrsd-v-4c.96402163385.png" alt="Louis Riel School Division" class="mysp-header-logo fr-fil fr-dib">
+		<div class="mysp-header-divider">
+			<br>
+		</div>
+		<div class="mysp-header-content">
+
+			<p class="mysp-header-eyebrow">Louis Riel School Division</p>
+
+			<h1 class="mysp-header-title">School and Classroom Support Team</h1>
+
+			<p class="mysp-header-subtitle">Supporting Every School. Strengthening Every Classroom. Ensuring Every Student Thrives.</p>
+		</div></div>
+	<!-- Who We Are -->
+	<div class="info-section">
+
+		<h2>Who We Are</h2>
+
+		<p>The School and Classroom Support Team (SCST) partners with schools across the Louis Riel School Division to strengthen student learning, well-being, and belonging.</p>
+
+		<p>Our work is grounded in:</p>
+		<div class="pillars-grid">
+			<div class="pillar-card">
+
+				<h4>Equity &amp; Reconciliation</h4>
+
+				<p>Centering Indigenous student success and closing opportunity gaps for all learners.</p>
+			</div>
+			<div class="pillar-card">
+
+				<h4>Evidence-Informed Practice</h4>
+
+				<p>Using data and research to guide responsive, effective support.</p>
+			</div>
+			<div class="pillar-card">
+
+				<h4>Relational Partnerships</h4>
+
+				<p>Working alongside school teams and communities through trust and collaboration.</p>
+			</div></div>
+
+		<p>We work alongside schools to build instructional and system capacity, respond to identified student and school needs, and close opportunity gaps&mdash;particularly for Indigenous students and learners experiencing barriers.</p>
+
+		<p>SCST is a coordinated, system-level team that integrates leadership, instructional support, clinical services, Indigenous education, and specialized supports into one aligned model.</p>
+	</div>
+	<!-- Why This Work Matters -->
+	<div class="info-section">
+
+		<h2>Why This Work Matters</h2>
+
+		<p>Divisional data&mdash;including literacy and numeracy screening, progress monitoring, attendance, and well-being indicators&mdash;continues to highlight:</p>
+
+		<ul>
+			<li>Persistent achievement gaps across schools</li>
+			<li>Disproportionate impact on Indigenous students</li>
+			<li>Students with multiple indicators of risk (academic, engagement, attendance)</li>
+		</ul>
+
+		<p>This data informs how SCST prioritizes support: schools with the greatest need receive more intensive and coordinated support, and supports are constantly monitored and adjusted based on impact.</p>
+
+		<p>This work directly advances the LRSD Multi-Year Strategic Plan through closing opportunity gaps, strengthening responsive instruction, supporting belonging and well-being, and embedding Indigenous education and reconciliation.</p>
+	</div>
+	<!-- How We Support Schools -->
+	<div class="info-section">
+
+		<h2>How We Support Schools</h2>
+
+		<p>SCST collaborates with schools to analyze data, strengthen instructional practice, support professional learning, mentor staff, and build inclusive and culturally responsive environments.</p>
+		<div class="tier-grid">
+			<div class="tier-card">
+				<div class="tier-card-header tier-1">Universal (Tier 1)</div>
+
+				<ul>
+					<li>Divisional frameworks and tools</li>
+					<li>Professional learning</li>
+					<li>Mentorship and capacity building</li>
+				</ul>
+			</div>
+			<div class="tier-card">
+				<div class="tier-card-header tier-2">Targeted (Tier 2)</div>
+
+				<ul>
+					<li>Coaching and co-planning</li>
+					<li>Data analysis and intervention planning</li>
+					<li>Support for identified groups of students and educators</li>
+				</ul>
+			</div>
+			<div class="tier-card">
+				<div class="tier-card-header tier-3">Intensive (Tier 3)</div>
+
+				<ul>
+					<li>Embedded, in-school support</li>
+					<li>Ongoing collaboration with school leadership and teams</li>
+					<li>Coordinated instructional, clinical, and Indigenous education supports</li>
+				</ul>
+			</div></div></div>
+	<!-- Team filter -->
+	<div id="scst-team-filter"><span class="filter-label">Filter by team:</span>
+		<button class="filter-btn active" data-filter="all">All</button>
+		<button class="filter-btn" data-filter="leadership">Leadership</button>
+		<button class="filter-btn" data-filter="instructional">Instructional Support</button>
+		<button class="filter-btn" data-filter="student-support">Student Support Services</button>
+		<button class="filter-btn" data-filter="indigenous">Indigenous Education</button>
+		<button class="filter-btn" data-filter="clinical">Clinical Services</button>
+		<button class="filter-btn" data-filter="specialized">Specialized Supports</button>
+	</div>
+	<!-- ── TEAM SECTIONS ── -->
+	<!-- 1. Leadership -->
+	<div class="team-section" id="section-leadership">
+		<div class="team-section-header">
+			<div class="team-section-num">1</div>
+			<div class="team-section-info">
+
+				<h3>Leadership</h3>
+
+				<p>System coherence, strategic alignment, and coordinated support across all SCST areas.</p>
+			</div></div>
+		<div class="team-section-body">
+			<div class="team-purpose">
+
+				<h4>Purpose</h4>
+
+				<p>Leadership ensures system coherence, alignment to the Multi-Year Strategic Plan, and coordinated support across all SCST areas. The leadership team aligns supports to divisional priorities and data, coordinates cross-team collaboration, responds to emerging school needs, and ensures equity-driven decision-making.</p>
+			</div>
+			<div class="person-cards-grid" id="cards-leadership">
+				<div class="person-card" data-team="leadership">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/nicholas-kelly.17c60a89137.jpg" alt="Nicholas Kelly" style="width: 100%; height: 100%; object-fit: cover;" class="fr-fil fr-dib"></div>
+					<div class="person-info">
+
+						<p class="person-name">Nicholas Kelly</p>
+
+						<p class="person-title">Director of School and Classroom Support</p>
+
+						<p class="person-bio">Nicholas provides overall leadership for the School and Classroom Support Team, ensuring coordinated, responsive, and equity-focused support across the division. He works closely with school and divisional leaders to align services, strengthen system coherence, and improve outcomes for all students.</p>
+					</div></div>
+				<div class="person-card" data-team="leadership">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/nicole-mager.4513e789138.jpg" alt="Nicole Mager" style="width: 100%; height: 100%; object-fit: cover;" class="fr-fil fr-dib"></div>
+					<div class="person-info">
+
+						<p class="person-name">Nicole Mager</p>
+
+						<p class="person-title">Divisional Principal &ndash; Instructional &amp; Indigenous Education</p>
+
+						<p class="person-bio">Nicole leads instructional and Indigenous education supports across the division. She partners with schools to strengthen teaching practices, advance culturally responsive learning, and support meaningful, engaging learning experiences for all students.</p>
+					</div></div>
+				<div class="person-card" data-team="leadership">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/megan-vankoughnett.64b74d89139.jpg" alt="Megan Vankoughnett" style="width: 100%; height: 100%; object-fit: cover;" class="fr-fil fr-dib"></div>
+					<div class="person-info">
+
+						<p class="person-name">Megan Vankoughnett</p>
+
+						<p class="person-title">Divisional Principal &ndash; Clinical &amp; Student Services</p>
+
+						<p class="person-bio">Megan provides leadership for clinical and student services, supporting inclusive and responsive learning environments. She works collaboratively with schools to ensure student needs are met through coordinated, evidence-informed approaches.</p>
+					</div></div>
+				<div class="person-card" data-team="leadership">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/lisa-tymchuk.24843289290.jpg" alt="Photo placeholder" style="width: 100%; height: 100%; object-fit: cover;" class="fr-fil fr-dib"></div>
+					<div class="person-info">
+
+						<p class="person-name">Lisa Tymchuk</p>
+
+						<p class="person-title">Assistant Director, Clinical Services</p>
+
+						<p class="person-bio">Lisa supports the delivery of clinical services across the division, helping to coordinate interdisciplinary supports for students. She works with school teams to strengthen practices that support student learning, communication, regulation, and well-being.</p>
+					</div></div>
+				<div class="person-card" data-team="leadership">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/kelsey-leneghan.22cc3989291.jpg" style="width: 300px;" class="fr-fic fr-dib" alt="kelsey-leneghan.22cc3989291.jpg"></div>
+					<div class="person-info">
+
+						<p class="person-name">Kelsey Lenaghan</p>
+
+						<p class="person-title">Divisional Indigenous Leader</p>
+
+						<p class="person-bio">Kelsey leads Indigenous education and intercultural understandings across the division. She works alongside schools to strengthen relationships, support Indigenous Education School-based Action Planning, and embed Indigenous perspectives, identities, and ways of knowing into learning.</p>
+					</div></div></div></div></div>
+	<!-- 2. Instructional Support -->
+	<div class="team-section" id="section-instructional">
+		<div class="team-section-header">
+			<div class="team-section-num">2</div>
+			<div class="team-section-info">
+
+				<h3>Instructional Support (Literacy &amp; Numeracy)</h3>
+
+				<p>Strengthening classroom practice, improving student achievement, and building teacher capacity.</p>
+			</div></div>
+		<div class="team-section-body">
+			<div class="team-purpose">
+
+				<h4>Purpose</h4>
+
+				<p>Instructional support strengthens classroom practice, improves student achievement, and builds teacher capacity.</p>
+			</div>
+			<div class="team-key-work">
+
+				<h4>Key Work</h4>
+
+				<ul>
+					<li>Early screening and progress monitoring</li>
+					<li>Structured literacy and numeracy practices</li>
+					<li>Intervention planning</li>
+					<li>Co-planning and co-teaching</li>
+					<li>Instructional coaching and mentorship</li>
+					<li>Data-informed instructional decision-making</li>
+				</ul>
+			</div>
+			<div class="person-cards-grid" id="cards-instructional">
+				<div class="person-card" data-team="instructional">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/kristyn-artibise.ba7e1289299.jpg" style="width: 300px;" class="fr-fic fr-dib" alt="kristyn-artibise.ba7e1289299.jpg"></div>
+					<div class="person-info">
+
+						<p class="person-name">Kristyn Artibise</p>
+
+						<p class="person-title">Instructional Support Teacher (Numeracy)</p>
+
+						<p class="person-bio">Kristyn supports schools in strengthening numeracy instruction through data-informed practices, targeted intervention planning, and collaborative problem solving. She works alongside educators to build confidence and capacity in teaching mathematics so all students can experience success.</p>
+					</div></div>
+				<div class="person-card" data-team="instructional">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/kristen-mcdowell.f308cc89300.jpg" style="width: 300px;" class="fr-fic fr-dib" alt="kristen-mcdowell.f308cc89300.jpg"></div>
+					<div class="person-info">
+
+						<p class="person-name">Kristen McDowell</p>
+
+						<p class="person-title">Instructional Support Teacher (Literacy)</p>
+
+						<p class="person-bio">Kristen partners with schools to strengthen literacy instruction using structured, evidence-informed approaches. She supports educators through coaching, co-planning, and the use of data to guide responsive instruction and improve student outcomes.</p>
+					</div></div>
+				<div class="person-card" data-team="instructional">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/1.bd3a3889301.png" style="width: 300px;" class="fr-fic fr-dib" alt="1.bd3a3889301.png"></div>
+					<div class="person-info">
+
+						<p class="person-name">Genevi&egrave;ve Shyiak</p>
+
+						<p class="person-title">Instructional Support Teacher (Literacy)</p>
+
+						<p class="person-bio">Genevi&egrave;ve works collaboratively with school teams to enhance literacy learning and instructional practice. She supports teachers in using data to inform instruction, monitor progress, and create responsive learning environments that meet the needs of all students.</p>
+					</div></div></div></div></div>
+	<!-- 3. Student Support Services -->
+	<div class="team-section" id="section-student-support">
+		<div class="team-section-header">
+			<div class="team-section-num">3</div>
+			<div class="team-section-info">
+
+				<h3>Student Support Services</h3>
+
+				<p>Creating inclusive, responsive environments that address academic, behavioural, and social-emotional needs.</p>
+			</div></div>
+		<div class="team-section-body">
+			<div class="team-purpose">
+
+				<h4>Purpose</h4>
+
+				<p>Student Support Services creates inclusive, responsive environments that address academic, behavioural, and social-emotional needs.</p>
+			</div>
+			<div class="team-key-work">
+
+				<h4>Key Work</h4>
+
+				<ul>
+					<li>MEECL, RAF, and TCIS frameworks</li>
+					<li>Mentor support for new teachers</li>
+					<li>Transitions planning</li>
+					<li>Student-centered data use</li>
+					<li>Support for multilingual learners</li>
+				</ul>
+			</div>
+			<div class="person-cards-grid" id="cards-student-support">
+				<div class="person-card" data-team="student-support">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/k-bush.75716089302.jpg" style="width: 300px;" class="fr-fic fr-dib" alt="k-bush.75716089302.jpg"></div>
+					<div class="person-info">
+
+						<p class="person-name">Kerri Bush</p>
+
+						<p class="person-title">Instructional Support / Student Services</p>
+
+						<p class="person-bio">Kerri supports schools in creating inclusive and responsive learning environments that meet the diverse needs of students. She works alongside educators to strengthen classroom practices, support social-emotional learning, and build strategies that enhance student well-being and engagement.</p>
+					</div></div>
+				<div class="person-card" data-team="student-support">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/rose-p.2014c389303.jpg" style="width: 300px;" class="fr-fic fr-dib" alt="rose-p.2014c389303.jpg"></div>
+					<div class="person-info">
+
+						<p class="person-name">Rose Pagtakhan</p>
+
+						<p class="person-title">Instructional Support / Student Services</p>
+
+						<p class="person-bio">Rose specializes in supporting multilingual learners across the division. She partners with teachers to design inclusive, language-rich instruction that supports both academic achievement and language development, helping students feel confident, capable, and connected in their learning.</p>
+					</div></div></div></div></div>
+	<!-- 4. Indigenous Education -->
+	<div class="team-section" id="section-indigenous">
+		<div class="team-section-header">
+			<div class="team-section-num">4</div>
+			<div class="team-section-info">
+
+				<h3>Indigenous Education</h3>
+
+				<p>Advancing Indigenous student success through culture, identity, and relationship.</p>
+			</div></div>
+		<div class="team-section-body">
+			<div class="team-purpose">
+
+				<h4>Purpose</h4>
+
+				<p>The Indigenous Education Team partners with schools to advance Indigenous student success through culture, identity, and relationship.</p>
+			</div>
+			<div class="team-key-work">
+
+				<h4>Key Work</h4>
+
+				<ul>
+					<li>Indigenous Education School-Based Action Plans (IESAP)</li>
+					<li>Data analysis and goal setting</li>
+					<li>Cultural teachings and land-based learning</li>
+					<li>Language programming</li>
+					<li>Connection to Elders and Knowledge Keepers</li>
+				</ul>
+			</div>
+
+			<p class="sub-team-label">Indigenous Education Team</p>
+			<div class="person-cards-grid" id="cards-indigenous">
+				<div class="person-card" data-team="indigenous">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/s-oliver.58621d89304.jpg" alt="Photo placeholder" style="width: 100%; height: 100%; object-fit: cover;" class="fr-fil fr-dib"></div>
+					<div class="person-info">
+
+						<p class="person-name">Sean Oliver</p>
+
+						<p class="person-title">Indigenous Education</p>
+
+						<p class="person-bio">Sean supports schools through land-based learning, cultural teachings, and Indigenous Education School-based Action Planning. He works alongside students and staff to strengthen connection to culture, identity, and community, helping create meaningful learning experiences rooted in relationship.</p>
+					</div></div>
+				<div class="person-card" data-team="indigenous">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/rose-bird.58be9189305.jpg" alt="Photo placeholder" style="width: 100%; height: 100%; object-fit: cover;" class="fr-fil fr-dib"></div>
+					<div class="person-info">
+
+						<p class="person-name">Rose Bird</p>
+
+						<p class="person-title">Indigenous Education</p>
+
+						<p class="person-bio">Rose partners with schools to support Indigenous language, culture, identity and Indigenous Education School-based Action Planning. She works with educators and students to deepen understanding, strengthen belonging, and create inclusive learning environments grounded in respect and connection.</p>
+					</div></div>
+				<div class="person-card" data-team="indigenous">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/2.f422fa89306.png" style="width: 300px;" class="fr-fic fr-dib" alt="2.f422fa89306.png"></div>
+					<div class="person-info">
+
+						<p class="person-name">Judith Saunders-McKay</p>
+
+						<p class="person-title">Indigenous Education</p>
+
+						<p class="person-bio">Judith supports Indigenous education in schools through language, cultural learning, relationship-building and Indigenous Education School-based Action Planning. She works collaboratively with staff and students to foster understanding, respect, and a strong sense of identity and belonging.</p>
+					</div></div>
+				<div class="person-card" data-team="indigenous">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/1.5a873d89308.png" style="width: 300px;" class="fr-fic fr-dib" alt="1.5a873d89308.png"></div>
+					<div class="person-info">
+
+						<p class="person-name">Sam Flamand</p>
+
+						<p class="person-title">Indigenous Education</p>
+
+						<p class="person-bio">Sam supports Indigenous language and cultural learning across schools and Indigenous Education School-based Action Planning. She works alongside educators to strengthen culturally responsive practices and helps create spaces where students feel seen, valued, and connected.</p>
+					</div></div>
+				<div class="person-card" data-team="indigenous">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/t-wilson.f3f3b189309.jpg" style="width: 300px;" class="fr-fic fr-dib" alt="t-wilson.f3f3b189309.jpg"></div>
+					<div class="person-info">
+
+						<p class="person-name">Trish Wilson</p>
+
+						<p class="person-title">Indigenous Education</p>
+
+						<p class="person-bio">Trish works with schools to support Indigenous education through cultural programming, relationship-building, student engagement and Indigenous Education School-based Action Planning. She also supports staff learning and contributes to creating inclusive and welcoming school environments.</p>
+					</div></div>
+				<div class="person-card" data-team="indigenous">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/t-bruce.8ee0c189310.jpg" style="width: 300px;" class="fr-fic fr-dib" alt="t-bruce.8ee0c189310.jpg"></div>
+					<div class="person-info">
+
+						<p class="person-name">Tammy Bruce</p>
+
+						<p class="person-title">Community Liaison &ndash; Indigenous Academic Support</p>
+
+						<p class="person-bio">Tammy connects students, families, schools, and community supports. She plays a key role in strengthening relationships, supporting student well-being, and ensuring that schools are responsive to the needs and strengths of the communities they serve.</p>
+					</div></div></div>
+
+			<p class="sub-team-label">Indigenous Language Team</p>
+			<div class="person-cards-grid" id="cards-language">
+				<div class="person-card" data-team="indigenous">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/1.f7fbd789311.png" style="width: 300px;" class="fr-fic fr-dib" alt="1.f7fbd789311.png"></div>
+					<div class="person-info">
+
+						<p class="person-name">Alice McKay</p>
+
+						<p class="person-title">Ojibwe Teacher</p>
+
+						<p class="person-bio">Alice teaches Ojibwe language and supports students in developing strong connections to language, culture, and identity. Her work helps create meaningful opportunities for students to learn through language and deepen their understanding of Indigenous ways of knowing.</p>
+					</div></div>
+				<div class="person-card" data-team="indigenous">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/c-pranteau.d0a60689312.jpg" style="width: 300px;" class="fr-fic fr-dib" alt="c-pranteau.d0a60689312.jpg"></div>
+					<div class="person-info">
+
+						<p class="person-name">Courtney Pranteau</p>
+
+						<p class="person-title">Cree Teacher</p>
+
+						<p class="person-bio">Courtney teaches Cree language and works with students to build confidence and connection through language learning. She supports cultural understanding and helps create spaces where students can explore identity and belonging.</p>
+					</div></div>
+				<div class="person-card" data-team="indigenous">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/maxine-lavitt.19e19c89313.jpg" style="width: 300px;" class="fr-fic fr-dib" alt="maxine-lavitt.19e19c89313.jpg"></div>
+					<div class="person-info">
+
+						<p class="person-name">Maxine Lavitt</p>
+
+						<p class="person-title">Michif Instructor</p>
+
+						<p class="person-bio">Maxine teaches Michif, supporting language revitalization and cultural connection for students. Her work strengthens identity, pride, and understanding of M&eacute;tis culture through meaningful learning experiences.</p>
+					</div></div>
+				<div class="person-card" data-team="indigenous">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/2.b5cfc389314.png" style="width: 300px;" class="fr-fic fr-dib" alt="2.b5cfc389314.png"></div>
+					<div class="person-info">
+
+						<p class="person-name">Cub Spring</p>
+
+						<p class="person-title">Ojibwe Instructor</p>
+
+						<p class="person-bio">Cub supports students in learning Ojibwe language while fostering connection to culture and community. He works alongside schools to create engaging and meaningful language learning opportunities.</p>
+					</div></div>
+				<div class="person-card" data-team="indigenous">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/nicholas-kelly.17c60a89137.jpg" alt="Photo placeholder" style="width: 100%; height: 100%; object-fit: cover;" class="fr-fil fr-dib"></div>
+					<div class="person-info">
+
+						<p class="person-name">Rhea Paul</p>
+
+						<p class="person-title">Ojibwe Instructor</p>
+
+						<p class="person-bio">Rhea supports Ojibwe language learning across schools, helping students develop communication skills and cultural understanding. Her work contributes to strengthening identity and belonging through language.</p>
+					</div></div>
+				<div class="person-card" data-team="indigenous">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/alyssa-guimond.6a007e89315.jpg" style="width: 300px;" class="fr-fic fr-dib" alt="alyssa-guimond.6a007e89315.jpg"></div>
+					<div class="person-info">
+
+						<p class="person-name">Alyssa Guimond</p>
+
+						<p class="person-title">Ojibwe Instructor</p>
+
+						<p class="person-bio">Alyssa supports students in learning Ojibwe language in ways that are engaging and responsive. She works with school teams to support language development and cultural connection.</p>
+					</div></div>
+				<div class="person-card" data-team="indigenous">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/hailey-mckay.409f4789316.jpg" style="width: 300px;" class="fr-fic fr-dib" alt="hailey-mckay.409f4789316.jpg"></div>
+					<div class="person-info">
+
+						<p class="person-name">Hailey McKay</p>
+
+						<p class="person-title">Cree Instructor</p>
+
+						<p class="person-bio">Hailey supports Cree language learning and works with students to build connection, confidence, and cultural understanding. She helps create inclusive learning environments where language and identity are valued.</p>
+					</div></div>
+				<div class="person-card" data-team="indigenous">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/1.e2beb489317.png" style="width: 300px;" class="fr-fic fr-dib" alt="1.e2beb489317.png"></div>
+					<div class="person-info">
+
+						<p class="person-name">Destanee Ducharme</p>
+
+						<p class="person-title">Cree Instructor</p>
+
+						<p class="person-bio">Destanee supports Cree language instruction and works with students to strengthen their understanding of culture, identity, and community. Her work helps create meaningful and connected learning experiences.</p>
+					</div></div>
+				<div class="person-card" data-team="indigenous">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/2.e6eb5089318.png" style="width: 300px;" class="fr-fic fr-dib" alt="2.e6eb5089318.png"></div>
+					<div class="person-info">
+
+						<p class="person-name">Rose McKay</p>
+
+						<p class="person-title">Cree Instructor</p>
+
+						<p class="person-bio">Rose supports Cree language learning through relationship, storytelling, and cultural connection. She works with students to build confidence and pride in language and identity.</p>
+					</div></div></div></div></div>
+	<!-- 5. Clinical Services -->
+	<div class="team-section" id="section-clinical">
+		<div class="team-section-header">
+			<div class="team-section-num">5</div>
+			<div class="team-section-info">
+
+				<h3>Clinical Services</h3>
+
+				<p>Supporting communication, regulation, and well-being through interdisciplinary collaboration.</p>
+			</div></div>
+		<div class="team-section-body">
+			<div class="team-purpose">
+
+				<h4>Purpose</h4>
+
+				<p>Clinical Services supports communication, regulation, and well-being through interdisciplinary collaboration.</p>
+			</div>
+			<div class="team-key-work">
+
+				<h4>Key Work</h4>
+
+				<ul>
+					<li>Occupational Therapy</li>
+					<li>Psychology</li>
+					<li>Speech Language Pathology</li>
+					<li>Social Work</li>
+					<li>Social-emotional and regulation support</li>
+					<li>Transition planning</li>
+					<li>Professional learning for staff</li>
+				</ul>
+			</div>
+			<div class="person-cards-grid" id="cards-clinical">
+				<div class="person-card" data-team="clinical">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/r-george.f71e0789319.jpg" style="width: 300px;" class="fr-fic fr-dib" alt="r-george.f71e0789319.jpg"></div>
+					<div class="person-info">
+
+						<p class="person-name">Robert George</p>
+
+						<p class="person-title">Psychologist</p>
+
+						<p class="person-bio">Robert supports schools through assessment, consultation, and collaborative problem solving. He works alongside educators to better understand student learning and well-being needs, helping to guide effective, data-informed supports and interventions.</p>
+					</div></div>
+				<div class="person-card" data-team="clinical">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/untitled-1.99e4cb89321.png" style="width: 300px;" class="fr-fic fr-dib" alt="untitled-1.99e4cb89321.png"></div>
+					<div class="person-info">
+
+						<p class="person-name">Travis Hoare</p>
+
+						<p class="person-title">Occupational Therapist</p>
+
+						<p class="person-bio">Travis supports students in developing skills related to self-regulation, independence, and participation in learning. He works with school teams to design inclusive, responsive strategies that help students succeed in their daily classroom environments.</p>
+					</div></div>
+				<div class="person-card" data-team="clinical">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/karla-g.44785589322.jpg" style="width: 300px;" class="fr-fic fr-dib" alt="karla-g.44785589322.jpg"></div>
+					<div class="person-info">
+
+						<p class="person-name">Karla Guiterrez</p>
+
+						<p class="person-title">Speech Language Pathologist</p>
+
+						<p class="person-bio">Karla supports students and educators in strengthening communication, language development, and literacy foundations. She collaborates with school teams to implement strategies that support student learning, engagement, and participation across all areas of the classroom.</p>
+					</div></div>
+				<div class="person-card" data-team="clinical">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/k-mackey.a9240789323.jpg" style="width: 300px;" class="fr-fic fr-dib" alt="k-mackey.a9240789323.jpg"></div>
+					<div class="person-info">
+
+						<p class="person-name">Kim Mackey</p>
+
+						<p class="person-title">Social Worker</p>
+
+						<p class="person-bio">Kim supports students&rsquo; social-emotional well-being, mental health, and overall sense of belonging within the school community. She collaborates with educators, families and caregivers, and community partners to provide responsive supports that help students navigate challenges, build resilience, and engage fully in their learning.</p>
+					</div></div></div></div></div>
+	<!-- 6. Specialized Supports -->
+	<div class="team-section" id="section-specialized">
+		<div class="team-section-header">
+			<div class="team-section-num">6</div>
+			<div class="team-section-info">
+
+				<h3>Specialized Supports</h3>
+
+				<p>Enhancing school programming, engagement, and discipline-specific instruction.</p>
+			</div></div>
+		<div class="team-section-body">
+			<div class="team-purpose">
+
+				<h4>Purpose</h4>
+
+				<p>Specialized supports enhance school programming, engagement, and discipline-specific instruction.</p>
+			</div>
+			<div class="team-key-work">
+
+				<h4>Key Areas</h4>
+
+				<ul>
+					<li>Library Services</li>
+					<li>Physical Education &amp; Healthy Living</li>
+					<li>Extra-Curricular Athletics</li>
+					<li>LRSD Arts (Music, Visual Arts, Drama)</li>
+					<li>Applied Technology and Human Ecology</li>
+				</ul>
+			</div>
+			<div class="person-cards-grid" id="cards-specialized">
+				<div class="person-card" data-team="specialized">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/k-atkin.7da52a89324.jpg" style="width: 300px;" class="fr-fic fr-dib" alt="k-atkin.7da52a89324.jpg"></div>
+					<div class="person-info">
+
+						<p class="person-name">Kathy Atkin</p>
+
+						<p class="person-title">Divisional Teacher Librarian</p>
+
+						<p class="person-bio">Kathy supports school libraries across the division, helping to create welcoming, literacy-rich environments that foster a love of reading and inquiry. She partners with educators to enhance access to diverse resources and strengthen teaching and learning through library programming.</p>
+					</div></div>
+				<div class="person-card" data-team="specialized">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/s-campbell.3dd21889326.jpg" style="width: 300px;" class="fr-fic fr-dib" alt="s-campbell.3dd21889326.jpg"></div>
+					<div class="person-info">
+
+						<p class="person-name">Shaemus Campbell</p>
+
+						<p class="person-title">Physical Education &amp; Healthy Living</p>
+
+						<p class="person-bio">Shaemus supports high-quality physical education and promotes active, healthy lifestyles for students. He works alongside teachers to strengthen physical education programming, mentor educators, and coordinate divisional events that engage students in physical activity and well-being.</p>
+					</div></div>
+				<div class="person-card" data-team="specialized">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/jordana-milne.09929489327.jpg" style="width: 300px;" class="fr-fic fr-dib" alt="jordana-milne.09929489327.jpg"></div>
+					<div class="person-info">
+
+						<p class="person-name">Jordana Milne</p>
+
+						<p class="person-title">Manager of Athletics and Healthy Living</p>
+
+						<p class="person-bio">Jordana leads and coordinates divisional extra-curricular athletics, supporting schools in offering inclusive and engaging sport opportunities. She works with staff to build strong school-based programs and helps create positive experiences for students through athletics and teamwork.</p>
+					</div></div>
+				<div class="person-card" data-team="specialized">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/r-sabourin.4c08a789328.jpg" style="width: 300px;" class="fr-fic fr-dib" alt="r-sabourin.4c08a789328.jpg"></div>
+					<div class="person-info">
+
+						<p class="person-name">Ryan Sabourin</p>
+
+						<p class="person-title">Applied Technology / Human Ecology</p>
+
+						<p class="person-bio">Ryan supports applied technology and human ecology programming across the division. He works with schools to create safe, innovative, and engaging learning experiences that prepare students with practical skills and real-world connections.</p>
+					</div></div>
+				<div class="person-card" data-team="specialized">
+					<div class="person-photo"><img src="https://media.lrsd.net/media/Default/frl/a-suban.299eb489329.jpg" style="width: 300px;" class="fr-fic fr-dib" alt="a-suban.299eb489329.jpg"></div>
+					<div class="person-info">
+
+						<p class="person-name">Allan Suban</p>
+
+						<p class="person-title">LRSD Arts (Music, Visual Arts, Drama)</p>
+
+						<p class="person-bio">Allan supports arts programming in schools, helping to foster creativity, expression, and student engagement. He works with educators to strengthen music, visual arts and drama experiences that enrich learning and build student confidence.</p>
+					</div></div></div></div></div>
+	<!-- School-Based Support -->
+	<div class="info-box">
+
+		<h3>School-Based Support</h3>
+
+		<p>The School and Classroom Support Team (SCST) provides supports based on a combination of divisional data, school-level context, and identified student and staff needs. This responsive approach ensures that resources are aligned to where they will have the greatest impact, while also building long-term capacity across all schools.</p>
+
+		<p>SCST works in partnership with school teams to analyze data (e.g., achievement, well-being, attendance, and engagement) and to co-develop plans that are strengths-based, culturally responsive, and focused on improving outcomes for all learners.</p>
+
+		<h4>Embedded Support Rationale</h4>
+
+		<p>Staff are assigned to schools based on:</p>
+
+		<ul>
+			<li>Indigenous student opportunity gaps</li>
+			<li>Attendance and engagement indicators</li>
+			<li>Literacy and numeracy data</li>
+			<li>Number of students with multiple risk factors</li>
+			<li>Need for sustained relational support</li>
+		</ul>
+
+		<h4>Instructional Support &ndash; Current Direction</h4>
+
+		<p><strong>Literacy (2026&ndash;2027):</strong> Wave-based support model across priority schools, focused on highest-need schools identified through data.</p>
+
+		<p><strong>Numeracy (2026&ndash;2027):</strong> Wave-based support model across priority schools, focused on highest-need schools identified through data.</p>
+	</div>
+	<!-- Equity Support School Model -->
+	<div class="info-box">
+
+		<h3>Equity Support School Model</h3>
+
+		<p>SCST uses a tiered model to differentiate levels of support across schools. This model allows for targeted allocation of time, expertise, and resources while maintaining a strong focus on equity, inclusion, and capacity building.</p>
+		<div class="equity-tier-grid">
+			<div class="equity-tier-card">
+				<div class="equity-tier-hd t3">Tier 3 &ndash; Intensive Support</div>
+				<div class="equity-tier-bd">
+
+					<p>Schools identified for Tier 3 support receive the highest level of involvement from SCST. Support is frequent, collaborative, and responsive to complex or urgent needs.</p>
+
+					<ul>
+						<li>Ongoing, embedded support from multidisciplinary team members</li>
+						<li>Regular in-school presence to co-plan, co-teach, and model practices</li>
+						<li>Intensive data analysis and progress monitoring</li>
+						<li>Support with comprehensive school-based action planning</li>
+						<li>Coordination with external agencies and specialized services</li>
+						<li>Focused efforts to address significant gaps in student achievement, well-being, or engagement</li>
+					</ul>
+				</div></div>
+			<div class="equity-tier-card">
+				<div class="equity-tier-hd t2">Tier 2 &ndash; Targeted Support</div>
+				<div class="equity-tier-bd">
+
+					<p>Schools in Tier 2 receive targeted, short- to medium-term support focused on specific areas of need identified through data and school context.</p>
+
+					<ul>
+						<li>Planned cycles of support (e.g., coaching, consultation, or collaborative inquiry)</li>
+						<li>Support with implementing evidence-informed strategies</li>
+						<li>Joint problem-solving with school teams and leadership</li>
+						<li>Professional learning tailored to identified priorities</li>
+						<li>Check-ins to monitor progress and adjust supports as needed</li>
+					</ul>
+				</div></div>
+			<div class="equity-tier-card">
+				<div class="equity-tier-hd t1">Tier 1 &ndash; Universal Support</div>
+				<div class="equity-tier-bd">
+
+					<p>All schools receive universal support focused on building strong, inclusive, and responsive learning environments.</p>
+
+					<ul>
+						<li>Access to divisional professional learning opportunities</li>
+						<li>Universal resources, tools, and frameworks to support teaching and learning</li>
+						<li>Consultation upon request</li>
+						<li>Support for implementing divisional priorities (e.g., literacy, numeracy, well-being, Indigenous education)</li>
+						<li>Opportunities for networking and collaboration across schools</li>
+					</ul>
+				</div></div></div></div>
+	<!-- Looking Ahead -->
+	<div class="looking-ahead">
+
+		<h2>Looking Ahead</h2>
+
+		<ul>
+			<li>Increase embedded, in-school support</li>
+			<li>Strengthen collaboration across teams</li>
+			<li>Refine data-informed decision-making</li>
+			<li>Expand impact through tiered instructional models</li>
+			<li>Improve outcomes for students, particularly those experiencing barriers</li>
+			<li>Specialized Teacher Mentorship (Library, Phys. Ed, Music, Applied Technology, Human Ecology, Student Services, Teachers New To LRSD)</li>
+		</ul>
+	</div></div>
+<script>
+	(function()
+	{
+		var wrapper = document.getElementById('scst-wrapper');
+		if (wrapper) wrapper.classList.add('js-ready');
+
+		// ── Team filter ──────────────────────────────────────────────────
+		var filterBar = document.getElementById('scst-team-filter');
+		if (filterBar)
+		{
+			filterBar.addEventListener('click', function(e)
+			{
+				var btn = e.target.closest('.filter-btn');
+				if (!btn) return;
+					// Update active button
+				filterBar.querySelectorAll('.filter-btn').forEach(function(b)
+				{
+					b.classList.remove('active');
+				});
+				btn.classList.add('active');
+				var filter = btn.getAttribute('data-filter');
+					// Show/hide team sections and their cards
+				document.querySelectorAll('.team-section').forEach(function(sec)
+				{
+					if (filter === 'all')
+					{
+						sec.classList.remove('scst-hidden');
+						sec.querySelectorAll('.person-card').forEach(function(c)
+						{
+							c.classList.remove('scst-hidden');
+						});
+					}
+					else
+					{
+						var hasMatch = false;
+						sec.querySelectorAll('.person-card').forEach(function(c)
+						{
+							if (c.getAttribute('data-team') === filter)
+							{
+								c.classList.remove('scst-hidden');
+								hasMatch = true;
+							}
+							else
+							{
+								c.classList.add('scst-hidden');
+							}
+						});
+						if (hasMatch)
+						{
+							sec.classList.remove('scst-hidden');
+						}
+						else
+						{
+							sec.classList.add('scst-hidden');
+						}
+					}
+				});
+			});
+		}
+
+		// ── Staggered card entrance ───────────────────────────────────────
+		document.querySelectorAll('.person-cards-grid').forEach(function(grid)
+		{
+			grid.querySelectorAll('.person-card').forEach(function(card, i)
+			{
+				setTimeout(function()
+				{
+					card.classList.add('visible');
+				}, 80 + i * 80);
+			});
+		});
+	})();
+
+</script>
