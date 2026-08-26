@@ -709,21 +709,25 @@
 		if (wrapper) wrapper.classList.add('js-ready', 'is-animating');
 
 		// ── Staggered card entrance ───────────────────────────────────────
+		var maxDelay = 0;
 		document.querySelectorAll('.person-cards-grid').forEach(function(grid)
 		{
 			grid.querySelectorAll('.person-card').forEach(function(card, i)
 			{
+				var delay = 80 + i * 80;
+				if (delay > maxDelay) maxDelay = delay;
+
 				setTimeout(function()
 				{
 					card.classList.add('visible');
-				}, 80 + i * 80);
+				}, delay);
 			});
 		});
 
 		setTimeout(function()
 		{
 			if (wrapper) wrapper.classList.remove('is-animating');
-		}, 2000);
+		}, maxDelay + 600);
 	})();
 
 </script>
