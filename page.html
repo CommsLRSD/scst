@@ -120,7 +120,7 @@
 	</div>
 
 	<!-- ── HIERARCHY VIEW ── -->
-	<div id="hierarchy-view" style="display:none;font-family:'Poppins',sans-serif;color:#222;text-align:left;direction:ltr;">
+	<div id="hierarchy-view" style="display:none;font-family:'Poppins',sans-serif;color:#222;text-align:left;direction:ltr;margin-bottom:3rem;">
 
 		<!-- Director — always shown, also serves as Leadership entry -->
 		<div style="background:#ffffff;border-radius:14px;box-shadow:0 4px 16px rgba(0,0,0,0.12);overflow:hidden;margin-bottom:1.5rem;">
@@ -168,11 +168,11 @@
 		<!-- Level 1 children wrapper — hidden when leadership filter is active -->
 		<div id="hier-full-tree" style="border-left:3px solid #d0dae6;margin-left:36px;padding-left:0;">
 
-			<!-- ── Portfolio 1: Nicole Mager (instructional + indigenous) ── -->
-			<div data-hier="instructional indigenous" style="margin-bottom:1.25rem;">
+			<!-- ── Portfolio 1a: Nicole Mager → Instructional only ── -->
+			<div data-hier="instructional" style="margin-bottom:1.25rem;">
 				<div style="display:flex;align-items:flex-start;gap:0;">
 					<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;margin-top:0;"></div>
-					<div class="scst-hier-toggle" data-target="hier-nicole" style="flex:none;width:calc(100% - 28px);background:#ffffff;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.09);overflow:hidden;cursor:pointer;border-left:4px solid #264e74;">
+					<div class="scst-hier-toggle" data-target="hier-nicole-instructional" style="flex:none;width:calc(100% - 28px);background:#ffffff;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.09);overflow:hidden;cursor:pointer;border-left:4px solid #264e74;">
 						<div style="display:flex;align-items:center;gap:1rem;padding:0.9rem 1rem;text-align:left;">
 							<img src="https://media.lrsd.net/media/Default/frl/nicole-mager.da01da89378.jpg" alt="Nicole Mager" style="width:52px;height:52px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid #e0e8f0;">
 							<div style="flex:1;min-width:0;text-align:left;">
@@ -183,11 +183,7 @@
 						</div>
 					</div>
 				</div>
-
-				<!-- Nicole's children -->
-				<div id="hier-nicole" style="border-left:3px solid #d0dae6;margin-left:28px;padding-left:0;margin-top:0.5rem;">
-
-					<!-- Instructional staff -->
+				<div id="hier-nicole-instructional" style="border-left:3px solid #d0dae6;margin-left:28px;padding-left:0;margin-top:0.5rem;">
 					<div style="display:flex;align-items:center;gap:0;margin-bottom:0.5rem;">
 						<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;"></div>
 						<div style="background:#f5f7fa;border-radius:8px;padding:0.6rem 0.9rem;display:flex;align-items:center;gap:0.75rem;flex:none;width:auto;max-width:420px;border-left:3px solid #3491cd;text-align:left;">
@@ -209,7 +205,25 @@
 							<div style="text-align:left;"><p style="font-family:'Montserrat',sans-serif;font-size:0.82rem;font-weight:700;color:#264e74;margin:0 0 0.1rem;text-align:left;">Genevi&egrave;ve Shyiak</p><p style="font-size:0.73rem;color:#666;margin:0;text-align:left;">Instructional Support Teacher (Literacy)</p></div>
 						</div>
 					</div>
+				</div>
+			</div>
 
+			<!-- ── Portfolio 1b: Nicole Mager → Indigenous only ── -->
+			<div data-hier="indigenous" style="margin-bottom:1.25rem;">
+				<div style="display:flex;align-items:flex-start;gap:0;">
+					<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;margin-top:0;"></div>
+					<div class="scst-hier-toggle" data-target="hier-nicole-indigenous" style="flex:none;width:calc(100% - 28px);background:#ffffff;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.09);overflow:hidden;cursor:pointer;border-left:4px solid #264e74;">
+						<div style="display:flex;align-items:center;gap:1rem;padding:0.9rem 1rem;text-align:left;">
+							<img src="https://media.lrsd.net/media/Default/frl/nicole-mager.da01da89378.jpg" alt="Nicole Mager" style="width:52px;height:52px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid #e0e8f0;">
+							<div style="flex:1;min-width:0;text-align:left;">
+								<p style="font-family:'Montserrat',sans-serif;font-size:0.92rem;font-weight:700;color:#264e74;margin:0 0 0.15rem;text-align:left;">Nicole Mager</p>
+								<p style="font-size:0.78rem;color:#555;margin:0;text-align:left;">Divisional Principal, Instructional &amp; Indigenous Education</p>
+							</div>
+							<span class="scst-chevron" style="font-size:0.75rem;color:#264e74;flex-shrink:0;transition:transform 0.2s;">&#9660;</span>
+						</div>
+					</div>
+				</div>
+				<div id="hier-nicole-indigenous" style="border-left:3px solid #d0dae6;margin-left:28px;padding-left:0;margin-top:0.5rem;">
 					<!-- Kelsey Lenaghan (sub-portfolio) -->
 					<div style="display:flex;align-items:flex-start;gap:0;margin-bottom:0.5rem;">
 						<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;margin-top:0;"></div>
@@ -224,7 +238,6 @@
 							</div>
 						</div>
 					</div>
-
 					<!-- Kelsey's team -->
 					<div id="hier-kelsey" style="border-left:3px solid #d0dae6;margin-left:28px;padding-left:0;margin-top:0.25rem;margin-bottom:0.5rem;">
 						<p style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin:0.5rem 0 0.4rem 28px;text-align:left;">Indigenous Education Team</p>
@@ -249,8 +262,7 @@
 							<div style="background:#f5f7fa;border-radius:6px;padding:0.4rem 0.7rem;font-size:0.78rem;color:#264e74;font-weight:600;border-left:3px solid #3491cd;text-align:left;">Maxine Lavitt <span style="font-weight:400;color:#888;font-size:0.72rem;">(Michif)</span></div>
 						</div>
 					</div>
-
-				</div><!-- /hier-nicole -->
+				</div>
 			</div>
 
 			<!-- ── Portfolio 2: Megan Vankoughnett (student-support + clinical) ── -->
