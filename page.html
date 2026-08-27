@@ -15,7 +15,7 @@
 		<button class="scst-main-tab" data-main-tab="who" type="button" style="background:transparent;border:none;border-right:1px solid #c8d3df;padding:0 1rem 0.3rem 0;margin:0 0.35rem 0 0;font-size:1rem;font-weight:600;color:#264e74;cursor:pointer;border-bottom:3px solid #264e74;line-height:1.2;">Who we are</button>
 		<button class="scst-main-tab" data-main-tab="why" type="button" style="background:transparent;border:none;border-right:1px solid #c8d3df;padding:0 1rem 0.3rem 0;margin:0 0.35rem 0 0;font-size:1rem;font-weight:600;color:#5f7185;cursor:pointer;border-bottom:3px solid transparent;line-height:1.2;">Why this work matters</button>
 		<button class="scst-main-tab" data-main-tab="how" type="button" style="background:transparent;border:none;border-right:1px solid #c8d3df;padding:0 1rem 0.3rem 0;margin:0 0.35rem 0 0;font-size:1rem;font-weight:600;color:#5f7185;cursor:pointer;border-bottom:3px solid transparent;line-height:1.2;">How we support schools</button>
-		<button class="scst-main-tab" data-main-tab="team" type="button" style="background:transparent;border:none;padding:0 0 0.3rem;margin:0;font-size:1rem;font-weight:600;color:#5f7185;cursor:pointer;border-bottom:3px solid transparent;line-height:1.2;">The team</button>
+		<button class="scst-main-tab" data-main-tab="team" type="button" style="background:transparent;border:none;padding:0 0 0.3rem 0.65rem;margin:0;font-size:1rem;font-weight:600;color:#5f7185;cursor:pointer;border-bottom:3px solid transparent;line-height:1.2;">The team</button>
 	</div>
 	<!-- Who We Are -->
 	<div class="info-section" data-main-section="who">
@@ -954,15 +954,20 @@
 		var mainSections = document.querySelectorAll('[data-main-section]');
 		var activeMainSection = 'who';
 		var currentFilter = 'leadership';
-		var MAIN_TAB_ACTIVE = 'background:transparent;border:none;padding:0 0 0.3rem;margin:0;font-size:1rem;font-weight:600;color:#264e74;cursor:pointer;border-bottom:3px solid #264e74;line-height:1.2;';
-		var MAIN_TAB_INACTIVE = 'background:transparent;border:none;padding:0 0 0.3rem;margin:0;font-size:1rem;font-weight:600;color:#5f7185;cursor:pointer;border-bottom:3px solid transparent;line-height:1.2;';
+		function getMainTabStyle(tabKey, isActive)
+		{
+			var separatorStyle = tabKey === 'team'
+				? 'padding:0 0 0.3rem 0.65rem;margin:0;'
+				: 'border-right:1px solid #c8d3df;padding:0 1rem 0.3rem 0;margin:0 0.35rem 0 0;';
+			return 'background:transparent;border:none;' + separatorStyle + 'font-size:1rem;font-weight:600;color:' + (isActive ? '#264e74' : '#5f7185') + ';cursor:pointer;border-bottom:3px solid ' + (isActive ? '#264e74' : 'transparent') + ';line-height:1.2;';
+		}
 
 		function showMainSection(sectionKey)
 		{
 			activeMainSection = sectionKey;
 			mainTabs.forEach(function(tab)
 			{
-				tab.setAttribute('style', tab.dataset.mainTab === sectionKey ? MAIN_TAB_ACTIVE : MAIN_TAB_INACTIVE);
+				tab.setAttribute('style', getMainTabStyle(tab.dataset.mainTab, tab.dataset.mainTab === sectionKey));
 			});
 			mainSections.forEach(function(section)
 			{
