@@ -1,8 +1,5 @@
 <div id="scst-wrapper">
-	<div class="mysp-page-header"><img src="https://media.lrsd.net/media/Default/medialib/lrsd-v-4c.96402163385.png" alt="Louis Riel School Division" class="mysp-header-logo fr-fil fr-dib">
-		<div class="mysp-header-divider">
-			<br>
-		</div>
+	<div class="mysp-page-header">
 		<div class="mysp-header-content">
 
 			<p class="mysp-header-eyebrow">Louis Riel School Division</p>
@@ -1151,7 +1148,7 @@
 	}
 	
 	.fr-view #scst-wrapper {
-		max-width: 1180px !important; margin: 0 auto !important; padding: 0 2rem 4rem !important; font-family: 'Poppins', sans-serif !important; font-size: 16px !important; color: #222222 !important; line-height: 1.6 !important; background: transparent !important; text-align: left !important; position: relative !important; left: clamp(-80px, -8vw, 0px) !important;
+		max-width: 1180px !important; margin: 0 auto !important; padding: 0 2rem 4rem !important; font-family: 'Poppins', sans-serif !important; font-size: 16px !important; color: #222222 !important; line-height: 1.6 !important; background: transparent !important; text-align: left !important; position: relative !important; left: 0 !important;
 	}
 	
 	.fr-view #scst-wrapper h1,
@@ -1171,15 +1168,7 @@
 	/* ── Page header ── */
 	
 	#scst-wrapper .mysp-page-header {
-		display: flex !important; align-items: center !important; gap: 2.5rem !important; padding: 1.5rem 0 2rem !important; margin: 0 0 2rem !important;
-	}
-	
-	.fr-view #scst-wrapper .mysp-header-logo {
-		height: 150px !important; width: auto !important; object-fit: contain !important; flex-shrink: 0 !important;
-	}
-	
-	.fr-view #scst-wrapper .mysp-header-divider {
-		width: 1px !important; height: 100px !important; background: rgba(38, 78, 116, 0.15) !important; flex-shrink: 0 !important;
+		padding: 1rem 0 2rem !important; margin: 0 0 2rem !important;
 	}
 	
 	.fr-view #scst-wrapper .mysp-header-content {
@@ -1484,44 +1473,54 @@
 	}
 	/* ── Responsive ── */
 	
-	@media (max-width: 1340px) {
+	@media (min-width: 1600px) {
 		.fr-view #scst-wrapper {
-			left: 0 !important;
+			left: clamp(-80px, -4vw, 0px) !important;
 		}
-		@media (max-width: 860px) {
-			.fr-view #scst-wrapper .pillars-grid,
-			.fr-view #scst-wrapper .tier-grid,
-			.fr-view #scst-wrapper .equity-tier-grid {
-				grid-template-columns: 1fr !important;
-			}
-			.fr-view #scst-wrapper .looking-ahead ul {
-				columns: 1 !important;
-			}
-			@media (max-width: 600px) {
-				.fr-view #scst-wrapper .scst-hero {
-					flex-direction: column !important; align-items: flex-start !important; gap: 1rem !important; padding: 1.75rem 1.5rem !important;
-				}
-				.fr-view #scst-wrapper .hero-title {
-					font-size: 1.9rem !important;
-				}
-				.fr-view #scst-wrapper .mysp-page-header {
-					flex-direction: column !important; align-items: flex-start !important; gap: 1.25rem !important; padding: 2rem 1.5rem 2rem !important;
-				}
-				.fr-view #scst-wrapper .mysp-header-logo {
-					height: 90px !important;
-				}
-				.fr-view #scst-wrapper .mysp-header-divider {
-					display: none !important;
-				}
-				.fr-view #scst-wrapper .mysp-header-title {
-					font-size: 1.9rem !important;
-				}
-				.fr-view #scst-wrapper .person-cards-grid {
-					grid-template-columns: repeat(2, 1fr) !important;
-				}
-				@media (max-width: 400px) {
-					.fr-view #scst-wrapper .person-cards-grid {
-						grid-template-columns: 1fr !important;
-					}
-
+	}
+	
+	@media (max-width: 860px) {
+		.fr-view #scst-wrapper .pillars-grid,
+		.fr-view #scst-wrapper .tier-grid,
+		.fr-view #scst-wrapper .equity-tier-grid {
+			grid-template-columns: 1fr !important;
+		}
+		.fr-view #scst-wrapper .looking-ahead ul {
+			columns: 1 !important;
+		}
+	}
+	
+	@media (max-width: 600px) {
+		.fr-view #scst-wrapper .scst-hero {
+			flex-direction: column !important; align-items: flex-start !important; gap: 1rem !important; padding: 1.75rem 1.5rem !important;
+		}
+		.fr-view #scst-wrapper .hero-title {
+			font-size: 1.9rem !important;
+		}
+		.fr-view #scst-wrapper .mysp-page-header {
+			padding: 1.25rem 0 1.5rem !important;
+		}
+		.fr-view #scst-wrapper .mysp-header-title {
+			font-size: 1.9rem !important;
+		}
+		.fr-view #scst-wrapper .mysp-header-subtitle {
+			font-size: 0.9rem !important;
+		}
+		.fr-view #scst-wrapper #main-section-nav .scst-main-tab {
+			flex: 1 1 calc(50% - 0.25rem) !important;
+			text-align: center !important;
+		}
+		.fr-view #scst-wrapper .person-cards-grid {
+			grid-template-columns: repeat(2, 1fr) !important;
+		}
+	}
+	
+	@media (max-width: 400px) {
+		.fr-view #scst-wrapper #main-section-nav .scst-main-tab {
+			flex-basis: 100% !important;
+		}
+		.fr-view #scst-wrapper .person-cards-grid {
+			grid-template-columns: 1fr !important;
+		}
+	}
 </style>
