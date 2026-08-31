@@ -104,148 +104,163 @@
 	<div id="team-controls" data-main-section="team" style="margin-bottom:2rem;background:#ffffff;border-radius:14px;padding:1.25rem 1.5rem;box-shadow:0 2px 10px rgba(0,0,0,0.08);border:1px solid #e0e8f0;font-family:'Poppins',sans-serif;">
 		<!-- View switcher -->
 		<div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:1rem;">
+
 			<p style="font-size:0.75rem;font-weight:700;color:#264e74;text-transform:uppercase;letter-spacing:0.08em;margin:0 0.5rem 0 0;">View</p>
 			<div style="display:flex;gap:0;background:#f0f4f8;border-radius:10px;padding:4px;">
-				<button id="btn-cards"     aria-pressed="true"  style="background:#264e74;color:#fff;border:none;border-radius:7px;padding:0.45rem 1.1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;display:flex;align-items:center;gap:0.4rem;transition:background 0.15s,color 0.15s;"><svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><rect x="0" y="0" width="6" height="6" rx="1"/><rect x="8" y="0" width="6" height="6" rx="1"/><rect x="0" y="8" width="6" height="6" rx="1"/><rect x="8" y="8" width="6" height="6" rx="1"/></svg> Cards</button>
-				<button id="btn-hierarchy" aria-pressed="false" style="background:transparent;color:#264e74;border:none;border-radius:7px;padding:0.45rem 1.1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;display:flex;align-items:center;gap:0.4rem;transition:background 0.15s,color 0.15s;"><svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><rect x="5" y="0" width="4" height="4" rx="1"/><rect x="0" y="10" width="4" height="4" rx="1"/><rect x="5" y="10" width="4" height="4" rx="1"/><rect x="10" y="10" width="4" height="4" rx="1"/><rect x="6" y="4" width="2" height="3"/><rect x="1" y="7" width="2" height="3"/><rect x="6" y="7" width="2" height="3"/><rect x="11" y="7" width="2" height="3"/><rect x="1" y="6" width="12" height="2"/></svg> Hierarchy</button>
-			</div>
-		</div>
+				<button id="btn-cards" style="background:#264e74;color:#fff;border:none;border-radius:7px;padding:0.45rem 1.1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;display:flex;align-items:center;gap:0.4rem;transition:background 0.15s,color 0.15s;">&nbsp;Cards</button>
+				<button id="btn-hierarchy" style="background:transparent;color:#264e74;border:none;border-radius:7px;padding:0.45rem 1.1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;display:flex;align-items:center;gap:0.4rem;transition:background 0.15s,color 0.15s;">&nbsp;Hierarchy</button>
+			</div></div>
 		<!-- Filter tabs -->
 		<div id="team-filter-bar">
+
 			<p style="font-size:0.75rem;font-weight:700;color:#264e74;text-transform:uppercase;letter-spacing:0.08em;margin:0 0 0.6rem;">Show team</p>
 			<div style="display:flex;flex-wrap:wrap;gap:0;background:#f0f4f8;border-radius:10px;padding:4px;width:fit-content;max-width:100%;">
-				<button class="scst-tab" data-filter="all"              style="background:#264e74;color:#fff;border:none;border-radius:7px;padding:0.45rem 1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;white-space:nowrap;transition:background 0.15s,color 0.15s;">All</button>
-				<button class="scst-tab" data-filter="leadership"       style="background:transparent;color:#264e74;border:none;border-radius:7px;padding:0.45rem 1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;white-space:nowrap;transition:background 0.15s,color 0.15s;">Leadership</button>
-				<button class="scst-tab" data-filter="instructional"    style="background:transparent;color:#264e74;border:none;border-radius:7px;padding:0.45rem 1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;white-space:nowrap;transition:background 0.15s,color 0.15s;">Instructional</button>
-				<button class="scst-tab" data-filter="student-support"  style="background:transparent;color:#264e74;border:none;border-radius:7px;padding:0.45rem 1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;white-space:nowrap;transition:background 0.15s,color 0.15s;">Student Support</button>
-				<button class="scst-tab" data-filter="indigenous"       style="background:transparent;color:#264e74;border:none;border-radius:7px;padding:0.45rem 1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;white-space:nowrap;transition:background 0.15s,color 0.15s;">Indigenous Education</button>
-				<button class="scst-tab" data-filter="clinical"         style="background:transparent;color:#264e74;border:none;border-radius:7px;padding:0.45rem 1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;white-space:nowrap;transition:background 0.15s,color 0.15s;">Clinical Services</button>
-				<button class="scst-tab" data-filter="specialized"      style="background:transparent;color:#264e74;border:none;border-radius:7px;padding:0.45rem 1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;white-space:nowrap;transition:background 0.15s,color 0.15s;">Specialized Supports</button>
-			</div>
-		</div>
-	</div>
-
+				<button class="scst-tab" data-filter="all" style="background:#264e74;color:#fff;border:none;border-radius:7px;padding:0.45rem 1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;white-space:nowrap;transition:background 0.15s,color 0.15s;">All</button>
+				<button class="scst-tab" data-filter="leadership" style="background:transparent;color:#264e74;border:none;border-radius:7px;padding:0.45rem 1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;white-space:nowrap;transition:background 0.15s,color 0.15s;">Leadership</button>
+				<button class="scst-tab" data-filter="instructional" style="background:transparent;color:#264e74;border:none;border-radius:7px;padding:0.45rem 1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;white-space:nowrap;transition:background 0.15s,color 0.15s;">Instructional</button>
+				<button class="scst-tab" data-filter="student-support" style="background:transparent;color:#264e74;border:none;border-radius:7px;padding:0.45rem 1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;white-space:nowrap;transition:background 0.15s,color 0.15s;">Student Support</button>
+				<button class="scst-tab" data-filter="indigenous" style="background:transparent;color:#264e74;border:none;border-radius:7px;padding:0.45rem 1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;white-space:nowrap;transition:background 0.15s,color 0.15s;">Indigenous Education</button>
+				<button class="scst-tab" data-filter="clinical" style="background:transparent;color:#264e74;border:none;border-radius:7px;padding:0.45rem 1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;white-space:nowrap;transition:background 0.15s,color 0.15s;">Clinical Services</button>
+				<button class="scst-tab" data-filter="specialized" style="background:transparent;color:#264e74;border:none;border-radius:7px;padding:0.45rem 1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;white-space:nowrap;transition:background 0.15s,color 0.15s;">Specialized Supports</button>
+			</div></div></div>
 	<!-- ── HIERARCHY VIEW ── -->
 	<div id="hierarchy-view" data-main-section="team" style="display:none;font-family:'Poppins',sans-serif;color:#222;text-align:left;direction:ltr;margin-bottom:3rem;">
-
 		<!-- Director — always shown, also serves as Leadership entry -->
 		<div style="background:#ffffff;border-radius:14px;box-shadow:0 4px 16px rgba(0,0,0,0.12);overflow:hidden;margin-bottom:1.5rem;">
-			<div style="background:linear-gradient(135deg,#1a3a58 0%,#264e74 100%);padding:1.5rem;display:flex;align-items:center;gap:1.25rem;text-align:left;">
-				<img src="https://media.lrsd.net/media/Default/frl/nicholas-kelly.4ad00389377.jpg" alt="Nicholas Kelly" style="width:72px;height:72px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,0.35);flex-shrink:0;">
+			<div style="background:linear-gradient(135deg,#1a3a58 0%,#264e74 100%);padding:1.5rem;display:flex;align-items:center;gap:1.25rem;text-align:left;"><img src="https://media.lrsd.net/media/Default/frl/nicholas-kelly.4ad00389377.jpg" alt="Nicholas Kelly" style="width: 72px; height: 72px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255, 255, 255, 0.35); flex-shrink: 0;" class="fr-fil fr-dib">
 				<div style="flex:1;min-width:0;text-align:left;">
-					<p style="font-family:'Montserrat',sans-serif;font-size:1.15rem;font-weight:700;color:#fff;margin:0 0 0.2rem;text-align:left;">Nicholas Kelly</p>
-					<p style="font-size:0.82rem;color:rgba(255,255,255,0.8);margin:0;font-weight:500;text-align:left;">Director, School and Classroom Support</p>
-				</div>
-			</div>
-		</div>
 
+					<p style="font-family:'Montserrat',sans-serif;font-size:1.15rem;font-weight:700;color:#fff;margin:0 0 0.2rem;text-align:left;">Nicholas Kelly</p>
+
+					<p style="font-size:0.82rem;color:rgba(255,255,255,0.8);margin:0;font-weight:500;text-align:left;">Director, School and Classroom Support</p>
+				</div></div></div>
 		<!-- Leadership members shown only when leadership filter is active -->
 		<div id="hier-leadership-team" style="margin-bottom:1.5rem;">
 			<div style="display:flex;align-items:center;gap:0;margin-bottom:0.5rem;">
-				<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;"></div>
-				<div style="background:#f5f7fa;border-radius:8px;padding:0.6rem 0.9rem;display:flex;align-items:center;gap:0.75rem;flex:none;width:auto;max-width:420px;border-left:3px solid #264e74;text-align:left;">
-					<img src="https://media.lrsd.net/media/Default/frl/nicole-mager.da01da89378.jpg" alt="Nicole Mager" style="width:38px;height:38px;border-radius:50%;object-fit:cover;flex-shrink:0;">
-					<div style="text-align:left;"><p style="font-family:'Montserrat',sans-serif;font-size:0.82rem;font-weight:700;color:#264e74;margin:0 0 0.1rem;text-align:left;">Nicole Mager</p><p style="font-size:0.73rem;color:#666;margin:0;text-align:left;">Divisional Principal, Instructional &amp; Indigenous Education</p></div>
+				<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;">
+					<br>
 				</div>
-			</div>
-			<div style="display:flex;align-items:center;gap:0;margin-bottom:0.5rem;">
-				<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;"></div>
-				<div style="background:#f5f7fa;border-radius:8px;padding:0.6rem 0.9rem;display:flex;align-items:center;gap:0.75rem;flex:none;width:auto;max-width:420px;border-left:3px solid #264e74;text-align:left;">
-					<img src="https://media.lrsd.net/media/Default/frl/megan-vankoughnett.100d8089379.jpg" alt="Megan Vankoughnett" style="width:38px;height:38px;border-radius:50%;object-fit:cover;flex-shrink:0;">
-					<div style="text-align:left;"><p style="font-family:'Montserrat',sans-serif;font-size:0.82rem;font-weight:700;color:#264e74;margin:0 0 0.1rem;text-align:left;">Megan Vankoughnett</p><p style="font-size:0.73rem;color:#666;margin:0;text-align:left;">Divisional Principal, Clinical &amp; Student Services</p></div>
-				</div>
-			</div>
-			<div style="display:flex;align-items:center;gap:0;margin-bottom:0.5rem;">
-				<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;"></div>
-				<div style="background:#f5f7fa;border-radius:8px;padding:0.6rem 0.9rem;display:flex;align-items:center;gap:0.75rem;flex:none;width:auto;max-width:420px;border-left:3px solid #264e74;text-align:left;">
-					<img src="https://media.lrsd.net/media/Default/frl/lisa-tymchuk.68618d89380.jpg" alt="Lisa Tymchuk" style="width:38px;height:38px;border-radius:50%;object-fit:cover;flex-shrink:0;">
-					<div style="text-align:left;"><p style="font-family:'Montserrat',sans-serif;font-size:0.82rem;font-weight:700;color:#264e74;margin:0 0 0.1rem;text-align:left;">Lisa Tymchuk</p><p style="font-size:0.73rem;color:#666;margin:0;text-align:left;">Assistant Director, Clinical Services</p></div>
-				</div>
-			</div>
-			<div style="display:flex;align-items:center;gap:0;margin-bottom:0.5rem;">
-				<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;"></div>
-				<div style="background:#f5f7fa;border-radius:8px;padding:0.6rem 0.9rem;display:flex;align-items:center;gap:0.75rem;flex:none;width:auto;max-width:420px;border-left:3px solid #264e74;text-align:left;">
-					<img src="https://media.lrsd.net/media/Default/frl/kelsey-leneghan.01377989381.jpg" alt="Kelsey Lenaghan" style="width:38px;height:38px;border-radius:50%;object-fit:cover;flex-shrink:0;">
-					<div style="text-align:left;"><p style="font-family:'Montserrat',sans-serif;font-size:0.82rem;font-weight:700;color:#264e74;margin:0 0 0.1rem;text-align:left;">Kelsey Lenaghan</p><p style="font-size:0.73rem;color:#666;margin:0;text-align:left;">Divisional Indigenous Leader</p></div>
-				</div>
-			</div>
-		</div>
+				<div style="background:#f5f7fa;border-radius:8px;padding:0.6rem 0.9rem;display:flex;align-items:center;gap:0.75rem;flex:none;width:auto;max-width:420px;border-left:3px solid #264e74;text-align:left;"><img src="https://media.lrsd.net/media/Default/frl/nicole-mager.da01da89378.jpg" alt="Nicole Mager" style="width: 38px; height: 38px; border-radius: 50%; object-fit: cover; flex-shrink: 0;" class="fr-fil fr-dib">
+					<div style="text-align:left;">
 
+						<p style="font-family:'Montserrat',sans-serif;font-size:0.82rem;font-weight:700;color:#264e74;margin:0 0 0.1rem;text-align:left;">Nicole Mager</p>
+
+						<p style="font-size:0.73rem;color:#666;margin:0;text-align:left;">Divisional Principal, Instructional &amp; Indigenous Education</p>
+					</div></div></div>
+			<div style="display:flex;align-items:center;gap:0;margin-bottom:0.5rem;">
+				<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;">
+					<br>
+				</div>
+				<div style="background:#f5f7fa;border-radius:8px;padding:0.6rem 0.9rem;display:flex;align-items:center;gap:0.75rem;flex:none;width:auto;max-width:420px;border-left:3px solid #264e74;text-align:left;"><img src="https://media.lrsd.net/media/Default/frl/megan-vankoughnett.100d8089379.jpg" alt="Megan Vankoughnett" style="width: 38px; height: 38px; border-radius: 50%; object-fit: cover; flex-shrink: 0;" class="fr-fil fr-dib">
+					<div style="text-align:left;">
+
+						<p style="font-family:'Montserrat',sans-serif;font-size:0.82rem;font-weight:700;color:#264e74;margin:0 0 0.1rem;text-align:left;">Megan Vankoughnett</p>
+
+						<p style="font-size:0.73rem;color:#666;margin:0;text-align:left;">Divisional Principal, Clinical &amp; Student Services</p>
+					</div></div></div>
+			<div style="display:flex;align-items:center;gap:0;margin-bottom:0.5rem;">
+				<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;">
+					<br>
+				</div>
+				<div style="background:#f5f7fa;border-radius:8px;padding:0.6rem 0.9rem;display:flex;align-items:center;gap:0.75rem;flex:none;width:auto;max-width:420px;border-left:3px solid #264e74;text-align:left;"><img src="https://media.lrsd.net/media/Default/frl/lisa-tymchuk.68618d89380.jpg" alt="Lisa Tymchuk" style="width: 38px; height: 38px; border-radius: 50%; object-fit: cover; flex-shrink: 0;" class="fr-fil fr-dib">
+					<div style="text-align:left;">
+
+						<p style="font-family:'Montserrat',sans-serif;font-size:0.82rem;font-weight:700;color:#264e74;margin:0 0 0.1rem;text-align:left;">Lisa Tymchuk</p>
+
+						<p style="font-size:0.73rem;color:#666;margin:0;text-align:left;">Assistant Director, Clinical Services</p>
+					</div></div></div>
+			<div style="display:flex;align-items:center;gap:0;margin-bottom:0.5rem;">
+				<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;">
+					<br>
+				</div>
+				<div style="background:#f5f7fa;border-radius:8px;padding:0.6rem 0.9rem;display:flex;align-items:center;gap:0.75rem;flex:none;width:auto;max-width:420px;border-left:3px solid #264e74;text-align:left;"><img src="https://media.lrsd.net/media/Default/frl/kelsey-leneghan.01377989381.jpg" alt="Kelsey Lenaghan" style="width: 38px; height: 38px; border-radius: 50%; object-fit: cover; flex-shrink: 0;" class="fr-fil fr-dib">
+					<div style="text-align:left;">
+
+						<p style="font-family:'Montserrat',sans-serif;font-size:0.82rem;font-weight:700;color:#264e74;margin:0 0 0.1rem;text-align:left;">Kelsey Lenaghan</p>
+
+						<p style="font-size:0.73rem;color:#666;margin:0;text-align:left;">Divisional Indigenous Leader</p>
+					</div></div></div></div>
 		<!-- Level 1 children wrapper — hidden when leadership filter is active -->
 		<div id="hier-full-tree" style="border-left:3px solid #d0dae6;margin-left:36px;padding-left:0;">
-
 			<!-- ── Portfolio 1a: Nicole Mager → Instructional only ── -->
 			<div data-hier="instructional" style="margin-bottom:1.25rem;">
 				<div style="display:flex;align-items:flex-start;gap:0;">
-					<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;margin-top:0;"></div>
-					<div class="scst-hier-toggle" data-target="hier-nicole-instructional" style="flex:none;width:calc(100% - 28px);background:#ffffff;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.09);overflow:hidden;cursor:pointer;border-left:4px solid #264e74;">
-						<div style="display:flex;align-items:center;gap:1rem;padding:0.9rem 1rem;text-align:left;">
-							<img src="https://media.lrsd.net/media/Default/frl/nicole-mager.da01da89378.jpg" alt="Nicole Mager" style="width:52px;height:52px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid #e0e8f0;">
-							<div style="flex:1;min-width:0;text-align:left;">
-								<p style="font-family:'Montserrat',sans-serif;font-size:0.92rem;font-weight:700;color:#264e74;margin:0 0 0.15rem;text-align:left;">Nicole Mager</p>
-								<p style="font-size:0.78rem;color:#555;margin:0;text-align:left;">Divisional Principal, Instructional &amp; Indigenous Education</p>
-							</div>
-							<span class="scst-chevron" style="font-size:0.75rem;color:#264e74;flex-shrink:0;transition:transform 0.2s;">&#9660;</span>
-						</div>
+					<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;margin-top:0;">
+						<br>
 					</div>
-				</div>
+					<div class="scst-hier-toggle" data-target="hier-nicole-instructional" style="flex:none;width:calc(100% - 28px);background:#ffffff;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.09);overflow:hidden;cursor:pointer;border-left:4px solid #264e74;">
+						<div style="display:flex;align-items:center;gap:1rem;padding:0.9rem 1rem;text-align:left;"><img src="https://media.lrsd.net/media/Default/frl/nicole-mager.da01da89378.jpg" alt="Nicole Mager" style="width: 52px; height: 52px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid rgb(224, 232, 240);" class="fr-fil fr-dib">
+							<div style="flex:1;min-width:0;text-align:left;">
+
+								<p style="font-family:'Montserrat',sans-serif;font-size:0.92rem;font-weight:700;color:#264e74;margin:0 0 0.15rem;text-align:left;">Nicole Mager</p>
+
+								<p style="font-size:0.78rem;color:#555;margin:0;text-align:left;">Divisional Principal, Instructional &amp; Indigenous Education</p>
+							</div><span class="scst-chevron" style="font-size:0.75rem;color:#264e74;flex-shrink:0;transition:transform 0.2s;">▼</span></div></div></div>
 				<div id="hier-nicole-instructional" style="border-left:3px solid #d0dae6;margin-left:28px;padding-left:0;margin-top:0.5rem;">
 					<div style="display:flex;align-items:center;gap:0;margin-bottom:0.5rem;">
-						<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;"></div>
-						<div style="background:#f5f7fa;border-radius:8px;padding:0.6rem 0.9rem;display:flex;align-items:center;gap:0.75rem;flex:none;width:auto;max-width:420px;border-left:3px solid #3491cd;text-align:left;">
-							<img src="https://media.lrsd.net/media/Default/frl/kristyn-artibise.45f3e989382.jpg" alt="Kristyn Artibise" style="width:38px;height:38px;border-radius:50%;object-fit:cover;flex-shrink:0;">
-							<div style="text-align:left;"><p style="font-family:'Montserrat',sans-serif;font-size:0.82rem;font-weight:700;color:#264e74;margin:0 0 0.1rem;text-align:left;">Kristyn Artibise</p><p style="font-size:0.73rem;color:#666;margin:0;text-align:left;">Instructional Support Teacher (Numeracy)</p></div>
+						<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;">
+							<br>
 						</div>
-					</div>
-					<div style="display:flex;align-items:center;gap:0;margin-bottom:0.5rem;">
-						<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;"></div>
-						<div style="background:#f5f7fa;border-radius:8px;padding:0.6rem 0.9rem;display:flex;align-items:center;gap:0.75rem;flex:none;width:auto;max-width:420px;border-left:3px solid #3491cd;text-align:left;">
-							<img src="https://media.lrsd.net/media/Default/frl/kristen-mcdowell.becac689383.jpg" alt="Kristen McDowell" style="width:38px;height:38px;border-radius:50%;object-fit:cover;flex-shrink:0;">
-							<div style="text-align:left;"><p style="font-family:'Montserrat',sans-serif;font-size:0.82rem;font-weight:700;color:#264e74;margin:0 0 0.1rem;text-align:left;">Kristen McDowell</p><p style="font-size:0.73rem;color:#666;margin:0;text-align:left;">Instructional Support Teacher (Literacy)</p></div>
-						</div>
-					</div>
-					<div style="display:flex;align-items:center;gap:0;margin-bottom:0.5rem;">
-						<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;"></div>
-						<div style="background:#f5f7fa;border-radius:8px;padding:0.6rem 0.9rem;display:flex;align-items:center;gap:0.75rem;flex:none;width:auto;max-width:420px;border-left:3px solid #3491cd;text-align:left;">
-							<img src="https://media.lrsd.net/media/Default/frl/genevieve-shyiak.63aa7889385.jpg" alt="Geneviève Shyiak" style="width:38px;height:38px;border-radius:50%;object-fit:cover;flex-shrink:0;">
-							<div style="text-align:left;"><p style="font-family:'Montserrat',sans-serif;font-size:0.82rem;font-weight:700;color:#264e74;margin:0 0 0.1rem;text-align:left;">Genevi&egrave;ve Shyiak</p><p style="font-size:0.73rem;color:#666;margin:0;text-align:left;">Instructional Support Teacher (Literacy)</p></div>
-						</div>
-					</div>
-				</div>
-			</div>
+						<div style="background:#f5f7fa;border-radius:8px;padding:0.6rem 0.9rem;display:flex;align-items:center;gap:0.75rem;flex:none;width:auto;max-width:420px;border-left:3px solid #3491cd;text-align:left;"><img src="https://media.lrsd.net/media/Default/frl/kristyn-artibise.45f3e989382.jpg" alt="Kristyn Artibise" style="width: 38px; height: 38px; border-radius: 50%; object-fit: cover; flex-shrink: 0;" class="fr-fil fr-dib">
+							<div style="text-align:left;">
 
+								<p style="font-family:'Montserrat',sans-serif;font-size:0.82rem;font-weight:700;color:#264e74;margin:0 0 0.1rem;text-align:left;">Kristyn Artibise</p>
+
+								<p style="font-size:0.73rem;color:#666;margin:0;text-align:left;">Instructional Support Teacher (Numeracy)</p>
+							</div></div></div>
+					<div style="display:flex;align-items:center;gap:0;margin-bottom:0.5rem;">
+						<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;">
+							<br>
+						</div>
+						<div style="background:#f5f7fa;border-radius:8px;padding:0.6rem 0.9rem;display:flex;align-items:center;gap:0.75rem;flex:none;width:auto;max-width:420px;border-left:3px solid #3491cd;text-align:left;"><img src="https://media.lrsd.net/media/Default/frl/kristen-mcdowell.becac689383.jpg" alt="Kristen McDowell" style="width: 38px; height: 38px; border-radius: 50%; object-fit: cover; flex-shrink: 0;" class="fr-fil fr-dib">
+							<div style="text-align:left;">
+
+								<p style="font-family:'Montserrat',sans-serif;font-size:0.82rem;font-weight:700;color:#264e74;margin:0 0 0.1rem;text-align:left;">Kristen McDowell</p>
+
+								<p style="font-size:0.73rem;color:#666;margin:0;text-align:left;">Instructional Support Teacher (Literacy)</p>
+							</div></div></div>
+					<div style="display:flex;align-items:center;gap:0;margin-bottom:0.5rem;">
+						<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;">
+							<br>
+						</div>
+						<div style="background:#f5f7fa;border-radius:8px;padding:0.6rem 0.9rem;display:flex;align-items:center;gap:0.75rem;flex:none;width:auto;max-width:420px;border-left:3px solid #3491cd;text-align:left;"><img src="https://media.lrsd.net/media/Default/frl/genevieve-shyiak.63aa7889385.jpg" alt="Geneviève Shyiak" style="width: 38px; height: 38px; border-radius: 50%; object-fit: cover; flex-shrink: 0;" class="fr-fil fr-dib">
+							<div style="text-align:left;">
+
+								<p style="font-family:'Montserrat',sans-serif;font-size:0.82rem;font-weight:700;color:#264e74;margin:0 0 0.1rem;text-align:left;">Genevi&egrave;ve Shyiak</p>
+
+								<p style="font-size:0.73rem;color:#666;margin:0;text-align:left;">Instructional Support Teacher (Literacy)</p>
+							</div></div></div></div></div>
 			<!-- ── Portfolio 1b: Nicole Mager → Indigenous only ── -->
 			<div data-hier="indigenous" style="margin-bottom:1.25rem;">
 				<div style="display:flex;align-items:flex-start;gap:0;">
-					<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;margin-top:0;"></div>
-					<div class="scst-hier-toggle" data-target="hier-nicole-indigenous" style="flex:none;width:calc(100% - 28px);background:#ffffff;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.09);overflow:hidden;cursor:pointer;border-left:4px solid #264e74;">
-						<div style="display:flex;align-items:center;gap:1rem;padding:0.9rem 1rem;text-align:left;">
-							<img src="https://media.lrsd.net/media/Default/frl/nicole-mager.da01da89378.jpg" alt="Nicole Mager" style="width:52px;height:52px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid #e0e8f0;">
-							<div style="flex:1;min-width:0;text-align:left;">
-								<p style="font-family:'Montserrat',sans-serif;font-size:0.92rem;font-weight:700;color:#264e74;margin:0 0 0.15rem;text-align:left;">Nicole Mager</p>
-								<p style="font-size:0.78rem;color:#555;margin:0;text-align:left;">Divisional Principal, Instructional &amp; Indigenous Education</p>
-							</div>
-							<span class="scst-chevron" style="font-size:0.75rem;color:#264e74;flex-shrink:0;transition:transform 0.2s;">&#9660;</span>
-						</div>
+					<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;margin-top:0;">
+						<br>
 					</div>
-				</div>
+					<div class="scst-hier-toggle" data-target="hier-nicole-indigenous" style="flex:none;width:calc(100% - 28px);background:#ffffff;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.09);overflow:hidden;cursor:pointer;border-left:4px solid #264e74;">
+						<div style="display:flex;align-items:center;gap:1rem;padding:0.9rem 1rem;text-align:left;"><img src="https://media.lrsd.net/media/Default/frl/nicole-mager.da01da89378.jpg" alt="Nicole Mager" style="width: 52px; height: 52px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid rgb(224, 232, 240);" class="fr-fil fr-dib">
+							<div style="flex:1;min-width:0;text-align:left;">
+
+								<p style="font-family:'Montserrat',sans-serif;font-size:0.92rem;font-weight:700;color:#264e74;margin:0 0 0.15rem;text-align:left;">Nicole Mager</p>
+
+								<p style="font-size:0.78rem;color:#555;margin:0;text-align:left;">Divisional Principal, Instructional &amp; Indigenous Education</p>
+							</div><span class="scst-chevron" style="font-size:0.75rem;color:#264e74;flex-shrink:0;transition:transform 0.2s;">▼</span></div></div></div>
 				<div id="hier-nicole-indigenous" style="border-left:3px solid #d0dae6;margin-left:28px;padding-left:0;margin-top:0.5rem;">
 					<!-- Kelsey Lenaghan (sub-portfolio) -->
 					<div style="display:flex;align-items:flex-start;gap:0;margin-bottom:0.5rem;">
-						<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;margin-top:0;"></div>
-						<div class="scst-hier-toggle" data-target="hier-kelsey" style="flex:none;width:calc(100% - 28px);background:#ffffff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);overflow:hidden;cursor:pointer;border-left:4px solid #264e74;">
-							<div style="display:flex;align-items:center;gap:0.75rem;padding:0.7rem 0.9rem;text-align:left;">
-								<img src="https://media.lrsd.net/media/Default/frl/kelsey-leneghan.01377989381.jpg" alt="Kelsey Lenaghan" style="width:42px;height:42px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid #e0e8f0;">
-								<div style="flex:1;min-width:0;text-align:left;">
-									<p style="font-family:'Montserrat',sans-serif;font-size:0.85rem;font-weight:700;color:#264e74;margin:0 0 0.1rem;text-align:left;">Kelsey Lenaghan</p>
-									<p style="font-size:0.75rem;color:#555;margin:0;text-align:left;">Divisional Indigenous Leader</p>
-								</div>
-								<span class="scst-chevron" style="font-size:0.75rem;color:#264e74;flex-shrink:0;">&#9660;</span>
-							</div>
+						<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;margin-top:0;">
+							<br>
 						</div>
-					</div>
+						<div class="scst-hier-toggle" data-target="hier-kelsey" style="flex:none;width:calc(100% - 28px);background:#ffffff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);overflow:hidden;cursor:pointer;border-left:4px solid #264e74;">
+							<div style="display:flex;align-items:center;gap:0.75rem;padding:0.7rem 0.9rem;text-align:left;"><img src="https://media.lrsd.net/media/Default/frl/kelsey-leneghan.01377989381.jpg" alt="Kelsey Lenaghan" style="width: 42px; height: 42px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid rgb(224, 232, 240);" class="fr-fil fr-dib">
+								<div style="flex:1;min-width:0;text-align:left;">
+
+									<p style="font-family:'Montserrat',sans-serif;font-size:0.85rem;font-weight:700;color:#264e74;margin:0 0 0.1rem;text-align:left;">Kelsey Lenaghan</p>
+
+									<p style="font-size:0.75rem;color:#555;margin:0;text-align:left;">Divisional Indigenous Leader</p>
+								</div><span class="scst-chevron" style="font-size:0.75rem;color:#264e74;flex-shrink:0;">▼</span></div></div></div>
 					<!-- Kelsey's team -->
 					<div id="hier-kelsey" style="border-left:3px solid #d0dae6;margin-left:28px;padding-left:0;margin-top:0.25rem;margin-bottom:0.5rem;">
+
 						<p style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin:0.5rem 0 0.4rem 28px;text-align:left;">Indigenous Education Team</p>
 						<div style="display:flex;flex-wrap:wrap;gap:0.4rem;padding-left:28px;margin-bottom:0.75rem;">
 							<div style="background:#f5f7fa;border-radius:6px;padding:0.4rem 0.7rem;font-size:0.78rem;color:#264e74;font-weight:600;border-left:3px solid #264e74;text-align:left;">Sean Oliver</div>
@@ -253,8 +268,8 @@
 							<div style="background:#f5f7fa;border-radius:6px;padding:0.4rem 0.7rem;font-size:0.78rem;color:#264e74;font-weight:600;border-left:3px solid #264e74;text-align:left;">Judith Saunders-McKay</div>
 							<div style="background:#f5f7fa;border-radius:6px;padding:0.4rem 0.7rem;font-size:0.78rem;color:#264e74;font-weight:600;border-left:3px solid #264e74;text-align:left;">Sam Flamand</div>
 							<div style="background:#f5f7fa;border-radius:6px;padding:0.4rem 0.7rem;font-size:0.78rem;color:#264e74;font-weight:600;border-left:3px solid #264e74;text-align:left;">Trish Wilson</div>
-							<div style="background:#f5f7fa;border-radius:6px;padding:0.4rem 0.7rem;font-size:0.78rem;color:#264e74;font-weight:600;border-left:3px solid #264e74;text-align:left;">Tammy Bruce <span style="font-weight:400;color:#888;font-size:0.72rem;">(Community Liaison)</span></div>
-						</div>
+							<div style="background:#f5f7fa;border-radius:6px;padding:0.4rem 0.7rem;font-size:0.78rem;color:#264e74;font-weight:600;border-left:3px solid #264e74;text-align:left;">Tammy Bruce <span style="font-weight:400;color:#888;font-size:0.72rem;">(Community Liaison)</span></div></div>
+
 						<p style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin:0 0 0.4rem 28px;text-align:left;">Indigenous Language Team</p>
 						<div style="display:flex;flex-wrap:wrap;gap:0.4rem;padding-left:28px;">
 							<div style="background:#f5f7fa;border-radius:6px;padding:0.4rem 0.7rem;font-size:0.78rem;color:#264e74;font-weight:600;border-left:3px solid #3491cd;text-align:left;">Alice McKay <span style="font-weight:400;color:#888;font-size:0.72rem;">(Ojibwe)</span></div>
@@ -265,43 +280,35 @@
 							<div style="background:#f5f7fa;border-radius:6px;padding:0.4rem 0.7rem;font-size:0.78rem;color:#264e74;font-weight:600;border-left:3px solid #3491cd;text-align:left;">Hailey McKay <span style="font-weight:400;color:#888;font-size:0.72rem;">(Cree)</span></div>
 							<div style="background:#f5f7fa;border-radius:6px;padding:0.4rem 0.7rem;font-size:0.78rem;color:#264e74;font-weight:600;border-left:3px solid #3491cd;text-align:left;">Destanee Ducharme <span style="font-weight:400;color:#888;font-size:0.72rem;">(Cree)</span></div>
 							<div style="background:#f5f7fa;border-radius:6px;padding:0.4rem 0.7rem;font-size:0.78rem;color:#264e74;font-weight:600;border-left:3px solid #3491cd;text-align:left;">Rose McKay <span style="font-weight:400;color:#888;font-size:0.72rem;">(Cree)</span></div>
-							<div style="background:#f5f7fa;border-radius:6px;padding:0.4rem 0.7rem;font-size:0.78rem;color:#264e74;font-weight:600;border-left:3px solid #3491cd;text-align:left;">Maxine Lavitt <span style="font-weight:400;color:#888;font-size:0.72rem;">(Michif)</span></div>
-						</div>
-					</div>
-				</div>
-			</div>
-
+							<div style="background:#f5f7fa;border-radius:6px;padding:0.4rem 0.7rem;font-size:0.78rem;color:#264e74;font-weight:600;border-left:3px solid #3491cd;text-align:left;">Maxine Lavitt <span style="font-weight:400;color:#888;font-size:0.72rem;">(Michif)</span></div></div></div></div></div>
 			<!-- ── Portfolio 2: Megan Vankoughnett (student-support + clinical) ── -->
 			<div data-hier="student-support clinical" style="margin-bottom:1.25rem;">
 				<div style="display:flex;align-items:flex-start;gap:0;">
-					<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;margin-top:0;"></div>
-					<div class="scst-hier-toggle" data-target="hier-megan" style="flex:none;width:calc(100% - 28px);background:#ffffff;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.09);overflow:hidden;cursor:pointer;border-left:4px solid #264e74;">
-						<div style="display:flex;align-items:center;gap:1rem;padding:0.9rem 1rem;text-align:left;">
-							<img src="https://media.lrsd.net/media/Default/frl/megan-vankoughnett.100d8089379.jpg" alt="Megan Vankoughnett" style="width:52px;height:52px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid #e0e8f0;">
-							<div style="flex:1;min-width:0;text-align:left;">
-								<p style="font-family:'Montserrat',sans-serif;font-size:0.92rem;font-weight:700;color:#264e74;margin:0 0 0.15rem;text-align:left;">Megan Vankoughnett</p>
-								<p style="font-size:0.78rem;color:#555;margin:0;text-align:left;">Divisional Principal, Clinical &amp; Student Services</p>
-							</div>
-							<span class="scst-chevron" style="font-size:0.75rem;color:#264e74;flex-shrink:0;">&#9660;</span>
-						</div>
+					<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;margin-top:0;">
+						<br>
 					</div>
-				</div>
+					<div class="scst-hier-toggle" data-target="hier-megan" style="flex:none;width:calc(100% - 28px);background:#ffffff;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.09);overflow:hidden;cursor:pointer;border-left:4px solid #264e74;">
+						<div style="display:flex;align-items:center;gap:1rem;padding:0.9rem 1rem;text-align:left;"><img src="https://media.lrsd.net/media/Default/frl/megan-vankoughnett.100d8089379.jpg" alt="Megan Vankoughnett" style="width: 52px; height: 52px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid rgb(224, 232, 240);" class="fr-fil fr-dib">
+							<div style="flex:1;min-width:0;text-align:left;">
 
+								<p style="font-family:'Montserrat',sans-serif;font-size:0.92rem;font-weight:700;color:#264e74;margin:0 0 0.15rem;text-align:left;">Megan Vankoughnett</p>
+
+								<p style="font-size:0.78rem;color:#555;margin:0;text-align:left;">Divisional Principal, Clinical &amp; Student Services</p>
+							</div><span class="scst-chevron" style="font-size:0.75rem;color:#264e74;flex-shrink:0;">▼</span></div></div></div>
 				<div id="hier-megan" style="border-left:3px solid #d0dae6;margin-left:28px;padding-left:0;margin-top:0.5rem;">
 					<!-- Lisa Tymchuk sub-portfolio -->
 					<div style="display:flex;align-items:flex-start;gap:0;margin-bottom:0.5rem;">
-						<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;margin-top:0;"></div>
-						<div class="scst-hier-toggle" data-target="hier-lisa" style="flex:none;width:calc(100% - 28px);background:#ffffff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);overflow:hidden;cursor:pointer;border-left:4px solid #264e74;">
-							<div style="display:flex;align-items:center;gap:0.75rem;padding:0.7rem 0.9rem;text-align:left;">
-								<img src="https://media.lrsd.net/media/Default/frl/lisa-tymchuk.68618d89380.jpg" alt="Lisa Tymchuk" style="width:42px;height:42px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid #e0e8f0;">
-								<div style="flex:1;min-width:0;text-align:left;">
-									<p style="font-family:'Montserrat',sans-serif;font-size:0.85rem;font-weight:700;color:#264e74;margin:0 0 0.1rem;text-align:left;">Lisa Tymchuk</p>
-									<p style="font-size:0.75rem;color:#555;margin:0;text-align:left;">Assistant Director, Clinical Services</p>
-								</div>
-								<span class="scst-chevron" style="font-size:0.75rem;color:#264e74;flex-shrink:0;">&#9660;</span>
-							</div>
+						<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;margin-top:0;">
+							<br>
 						</div>
-					</div>
+						<div class="scst-hier-toggle" data-target="hier-lisa" style="flex:none;width:calc(100% - 28px);background:#ffffff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);overflow:hidden;cursor:pointer;border-left:4px solid #264e74;">
+							<div style="display:flex;align-items:center;gap:0.75rem;padding:0.7rem 0.9rem;text-align:left;"><img src="https://media.lrsd.net/media/Default/frl/lisa-tymchuk.68618d89380.jpg" alt="Lisa Tymchuk" style="width: 42px; height: 42px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid rgb(224, 232, 240);" class="fr-fil fr-dib">
+								<div style="flex:1;min-width:0;text-align:left;">
+
+									<p style="font-family:'Montserrat',sans-serif;font-size:0.85rem;font-weight:700;color:#264e74;margin:0 0 0.1rem;text-align:left;">Lisa Tymchuk</p>
+
+									<p style="font-size:0.75rem;color:#555;margin:0;text-align:left;">Assistant Director, Clinical Services</p>
+								</div><span class="scst-chevron" style="font-size:0.75rem;color:#264e74;flex-shrink:0;">▼</span></div></div></div>
 					<div id="hier-lisa" style="border-left:3px solid #d0dae6;margin-left:28px;padding-left:0;margin-top:0.25rem;margin-bottom:0.5rem;">
 						<div style="display:flex;flex-wrap:wrap;gap:0.4rem;padding-left:28px;">
 							<div style="background:#f5f7fa;border-radius:6px;padding:0.4rem 0.7rem;font-size:0.78rem;color:#264e74;font-weight:600;border-left:3px solid #3491cd;text-align:left;">Kerri Bush <span style="font-weight:400;color:#888;font-size:0.72rem;">(Student Services)</span></div>
@@ -309,32 +316,24 @@
 							<div style="background:#f5f7fa;border-radius:6px;padding:0.4rem 0.7rem;font-size:0.78rem;color:#264e74;font-weight:600;border-left:3px solid #3491cd;text-align:left;">Robert George <span style="font-weight:400;color:#888;font-size:0.72rem;">(Psychologist)</span></div>
 							<div style="background:#f5f7fa;border-radius:6px;padding:0.4rem 0.7rem;font-size:0.78rem;color:#264e74;font-weight:600;border-left:3px solid #3491cd;text-align:left;">Travis Hoare <span style="font-weight:400;color:#888;font-size:0.72rem;">(OT)</span></div>
 							<div style="background:#f5f7fa;border-radius:6px;padding:0.4rem 0.7rem;font-size:0.78rem;color:#264e74;font-weight:600;border-left:3px solid #3491cd;text-align:left;">Karla Guiterrez <span style="font-weight:400;color:#888;font-size:0.72rem;">(SLP)</span></div>
-							<div style="background:#f5f7fa;border-radius:6px;padding:0.4rem 0.7rem;font-size:0.78rem;color:#264e74;font-weight:600;border-left:3px solid #3491cd;text-align:left;">Kim Mackey <span style="font-weight:400;color:#888;font-size:0.72rem;">(Social Worker)</span></div>
-						</div>
-					</div>
-				</div>
-			</div>
-
+							<div style="background:#f5f7fa;border-radius:6px;padding:0.4rem 0.7rem;font-size:0.78rem;color:#264e74;font-weight:600;border-left:3px solid #3491cd;text-align:left;">Kim Mackey <span style="font-weight:400;color:#888;font-size:0.72rem;">(Social Worker)</span></div></div></div></div></div>
 			<!-- ── Specialized direct reports ── -->
 			<div data-hier="specialized" style="margin-bottom:0.5rem;">
 				<div style="display:flex;align-items:flex-start;gap:0;">
-					<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;margin-top:0;"></div>
+					<div style="width:28px;height:28px;border-bottom:3px solid #d0dae6;border-left:3px solid transparent;flex-shrink:0;margin-top:0;">
+						<br>
+					</div>
 					<div style="flex:none;width:calc(100% - 28px);background:#f0f4f8;border-radius:8px;padding:0.75rem 1rem;border-left:4px solid #a3b939;">
+
 						<p style="font-family:'Montserrat',sans-serif;font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:#5a6e00;margin:0 0 0.6rem;text-align:left;">Specialized Supports</p>
 						<div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
 							<div style="background:#fff;border-radius:6px;padding:0.4rem 0.7rem;font-size:0.78rem;color:#264e74;font-weight:600;border-left:3px solid #a3b939;text-align:left;">Kathy Atkin <span style="font-weight:400;color:#888;font-size:0.72rem;">(Teacher Librarian)</span></div>
 							<div style="background:#fff;border-radius:6px;padding:0.4rem 0.7rem;font-size:0.78rem;color:#264e74;font-weight:600;border-left:3px solid #a3b939;text-align:left;">Shaemus Campbell <span style="font-weight:400;color:#888;font-size:0.72rem;">(PE &amp; Healthy Living)</span></div>
 							<div style="background:#fff;border-radius:6px;padding:0.4rem 0.7rem;font-size:0.78rem;color:#264e74;font-weight:600;border-left:3px solid #a3b939;text-align:left;">Jordana Milne <span style="font-weight:400;color:#888;font-size:0.72rem;">(Athletics &amp; Healthy Living)</span></div>
 							<div style="background:#fff;border-radius:6px;padding:0.4rem 0.7rem;font-size:0.78rem;color:#264e74;font-weight:600;border-left:3px solid #a3b939;text-align:left;">Ryan Sabourin <span style="font-weight:400;color:#888;font-size:0.72rem;">(Applied Technology)</span></div>
-							<div style="background:#fff;border-radius:6px;padding:0.4rem 0.7rem;font-size:0.78rem;color:#264e74;font-weight:600;border-left:3px solid #a3b939;text-align:left;">Allan Suban <span style="font-weight:400;color:#888;font-size:0.72rem;">(LRSD Arts)</span></div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div><!-- /hier-full-tree -->
+							<div style="background:#fff;border-radius:6px;padding:0.4rem 0.7rem;font-size:0.78rem;color:#264e74;font-weight:600;border-left:3px solid #a3b939;text-align:left;">Allan Suban <span style="font-weight:400;color:#888;font-size:0.72rem;">(LRSD Arts)</span></div></div></div></div></div></div>
+		<!-- /hier-full-tree -->
 	</div>
-
 	<!-- ── TEAM SECTIONS ── -->
 	<!-- 1. Leadership -->
 	<div class="team-section" id="section-leadership" data-main-section="team">
@@ -987,14 +986,17 @@
 
 		mainTabs.forEach(function(tab)
 		{
-			tab.addEventListener('click', function() { showMainSection(tab.dataset.mainTab); });
+			tab.addEventListener('click', function()
+			{
+				showMainSection(tab.dataset.mainTab);
+			});
 		});
 
 		// ── Tab filter ────────────────────────────────────────────────────
 		var tabs = document.querySelectorAll('.scst-tab');
 		var teamSections = document.querySelectorAll('.team-section');
 
-		var TAB_ACTIVE   = 'background:#264e74;color:#fff;border:none;border-radius:7px;padding:0.45rem 1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:\'Poppins\',sans-serif;white-space:nowrap;transition:background 0.15s,color 0.15s;';
+		var TAB_ACTIVE = 'background:#264e74;color:#fff;border:none;border-radius:7px;padding:0.45rem 1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:\'Poppins\',sans-serif;white-space:nowrap;transition:background 0.15s,color 0.15s;';
 		var TAB_INACTIVE = 'background:transparent;color:#264e74;border:none;border-radius:7px;padding:0.45rem 1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:\'Poppins\',sans-serif;white-space:nowrap;transition:background 0.15s,color 0.15s;';
 
 		// Hierarchy sections tagged with data-hier (space-separated team keys)
@@ -1005,7 +1007,10 @@
 		function applyFilter(filter)
 		{
 			currentFilter = filter;
-			tabs.forEach(function(b) { b.setAttribute('style', b.dataset.filter === filter ? TAB_ACTIVE : TAB_INACTIVE); });
+			tabs.forEach(function(b)
+			{
+				b.setAttribute('style', b.dataset.filter === filter ? TAB_ACTIVE : TAB_INACTIVE);
+			});
 
 			// ── Cards view filter (only affects visible card sections) ──
 			var isHierarchyVisible = hierarchyView && hierarchyView.style.display !== 'none';
@@ -1036,21 +1041,21 @@
 			// ── Hierarchy view filter ──
 			if (activeMainSection !== 'team')
 			{
-				if (hierarchyView)      hierarchyView.style.display = 'none';
+				if (hierarchyView) hierarchyView.style.display = 'none';
 				if (hierLeadershipTeam) hierLeadershipTeam.style.display = 'none';
-				if (hierFullTree)       hierFullTree.style.display = 'none';
+				if (hierFullTree) hierFullTree.style.display = 'none';
 			}
 			else if (filter === 'leadership')
 			{
 				// Show leadership team list, hide full portfolio tree
 				if (hierLeadershipTeam) hierLeadershipTeam.style.display = '';
-				if (hierFullTree)       hierFullTree.style.display = 'none';
+				if (hierFullTree) hierFullTree.style.display = 'none';
 			}
 			else
 			{
 				// Hide leadership-only list, show full tree filtered by portfolio
 				if (hierLeadershipTeam) hierLeadershipTeam.style.display = 'none';
-				if (hierFullTree)       hierFullTree.style.display = '';
+				if (hierFullTree) hierFullTree.style.display = '';
 				hierSections.forEach(function(section)
 				{
 					if (filter === 'all')
@@ -1066,7 +1071,10 @@
 
 		tabs.forEach(function(btn)
 		{
-			btn.addEventListener('click', function() { applyFilter(btn.dataset.filter); });
+			btn.addEventListener('click', function()
+			{
+				applyFilter(btn.dataset.filter);
+			});
 		});
 
 		// ── View toggle (Cards / Hierarchy) ───────────────────────────────
@@ -1075,23 +1083,38 @@
 		var hierarchyView = document.getElementById('hierarchy-view');
 		var filterBarEl = document.getElementById('team-filter-bar');
 
-		var VIEW_BTN_ACTIVE   = 'background:#264e74;color:#fff;border:none;border-radius:7px;padding:0.45rem 1.1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:\'Poppins\',sans-serif;display:flex;align-items:center;gap:0.4rem;transition:background 0.15s,color 0.15s;';
+		var VIEW_BTN_ACTIVE = 'background:#264e74;color:#fff;border:none;border-radius:7px;padding:0.45rem 1.1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:\'Poppins\',sans-serif;display:flex;align-items:center;gap:0.4rem;transition:background 0.15s,color 0.15s;';
 		var VIEW_BTN_INACTIVE = 'background:transparent;color:#264e74;border:none;border-radius:7px;padding:0.45rem 1.1rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:\'Poppins\',sans-serif;display:flex;align-items:center;gap:0.4rem;transition:background 0.15s,color 0.15s;';
 
 		function setView(view)
 		{
 			var isHierarchy = view === 'hierarchy';
-			if (btnCards)     { btnCards.setAttribute('style', isHierarchy ? VIEW_BTN_INACTIVE : VIEW_BTN_ACTIVE);     btnCards.setAttribute('aria-pressed', String(!isHierarchy)); }
-			if (btnHierarchy) { btnHierarchy.setAttribute('style', isHierarchy ? VIEW_BTN_ACTIVE : VIEW_BTN_INACTIVE); btnHierarchy.setAttribute('aria-pressed', String(isHierarchy)); }
+			if (btnCards)
+			{
+				btnCards.setAttribute('style', isHierarchy ? VIEW_BTN_INACTIVE : VIEW_BTN_ACTIVE); btnCards.setAttribute('aria-pressed', String(!isHierarchy));
+			}
+			if (btnHierarchy)
+			{
+				btnHierarchy.setAttribute('style', isHierarchy ? VIEW_BTN_ACTIVE : VIEW_BTN_INACTIVE); btnHierarchy.setAttribute('aria-pressed', String(isHierarchy));
+			}
 			if (hierarchyView) hierarchyView.style.display = isHierarchy ? '' : 'none';
-			// Always hide card sections when hierarchy is showing
-			if (isHierarchy) teamSections.forEach(function(s) { s.style.display = 'none'; });
-			// Re-apply filter (cards view respects isHierarchyVisible; hierarchy filter always runs)
+				// Always hide card sections when hierarchy is showing
+			if (isHierarchy) teamSections.forEach(function(s)
+				{
+					s.style.display = 'none';
+				});
+				// Re-apply filter (cards view respects isHierarchyVisible; hierarchy filter always runs)
 			applyFilter(currentFilter);
 		}
 
-		if (btnCards)     btnCards.addEventListener('click',     function() { setView('cards'); });
-		if (btnHierarchy) btnHierarchy.addEventListener('click', function() { setView('hierarchy'); });
+		if (btnCards) btnCards.addEventListener('click', function()
+		{
+			setView('cards');
+		});
+		if (btnHierarchy) btnHierarchy.addEventListener('click', function()
+		{
+			setView('hierarchy');
+		});
 
 		// ── Expandable hierarchy nodes ────────────────────────────────────
 		document.querySelectorAll('.scst-hier-toggle').forEach(function(toggle)
@@ -1114,7 +1137,7 @@
 
 </script>
 <style>
-				@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@.fr-view 400;500;600&display=swap');:root {
+					@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@.fr-view 400;500;600&display=swap');:root {
 		--scst-primary: #264e74; --scst-accent: #b23427; --scst-light-bg: #f5f7fa; --scst-white: #ffffff; --scst-text: #222222; --scst-header-font: 'Montserrat', sans-serif; --scst-body-font: 'Poppins', sans-serif; --scst-shadow-light: 0 2px 6px rgba(34, 60, 80, 0.08); --scst-shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.13), 0 3px 8px rgba(0, 0, 0, 0.07);
 	}
 	
@@ -1465,42 +1488,40 @@
 		.fr-view #scst-wrapper {
 			left: 0 !important;
 		}
-	}
-
-	@media (max-width: 860px) {
-		.fr-view #scst-wrapper .pillars-grid,
-		.fr-view #scst-wrapper .tier-grid,
-		.fr-view #scst-wrapper .equity-tier-grid {
-			grid-template-columns: 1fr !important;
-		}
-		.fr-view #scst-wrapper .looking-ahead ul {
-			columns: 1 !important;
-		}
-		@media (max-width: 600px) {
-			.fr-view #scst-wrapper .scst-hero {
-				flex-direction: column !important; align-items: flex-start !important; gap: 1rem !important; padding: 1.75rem 1.5rem !important;
+		@media (max-width: 860px) {
+			.fr-view #scst-wrapper .pillars-grid,
+			.fr-view #scst-wrapper .tier-grid,
+			.fr-view #scst-wrapper .equity-tier-grid {
+				grid-template-columns: 1fr !important;
 			}
-			.fr-view #scst-wrapper .hero-title {
-				font-size: 1.9rem !important;
+			.fr-view #scst-wrapper .looking-ahead ul {
+				columns: 1 !important;
 			}
-			.fr-view #scst-wrapper .mysp-page-header {
-				flex-direction: column !important; align-items: flex-start !important; gap: 1.25rem !important; padding: 2rem 1.5rem 2rem !important;
-			}
-			.fr-view #scst-wrapper .mysp-header-logo {
-				height: 90px !important;
-			}
-			.fr-view #scst-wrapper .mysp-header-divider {
-				display: none !important;
-			}
-			.fr-view #scst-wrapper .mysp-header-title {
-				font-size: 1.9rem !important;
-			}
-			.fr-view #scst-wrapper .person-cards-grid {
-				grid-template-columns: repeat(2, 1fr) !important;
-			}
-			@media (max-width: 400px) {
-				.fr-view #scst-wrapper .person-cards-grid {
-					grid-template-columns: 1fr !important;
+			@media (max-width: 600px) {
+				.fr-view #scst-wrapper .scst-hero {
+					flex-direction: column !important; align-items: flex-start !important; gap: 1rem !important; padding: 1.75rem 1.5rem !important;
 				}
+				.fr-view #scst-wrapper .hero-title {
+					font-size: 1.9rem !important;
+				}
+				.fr-view #scst-wrapper .mysp-page-header {
+					flex-direction: column !important; align-items: flex-start !important; gap: 1.25rem !important; padding: 2rem 1.5rem 2rem !important;
+				}
+				.fr-view #scst-wrapper .mysp-header-logo {
+					height: 90px !important;
+				}
+				.fr-view #scst-wrapper .mysp-header-divider {
+					display: none !important;
+				}
+				.fr-view #scst-wrapper .mysp-header-title {
+					font-size: 1.9rem !important;
+				}
+				.fr-view #scst-wrapper .person-cards-grid {
+					grid-template-columns: repeat(2, 1fr) !important;
+				}
+				@media (max-width: 400px) {
+					.fr-view #scst-wrapper .person-cards-grid {
+						grid-template-columns: 1fr !important;
+					}
 
 </style>
